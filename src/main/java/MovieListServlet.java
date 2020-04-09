@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -21,9 +22,9 @@ import com.google.gson.JsonObject;
 @WebServlet(name = "MovieListServlet", urlPatterns = "/api/movielist")
 public class MovieListServlet extends HttpServlet{
 
-    @Resource(name = "jdbc/movies")
+    @Resource(name = "jdbc/moviedb")
     private DataSource dataSource;
-    protected void doGet( HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         try {
@@ -32,7 +33,6 @@ public class MovieListServlet extends HttpServlet{
 
             // Declare our statement
             Statement statement = dbcon.createStatement();
-            Statement genre_star_statement = dbcon.createStatement();
 
             String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
                     "where movies.id=ratings.movieId order by ratings.rating desc limit 20";
@@ -51,10 +51,15 @@ public class MovieListServlet extends HttpServlet{
                 String movie_id = rs.getString("id");
 
                 String genre_star_query = "select distinct genres.name as genres_name, stars.name as stars_name from stars, stars_in_movies, genres, genres_in_movies\n" +
-                        "where genres_in_movies.movieId = \"" + movie_id + "\" and genres.id = genres_in_movies.genreId \n" +
-                        "and stars_in_movies.movieId = \"" + movie_id + "\" and stars.id = stars_in_movies.starId limit 3";
+                        "where genres_in_movies.movieId = ? and genres.id = genres_in_movies.genreId \n" +
+                        "and stars_in_movies.movieId = ? and stars.id = stars_in_movies.starId limit 3";
 
-                ResultSet genre_star_rs = genre_star_statement.executeQuery(genre_star_query);
+                PreparedStatement genre_star_statement = dbcon.prepareStatement(genre_star_query);
+
+                genre_star_statement.setString(1, movie_id);
+                genre_star_statement.setString(2, movie_id);
+
+                ResultSet genre_star_rs = genre_star_statement.executeQuery();
 
                 while(genre_star_rs.next()){
                     movie_genres.add(genre_star_rs.getString("genres_name"));
@@ -81,7 +86,6 @@ public class MovieListServlet extends HttpServlet{
             // set response status to 200 (OK)
             response.setStatus(200);
 
-            genre_star_statement.close();
             rs.close();
             statement.close();
             dbcon.close();
