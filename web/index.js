@@ -8,9 +8,11 @@ function handleMovieListResult(resultData) {
         // Concatenate the html tags with resultData jsonObject
         let rowHTML = "";
         rowHTML += "<tr>";
-        rowHTML += "<th>" + resultData[i]["movie_title"] + "</th>";    // display star_name for the link text
+        rowHTML += "<th>" + resultData[i]["movie_title"] + "</th>";    // display movie_name for the link text
         rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
         rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
+        rowHTML += "<th>" + resultData[i]["movie_genres_one"] + ", " + resultData[i]["movie_genres_two"] + ", " + resultData[i]["movie_genres_three"] + ", " + "</th>";
+        rowHTML += "<th>" + resultData[i]["movie_stars_one"] + ", " + resultData[i]["movie_stars_two"] + ", " + resultData[i]["movie_stars_three"] + ", " + "</th>";
         rowHTML += "</tr>";
 
         // Append the row created to the table body, which will refresh the page
