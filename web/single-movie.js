@@ -28,12 +28,12 @@ function handleResult(resultData){
     let movieGenresElement = jQuery("#movie-genres");
     console.log(resultData[1]["genres"].length);
     for(let i=0;i<resultData[1]["genres"].length;i++){
-        movieGenresElement.append("<li>"+resultData[1]["genres"][i]+"</li>");
+        movieGenresElement.append("<li class=\"list-group\">"+resultData[1]["genres"][i]+"</li>");
     }
 
     let movieStarsElement = jQuery("#movie-stars");
     for(let j=0;j<resultData[1]["stars_name"].length;j++){
-        movieStarsElement.append("<li>"+'<a href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
+        movieStarsElement.append("<li class=\"list-group\">"+'<a href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
             '</a>'+"</li>");
     }
 
