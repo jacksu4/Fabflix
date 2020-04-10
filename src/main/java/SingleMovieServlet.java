@@ -9,12 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
@@ -61,7 +59,40 @@ public class SingleMovieServlet extends HttpServlet{
                 jsonArray.add(jsonObject);
             }
 
-            //genres
+            //genres and stars
+            String genre_query = "select genres.name from genres, genres_in_movies where genres_in_movies.movieId=? and genres_in_movies.genreId=genres.id";
+            PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);
+            genre_statement.setString(1,id);
+            ResultSet rs_genre = genre_statement.executeQuery();
+            ArrayList<String> genres = new ArrayList<String>();
+
+            while (rs_genre.next()){
+                genres.add(rs_genre.getString("name"));
+            }
+            JsonArray genres_JsonArray = new Gson().toJsonTree(genres).getAsJsonArray();
+
+            String star_query = "select stars.id, stars.name from stars, stars_in_movies where stars_in_movies.movieId=? and stars_in_movies.starId=stars.id";
+            PreparedStatement star_statement = dbcon.prepareStatement(star_query);
+            star_statement.setString(1,id);
+            ResultSet rs_star = star_statement.executeQuery();
+            ArrayList<String> stars_id = new ArrayList<String>();
+            ArrayList<String> stars_name = new ArrayList<String>();
+
+            while (rs_star.next()){
+                stars_id.add(rs_star.getString("id"));
+                stars_name.add(rs_star.getString("name"));
+            }
+            JsonArray stars_id_JsonArray = new Gson().toJsonTree(stars_id).getAsJsonArray();
+            JsonArray stars_name_JsonArray = new Gson().toJsonTree(stars_name).getAsJsonArray();
+
+            JsonObject jo = new JsonObject();
+            jo.add("genres", genres_JsonArray);
+            jo.add("stars_id", stars_id_JsonArray);
+            jo.add("stars_name", stars_name_JsonArray);
+
+            jsonArray.add(jo);
+
+            //
 
             // write JSON string to output
             out.write(jsonArray.toString());
