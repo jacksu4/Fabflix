@@ -19,12 +19,14 @@ function handleResult(resultData){
     //populate the movie-info h3
     let movieTitleElement = jQuery("#movie-title");
     movieTitleElement.append("<p>"+resultData[0]["movie_title"]+"</p>");
+    console.log(resultData[0]["movie_title"]);
 
     let movieInfoElement = jQuery("#movie-info");
     movieInfoElement.append("<p>Year: "+resultData[0]["movie_year"]+"</p>"+"<p>Director: "+resultData[0]["movie_director"]+"</p>"
         +"<p>Rating: "+resultData[0]["movie_rating"]+"</p>");
 
     let movieGenresElement = jQuery("#movie-genres");
+    console.log(resultData[1]["genres"].length);
     for(let i=0;i<resultData[1]["genres"].length;i++){
         movieGenresElement.append("<li>"+resultData[1]["genres"][i]+"</li>");
     }
@@ -34,6 +36,9 @@ function handleResult(resultData){
         movieStarsElement.append("<li>"+'<a href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
             '</a>'+"</li>");
     }
+
+
+
 }
 let movieId = getParameterByName('id');
 console.log(movieId);

@@ -69,7 +69,6 @@ public class SingleMovieServlet extends HttpServlet{
             while (rs_genre.next()){
                 genres.add(rs_genre.getString("name"));
             }
-            JsonArray genres_JsonArray = new Gson().toJsonTree(genres).getAsJsonArray();
 
             String star_query = "select stars.id, stars.name from stars, stars_in_movies where stars_in_movies.movieId=? and stars_in_movies.starId=stars.id";
             PreparedStatement star_statement = dbcon.prepareStatement(star_query);
@@ -82,6 +81,8 @@ public class SingleMovieServlet extends HttpServlet{
                 stars_id.add(rs_star.getString("id"));
                 stars_name.add(rs_star.getString("name"));
             }
+
+            JsonArray genres_JsonArray = new Gson().toJsonTree(genres).getAsJsonArray();
             JsonArray stars_id_JsonArray = new Gson().toJsonTree(stars_id).getAsJsonArray();
             JsonArray stars_name_JsonArray = new Gson().toJsonTree(stars_name).getAsJsonArray();
 
