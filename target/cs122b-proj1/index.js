@@ -8,7 +8,10 @@ function handleMovieListResult(resultData) {
         // Concatenate the html tags with resultData jsonObject
         let rowHTML = "";
         rowHTML += "<tr>";
-        rowHTML += "<th>"+'<a href="single-movie.html?id='+resultData[i]['movie_id']+'">'+ resultData[i]["movie_title"] + '</a>'+"</th>";    // display movie_name for the link text
+        rowHTML += "<th>"+'<a href="single-movie.html?id=' +
+            resultData[i]['movie_id']+'">'+
+            resultData[i]["movie_title"] + '</a>'+"</th>";    // display movie_name for the link text
+
         rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
         rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
         rowHTML += "<th>" + resultData[i]["movie_rating"] + "</th>";
