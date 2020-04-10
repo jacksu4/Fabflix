@@ -17,7 +17,7 @@ function handleMovieListResult(resultData) {
         rowHTML += "<th>" + resultData[i]["movie_rating"] + "</th>";
         rowHTML += "<th>";
         for (let y = 0; y<resultData[i]["movie_genres"].length; y++){
-            rowHTML += resultData[i]["movie_genres"][y] + " ";
+            rowHTML += '<span class="badge badge-secondary font-weight-light">'+resultData[i]["movie_genres"][y] + "</span> ";
         }
         rowHTML += "</th>";
 
@@ -25,7 +25,7 @@ function handleMovieListResult(resultData) {
         rowHTML += "<th>";
         for (let y = 0; y<resultData[i]["movie_stars"].length; y++){
             // console.log(resultData[i]["movie_stars"][y]);
-            rowHTML += '<a href="single-star.html?id=' +
+            rowHTML += '<a class="badge badge-info font-weight-light" href="single-star.html?id=' +
                 resultData[i]['movie_stars_id'][y] + '">' +
                 resultData[i]["movie_stars"][y] + "</a>" + "  ";
         }

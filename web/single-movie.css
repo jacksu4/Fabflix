@@ -1,9 +1,10 @@
 .container{
-    font-size: large;
+    font-family: Georgia;
     position:relative;
 }
-
-.list-group{
-    font-size: medium;
+.badge{
+    margin:5px;
 }
-
+.info-container{
+    margin-left:50px;
+}

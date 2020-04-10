@@ -1,4 +1,10 @@
 .container{
-    font-size: large;
+    font-family: Georgia;
     position:relative;
+}
+.info-container{
+    margin-left:50px;
+}
+#movie_table{
+    font-size: medium;
 }

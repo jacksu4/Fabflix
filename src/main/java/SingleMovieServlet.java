@@ -31,12 +31,11 @@ public class SingleMovieServlet extends HttpServlet{
 
             //title, year, director, rating
 
-            String query = "select movies.title, movies.year, movies.director, ratings.rating from movies,ratings where movies.id=? and ratings.movieId=?;";
+            String query = "select movies.title, movies.year, movies.director from movies where movies.id=?";
 
             PreparedStatement statement = dbcon.prepareStatement(query);
 
             statement.setString(1,id);
-            statement.setString(2,id);
 
             ResultSet rs = statement.executeQuery();
 
@@ -47,14 +46,12 @@ public class SingleMovieServlet extends HttpServlet{
                 String movie_title = rs.getString("title");
                 String movie_year = rs.getString("year");
                 String movie_director = rs.getString("director");
-                String movie_rating = rs.getString("rating");
 
                 // Create a JsonObject based on the data we retrieve from rs
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("movie_title", movie_title);
                 jsonObject.addProperty("movie_year", movie_year);
                 jsonObject.addProperty("movie_director", movie_director);
-                jsonObject.addProperty("movie_rating", movie_rating);
 
                 jsonArray.add(jsonObject);
             }
@@ -93,7 +90,19 @@ public class SingleMovieServlet extends HttpServlet{
 
             jsonArray.add(jo);
 
-            //
+            //ratings
+            String rating_query = "select ratings.rating from ratings where ratings.movieId=?";
+            PreparedStatement rating_statement = dbcon.prepareStatement(rating_query);
+            rating_statement.setString(1,id);
+            ResultSet rating_rs = rating_statement.executeQuery();
+            JsonObject ro = new JsonObject();
+            while (rating_rs.next()){
+                String movie_rating = rating_rs.getString("rating");
+                ro.addProperty("movie_rating",movie_rating);
+            }
+            if(ro.has("movie_rating")) {
+                jsonArray.add(ro);
+            }
 
             // write JSON string to output
             out.write(jsonArray.toString());

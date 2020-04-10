@@ -16,25 +16,32 @@ function getParameterByName(target) {
 
 function handleResult(resultData){
     console.log("handleResult: populating single movie result from resultData");
+    //console.log(resultData.length);
     //populate the movie-info h3
     let movieTitleElement = jQuery("#movie-title");
     movieTitleElement.append("<p>"+resultData[0]["movie_title"]+"</p>");
-    console.log(resultData[0]["movie_title"]);
+    //console.log(resultData[0]["movie_title"]);
 
     let movieInfoElement = jQuery("#movie-info");
-    movieInfoElement.append("<p>Year: "+resultData[0]["movie_year"]+"</p>"+"<p>Director: "+resultData[0]["movie_director"]+"</p>"
-        +"<p>Rating: "+resultData[0]["movie_rating"]+"</p>");
+    let infoHtml = "";
+    infoHtml += '<p>Year: <span class="font-weight-light">'+resultData[0]["movie_year"]+"</span></p>"+'<p>Director: <span class=\"font-weight-light\">'+resultData[0]["movie_director"]+"</span></p>";
+    if (resultData.length<3){
+        infoHtml += '<p>Rating: <span class="font-weight-light">N/A </span></p>';
+    }else{
+        infoHtml += '<p>Rating: <span class=\"font-weight-light\">'+resultData[2]["movie_rating"]+"</span></p>";
+    }
+    movieInfoElement.append(infoHtml);
 
     let movieGenresElement = jQuery("#movie-genres");
-    console.log(resultData[1]["genres"].length);
+    //console.log(resultData[1]["genres"].length);
     for(let i=0;i<resultData[1]["genres"].length;i++){
-        movieGenresElement.append("<li class=\"list-group\">"+resultData[1]["genres"][i]+"</li>");
+        movieGenresElement.append('<span class="badge badge-secondary font-weight-light">'+resultData[1]["genres"][i]+"</span> ");
     }
 
     let movieStarsElement = jQuery("#movie-stars");
     for(let j=0;j<resultData[1]["stars_name"].length;j++){
-        movieStarsElement.append("<li class=\"list-group\">"+'<a href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
-            '</a>'+"</li>");
+        movieStarsElement.append('<a class="badge badge-info font-weight-light" href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
+            '</a>');
     }
 
 

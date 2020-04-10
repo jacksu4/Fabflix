@@ -1,3 +1,17 @@
+body{
+    font-family: Georgia;
+}
 h1{
     font-size: large;
+    margin-left:30px;
+    margin-top:30px;
+}
+.table thead th{
+    padding-left:80px;
+}
+.table th{
+    padding-left:80px;
+}
+caption{
+    padding-left:80px;
 }
