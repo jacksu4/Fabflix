@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
+import javax.xml.transform.Result;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.sun.org.glassfish.external.statistics.annotations.Reset;
 
 
 @WebServlet(name = "MovieListServlet", urlPatterns = "/api/movielist")
@@ -33,12 +35,51 @@ public class MovieListServlet extends HttpServlet{
             Connection dbcon = dataSource.getConnection();
 
             // Declare our statement
-            Statement statement = dbcon.createStatement();
+//            Statement statement = dbcon.createStatement();
 
-            String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
-                    "where movies.id=ratings.movieId order by ratings.rating desc limit 20";
+//            String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
+//                    "where movies.id=ratings.movieId order by ratings.rating desc limit 20";
+            ResultSet rs;
+            PreparedStatement statement;
 
-            ResultSet rs = statement.executeQuery(query);
+//            System.out.println(request.getParameter("start"));
+//            System.out.println(request.getParameter("start").equals("null"));
+            if (!request.getParameter("start").equals("null") && !request.getParameter("start").isEmpty()){
+                System.out.println("enter start");
+                String start = request.getParameter("start");
+                if (!start.equals("*")) {
+                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
+                            "where movies.id=ratings.movieId and movies.title like ?";
+
+                    statement = dbcon.prepareStatement(query);
+
+                    statement.setString(1, start + "%");
+                } else {
+                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
+                            "where movies.id=ratings.movieId and movies.title REGEXP '^[^A-Za-z0-9]'";
+
+                    statement = dbcon.prepareStatement(query);
+                }
+
+            }else if (!request.getParameter("genre").equals("null") && !request.getParameter("genre").isEmpty()){
+                System.out.println("enter genre");
+                String genre = request.getParameter("genre");
+                String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings, genres, genres_in_movies\n" +
+                        "where movies.id=ratings.movieId and genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id";
+
+                statement = dbcon.prepareStatement(query);
+
+                statement.setString(1,genre);
+
+            }else{
+                System.out.println("enter default");
+                String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
+                        "where movies.id=ratings.movieId order by ratings.rating desc limit 20";
+
+                statement = dbcon.prepareStatement(query);
+            }
+
+            rs = statement.executeQuery();
 
             JsonArray jsonArray = new JsonArray();
 
@@ -54,7 +95,7 @@ public class MovieListServlet extends HttpServlet{
                 String movie_rating = rs.getString("rating");
 
                 String genre_query = "select genres.name as genres_name from genres, genres_in_movies " +//add first 3 genre
-                        "where genres_in_movies.movieId = ? and genres.id = genres_in_movies.genreId limit 3";
+                        "where genres_in_movies.movieId = ? and genres.id = genres_in_movies.genreId ORDER BY genres_name limit 3";
 
                 PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);
 
@@ -66,8 +107,7 @@ public class MovieListServlet extends HttpServlet{
                     movie_genres.add(genre_rs.getString("genres_name"));
                 }
 
-
-                String star_query = "select stars.name as stars_name, stars.id as stars_id from stars, stars_in_movies " +//add first 3 stars name and their id
+                String star_query = "select stars.name as stars_name, stars.id as stars_id from stars, stars_in_movies " +//need to change for proj2
                         "where stars_in_movies.movieId =? and stars.id = stars_in_movies.starId limit 3";
 
                 PreparedStatement star_statement = dbcon.prepareStatement(star_query);
