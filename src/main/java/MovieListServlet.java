@@ -44,7 +44,42 @@ public class MovieListServlet extends HttpServlet{
 
 //            System.out.println(request.getParameter("start"));
 //            System.out.println(request.getParameter("start").equals("null"));
-            if (!request.getParameter("start").equals("null") && !request.getParameter("start").isEmpty()){
+            if (!request.getParameter("search").equals("null") && !request.getParameter("search").isEmpty()){
+
+                System.out.println("enter search");
+                String title, director, star_name;
+                if(request.getParameter("title").equals("null")){
+                    title = "'%%'";
+                }else{
+                    title = "'%"+request.getParameter("title")+"%'";
+                }
+                if(request.getParameter("director").equals("null")){
+                    director = "'%%'";
+                }else{
+                    director = "'%"+request.getParameter("director")+"%'";
+                }
+                if(request.getParameter("star_name").equals("null")){
+                    star_name = "'%%'";
+                }else{
+                    star_name = "'%"+request.getParameter("star_name")+"%'";
+                }
+                System.out.println(title+director+star_name);
+                if(!request.getParameter("year").isEmpty() && !request.getParameter("year").equals("null")){
+                    String year = request.getParameter("year");
+                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) and movies.title like ? and movies.director like ? and movies.year=? and ratings.movieId=movies.id";
+                    statement = dbcon.prepareStatement(query);
+                    statement.setString(1,star_name);
+                    statement.setString(2,title);
+                    statement.setString(3,director);
+                    statement.setString(4,year);
+                }else{
+                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) and movies.title like ? and movies.director like ? and ratings.movieId=movies.id";
+                    statement = dbcon.prepareStatement(query);
+                    statement.setString(1,star_name);
+                    statement.setString(2,title);
+                    statement.setString(3,director);
+                }
+            }else if (!request.getParameter("start").equals("null") && !request.getParameter("start").isEmpty()){
                 System.out.println("enter start");
                 String start = request.getParameter("start");
                 if (!start.equals("*")) {

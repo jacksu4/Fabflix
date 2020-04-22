@@ -60,12 +60,37 @@ function getParameterByName(target) {
 
 let start = getParameterByName('start');
 let genre = getParameterByName('genre');
+let search = getParameterByName('search');
+if( search==null ){
+    console.log(1);
+    jQuery.ajax({
+        dataType: "json", // Setting return data type
+        method: "GET", // Setting request method
+        url: "api/movielist?start=" + start + "&genre=" + genre + "&search="+search, // Setting request url, which is mapped by StarsServlet in Stars.java
+        success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+    });
+}else{
+    console.log(2);
+    let title = getParameterByName('title');
+    let director = getParameterByName('director');
+    let year = getParameterByName('year');
+    let star_name = getParameterByName('star_name');
+    jQuery.ajax({
+        dataType: "json", // Setting return data type
+        method: "GET", // Setting request method
+        url: "api/movielist?search=true&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name, // Setting request url, which is mapped by StarsServlet in Stars.java
+        success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+    });
+}
 
 
 // Makes the HTTP GET request and registers on success callback function handleStarResult
+/*
 jQuery.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
     url: "api/movielist?start=" + start + "&genre=" + genre, // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
+
+ */

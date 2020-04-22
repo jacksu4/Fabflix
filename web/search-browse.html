@@ -5,6 +5,14 @@
     <title>Search and Browse</title>
 </head>
 <body>
+    <h2>Search Engine:</h2>
+    <form id="search-form" method="post" action="#">
+        <input name="title" placeholder="title" type="text">
+        <input name="year" placeholder="year" type="text">
+        <input name="director" placeholder="director" type="text">
+        <input name="star_name" placeholder="star's name" type="text">
+        <input type="submit" value="Search">
+    </form>
 
     <h2>Browse by Genres or Titles</h2>
     <h4>Titles</h4>
@@ -20,7 +28,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+    <script src="search.js"></script>
     <script src="search-browse.js"></script>
 </body>
 </html>
