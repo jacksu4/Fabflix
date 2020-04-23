@@ -39,6 +39,41 @@ function handleMovieListResult(resultData) {
 
         // Append the row created to the table body, which will refresh the page
         movieListTableBodyElement.append(rowHTML);
+
+        if (resultData.length < resultperpage){
+            $("#next").removeAttr('href');
+        }
+        else{
+            if(search==null){
+                let hyperlink = "index.html?start=" + start + "&genre=" + genre
+                    + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+                    + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)+1).toString();
+                $("#next").attr("href", hyperlink);
+            }
+            else{
+                let hyperlink = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
+                    + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+                    + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)+1).toString();
+                $("#next").attr("href", hyperlink);
+            }
+        }
+
+        if(page==0){
+            $("#prev").removeAttr('href');
+        }else{
+            if(search==null){
+                let hyperlink = "index.html?start=" + start + "&genre=" + genre
+                    + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+                    + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)-1).toString();
+                $("#prev").attr("href", hyperlink);
+            }else{
+                let hyperlink = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
+                    + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+                    + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)-1).toString();
+                $("#prev").attr("href", hyperlink);
+            }
+
+        }
     }
 }
 
@@ -73,6 +108,7 @@ var secondsort = getParameterByName('secondsort');
 var firstmethod = getParameterByName('firstmethod');
 var secondmethod = getParameterByName('secondmethod');
 var resultperpage = getParameterByName('resultperpage');
+var page = getParameterByName('page');
 
 
 if(search==null) {
@@ -81,7 +117,7 @@ if(search==null) {
         method: "GET", // Setting request method
         url: "api/movielist?start=" + start + "&genre=" + genre + "&search=" + search
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
-            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0", // Setting request url, which is mapped by StarsServlet in Stars.java
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page, // Setting request url, which is mapped by StarsServlet in Stars.java
         success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
     });
 } else {
@@ -90,7 +126,7 @@ if(search==null) {
         method: "GET", // Setting request method
         url: "api/movielist?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
-            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0", // Setting request url, which is mapped by StarsServlet in Stars.java
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page, // Setting request url, which is mapped by StarsServlet in Stars.java
         success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
     });
 }
@@ -162,13 +198,15 @@ $("#submit_sort").bind( "click", function(){
         console.log("enter nonsearch");
         window.location.href = "index.html?start=" + start + "&genre=" + genre
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
-            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page;
     }else{
         window.location.href = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
-            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page;
     }
 });
+
+
 
 
 // Makes the HTTP GET request and registers on success callback function handleStarResult

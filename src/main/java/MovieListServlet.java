@@ -57,7 +57,7 @@ public class MovieListServlet extends HttpServlet{
 //            System.out.println(request.getParameter("start").equals("null"));
             if (!request.getParameter("search").equals("null") && !request.getParameter("search").isEmpty()){
 
-                System.out.println(request.getParameter("search"));
+//                System.out.println(request.getParameter("search"));
                 String title, director, star_name;
                 if(request.getParameter("title").equals("null")){
                     title = "%%";
@@ -77,7 +77,10 @@ public class MovieListServlet extends HttpServlet{
                 System.out.println(title+director+star_name);
                 if(!request.getParameter("year").isEmpty() && !request.getParameter("year").equals("null")){
                     String year = request.getParameter("year");
-                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) and movies.title like ? and movies.director like ? and movies.year=? and ratings.movieId=movies.id";
+                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies " +
+                            "where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) " +
+                            "and movies.title like ? and movies.director like ? and movies.year=? and ratings.movieId=movies.id " +
+                            "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
                     statement.setString(1,star_name);
@@ -85,14 +88,21 @@ public class MovieListServlet extends HttpServlet{
                     statement.setString(3,director);
                     statement.setString(4,year);
 
+                    statement = generateStatement(statement,result_per_page, page, 5);
+
 //                    System.out.println(statement);
                 }else{
-                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) and movies.title like ? and movies.director like ? and ratings.movieId=movies.id";
+                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies" +
+                            " where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) " +
+                            "and movies.title like ? and movies.director like ? and ratings.movieId=movies.id "+
+                            "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
                     statement.setString(1,star_name);
                     statement.setString(2,title);
                     statement.setString(3,director);
+
+                    statement = generateStatement(statement,result_per_page, page, 4);
 
 //                    System.out.println(statement);
                 }
@@ -110,12 +120,12 @@ public class MovieListServlet extends HttpServlet{
 
                     statement.setString(1, start + "%");
 
-                    System.out.println(statement);
+//                    System.out.println(statement);
 
                 } else {
                     String query = "select movies.id, movies.title as title, movies.year, movies.director, ratings.rating as rating FROM movies, ratings \n" +
                             "where movies.id=ratings.movieId and movies.title REGEXP '^[^A-Za-z0-9]' \n" +
-                            "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";;
+                            "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
 

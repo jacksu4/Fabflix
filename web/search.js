@@ -20,6 +20,9 @@ function handleSearchResult(resultDataString) {
     if(resultDataString[0]["star_name"]!=""){
         new_address += "&star_name="+resultDataString[0]["star_name"];
     }
+
+    new_address += "&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0";
+
     window.location.replace(new_address);
 }
 
