@@ -5,6 +5,7 @@ function handleMovieListResult(resultData) {
 
     for (let i = 0; i < Math.min(100, resultData.length); i++) {
 
+
         // Concatenate the html tags with resultData jsonObject
         let rowHTML = "";
         rowHTML += "<tr>";
@@ -159,7 +160,7 @@ $firstsort.append(
     $('<option />')
         .text('title')
         .val('title'),
-)
+);
 
 $firstsort.on("change", function(){
     firstsort = this.value;
@@ -185,7 +186,7 @@ $pagemethod.append(
     $('<option />')
         .text('desc desc')
         .val('desc desc'),
-)
+);
 
 $pagemethod.on("change", function(){
     let splitedArray = this.value.split(/(\s+)/);

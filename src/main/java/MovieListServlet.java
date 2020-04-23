@@ -74,7 +74,7 @@ public class MovieListServlet extends HttpServlet{
                 }else{
                     star_name = "%"+request.getParameter("star_name")+"%";
                 }
-                System.out.println(title+director+star_name);
+//                System.out.println(title+director+star_name);
                 if(!request.getParameter("year").isEmpty() && !request.getParameter("year").equals("null")){
                     String year = request.getParameter("year");
                     String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies " +
@@ -88,7 +88,7 @@ public class MovieListServlet extends HttpServlet{
                     statement.setString(3,director);
                     statement.setString(4,year);
 
-                    statement = generateStatement(statement,result_per_page, page, 5);
+                    generateStatement(statement, result_per_page, page, 5);
 
 //                    System.out.println(statement);
                 }else{
@@ -102,7 +102,7 @@ public class MovieListServlet extends HttpServlet{
                     statement.setString(2,title);
                     statement.setString(3,director);
 
-                    statement = generateStatement(statement,result_per_page, page, 4);
+                    generateStatement(statement, result_per_page, page, 4);
 
 //                    System.out.println(statement);
                 }
@@ -116,7 +116,7 @@ public class MovieListServlet extends HttpServlet{
 
                     statement = dbcon.prepareStatement(query);
 
-                    statement = generateStatement(statement,result_per_page, page, 2);
+                    generateStatement(statement, result_per_page, page, 2);
 
                     statement.setString(1, start + "%");
 
@@ -129,7 +129,7 @@ public class MovieListServlet extends HttpServlet{
 
                     statement = dbcon.prepareStatement(query);
 
-                    statement = generateStatement(statement,result_per_page, page, 1);
+                    generateStatement(statement, result_per_page, page, 1);
                 }
 
             }else if (!request.getParameter("genre").equals("null") && !request.getParameter("genre").isEmpty()){
@@ -141,7 +141,7 @@ public class MovieListServlet extends HttpServlet{
 
                 statement = dbcon.prepareStatement(query);
 
-                statement = generateStatement(statement,result_per_page, page, 2);
+                generateStatement(statement, result_per_page, page, 2);
 
                 statement.setString(1,genre);
 
@@ -153,7 +153,7 @@ public class MovieListServlet extends HttpServlet{
 
                 statement = dbcon.prepareStatement(query);
 
-                statement = generateStatement(statement,result_per_page, page, 1);
+                generateStatement(statement, result_per_page, page, 1);
             }
 
             rs = statement.executeQuery();
