@@ -12,7 +12,7 @@ function handleTitleGenreBrwose(resultData){
         for (let y = 0; y < 5; y++){
             let curElement = numberList.shift();
             rowNum += "<a href='index.html?start=" +
-                curElement + "'>" + curElement + "</a> ";
+                curElement + "&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0'>" + curElement + "</a> ";
         }
         rowNum += "</li>";
         titleList.append(rowNum);
@@ -24,7 +24,7 @@ function handleTitleGenreBrwose(resultData){
         for (let y = 0; y < 6; y++){
             let curElement = alphabetList.shift();
             rowAlpha += "<a href='index.html?start=" +
-                curElement + "'>" + curElement + "</a> ";
+                curElement + "&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0'>" + curElement + "</a> ";
         }
         rowAlpha += "</li>";
         titleList.append(rowAlpha);
@@ -35,7 +35,7 @@ function handleTitleGenreBrwose(resultData){
     let blockGenre = "<p>";
     for (let i = 0; i < resultData.length; i++){
         blockGenre += "<a href='index.html?genre=" +
-            resultData[i] + "'>" + resultData[i] + "</a> ";
+            resultData[i] + "&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0'>" + resultData[i] + "</a> ";
     }
     blockGenre += "</p>";
     genreList.append(blockGenre);

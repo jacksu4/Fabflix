@@ -10,10 +10,7 @@ import javax.sql.DataSource;
 import javax.xml.transform.Result;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
@@ -27,6 +24,14 @@ public class MovieListServlet extends HttpServlet{
 
     @Resource(name = "jdbc/moviedb")
     private DataSource dataSource;
+
+    private PreparedStatement generateStatement(PreparedStatement statement, int result_per_page, int page, int start_num) throws SQLException {
+        int offset = result_per_page * page;
+        statement.setInt(start_num, result_per_page);
+        statement.setInt(start_num+1, offset);
+        return statement;
+    }
+
     protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -41,77 +46,104 @@ public class MovieListServlet extends HttpServlet{
 //                    "where movies.id=ratings.movieId order by ratings.rating desc limit 20";
             ResultSet rs;
             PreparedStatement statement;
+            int page = Integer.parseInt(request.getParameter("page"));
+            int result_per_page = Integer.parseInt(request.getParameter("resultperpage"));
+            String first_method = request.getParameter("firstmethod");
+            String second_method = request.getParameter("firstmethod");
+            String first_sort = request.getParameter("firstsort");
+            String second_sort = request.getParameter("secondsort");
 
 //            System.out.println(request.getParameter("start"));
 //            System.out.println(request.getParameter("start").equals("null"));
             if (!request.getParameter("search").equals("null") && !request.getParameter("search").isEmpty()){
 
-                System.out.println("enter search");
+                System.out.println(request.getParameter("search"));
                 String title, director, star_name;
                 if(request.getParameter("title").equals("null")){
-                    title = "'%%'";
+                    title = "%%";
                 }else{
-                    title = "'%"+request.getParameter("title")+"%'";
+                    title = "%"+request.getParameter("title")+"%";
                 }
                 if(request.getParameter("director").equals("null")){
-                    director = "'%%'";
+                    director = "%%";
                 }else{
-                    director = "'%"+request.getParameter("director")+"%'";
+                    director = "%"+request.getParameter("director")+"%";
                 }
                 if(request.getParameter("star_name").equals("null")){
-                    star_name = "'%%'";
+                    star_name = "%%";
                 }else{
-                    star_name = "'%"+request.getParameter("star_name")+"%'";
+                    star_name = "%"+request.getParameter("star_name")+"%";
                 }
                 System.out.println(title+director+star_name);
                 if(!request.getParameter("year").isEmpty() && !request.getParameter("year").equals("null")){
                     String year = request.getParameter("year");
                     String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) and movies.title like ? and movies.director like ? and movies.year=? and ratings.movieId=movies.id";
+
                     statement = dbcon.prepareStatement(query);
                     statement.setString(1,star_name);
                     statement.setString(2,title);
                     statement.setString(3,director);
                     statement.setString(4,year);
+
+//                    System.out.println(statement);
                 }else{
                     String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) and movies.title like ? and movies.director like ? and ratings.movieId=movies.id";
+
                     statement = dbcon.prepareStatement(query);
                     statement.setString(1,star_name);
                     statement.setString(2,title);
                     statement.setString(3,director);
+
+//                    System.out.println(statement);
                 }
             }else if (!request.getParameter("start").equals("null") && !request.getParameter("start").isEmpty()){
                 System.out.println("enter start");
                 String start = request.getParameter("start");
                 if (!start.equals("*")) {
-                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
-                            "where movies.id=ratings.movieId and movies.title like ?";
+                    String query = "select movies.id, movies.title as title, movies.year, movies.director, ratings.rating as rating FROM movies, ratings \n" +
+                            "where movies.id=ratings.movieId and movies.title like ? \n" +
+                    "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
+
+                    statement = generateStatement(statement,result_per_page, page, 2);
 
                     statement.setString(1, start + "%");
+
+                    System.out.println(statement);
+
                 } else {
-                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
-                            "where movies.id=ratings.movieId and movies.title REGEXP '^[^A-Za-z0-9]'";
+                    String query = "select movies.id, movies.title as title, movies.year, movies.director, ratings.rating as rating FROM movies, ratings \n" +
+                            "where movies.id=ratings.movieId and movies.title REGEXP '^[^A-Za-z0-9]' \n" +
+                            "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";;
 
                     statement = dbcon.prepareStatement(query);
+
+                    statement = generateStatement(statement,result_per_page, page, 1);
                 }
 
             }else if (!request.getParameter("genre").equals("null") && !request.getParameter("genre").isEmpty()){
                 System.out.println("enter genre");
                 String genre = request.getParameter("genre");
                 String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings, genres, genres_in_movies\n" +
-                        "where movies.id=ratings.movieId and genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id";
+                        "where movies.id=ratings.movieId and genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id \n" +
+                        "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                 statement = dbcon.prepareStatement(query);
+
+                statement = generateStatement(statement,result_per_page, page, 2);
 
                 statement.setString(1,genre);
 
             }else{
                 System.out.println("enter default");
                 String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
-                        "where movies.id=ratings.movieId order by ratings.rating desc limit 20";
+                        "where movies.id=ratings.movieId \n" +
+                        "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                 statement = dbcon.prepareStatement(query);
+
+                statement = generateStatement(statement,result_per_page, page, 1);
             }
 
             rs = statement.executeQuery();
@@ -171,6 +203,7 @@ public class MovieListServlet extends HttpServlet{
                 jsonObject.add("movie_stars", movie_stars_JsonArray);
                 jsonObject.add("movie_stars_id", movie_stars_id_JsonArray);
 
+
                 jsonArray.add(jsonObject);
 
                 genre_rs.close();
@@ -194,3 +227,5 @@ public class MovieListServlet extends HttpServlet{
         out.close();
     }
 }
+
+
