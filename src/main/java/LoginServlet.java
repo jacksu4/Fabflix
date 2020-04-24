@@ -56,6 +56,7 @@ public class LoginServlet extends HttpServlet {
                     responseJsonObject.addProperty("message", "incorrect password");
                 } else {
                     request.getSession().setAttribute("user", new User(username));
+                    request.getSession().setAttribute("cart", new Cart(username));
 
                     responseJsonObject.addProperty("status", "success");
                     responseJsonObject.addProperty("message", "success");
