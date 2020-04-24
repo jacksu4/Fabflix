@@ -30,7 +30,7 @@ function handleTitleGenreBrwose(resultData){
         titleList.append(rowAlpha);
     }
 
-    titleList.append("<li><a href='index.html?start=*'>*</a>");
+    titleList.append("<li><a href='index.html?start=*&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0'>*</a>");
 
     let blockGenre = "<p>";
     for (let i = 0; i < resultData.length; i++){

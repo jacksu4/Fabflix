@@ -77,9 +77,9 @@ public class MovieListServlet extends HttpServlet{
 //                System.out.println(title+director+star_name);
                 if(!request.getParameter("year").isEmpty() && !request.getParameter("year").equals("null")){
                     String year = request.getParameter("year");
-                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies " +
+                    String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select distinct(movies.id), movies.title, movies.year, movies.director From movies where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies " +
                             "where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) " +
-                            "and movies.title like ? and movies.director like ? and movies.year=? and ratings.movieId=movies.id " +
+                            "and movies.title like ? and movies.director like ? and movies.year=?) as T1 left join ratings on T1.id=ratings.movieId " +
                             "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
@@ -90,11 +90,11 @@ public class MovieListServlet extends HttpServlet{
 
                     generateStatement(statement, result_per_page, page, 5);
 
-//                    System.out.println(statement);
+                    //System.out.println(statement);
                 }else{
-                    String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating From movies, ratings where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies" +
+                    String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select distinct(movies.id), movies.title, movies.year, movies.director From movies where movies.id in (select distinct(movies.id) as movie_id from movies, stars, stars_in_movies" +
                             " where stars.name like ? and stars.id = stars_in_movies.starId and movies.id = stars_in_movies.movieId) " +
-                            "and movies.title like ? and movies.director like ? and ratings.movieId=movies.id "+
+                            "and movies.title like ? and movies.director like ?) as T1 left join ratings on T1.id=ratings.movieId "+
                             "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
@@ -104,14 +104,14 @@ public class MovieListServlet extends HttpServlet{
 
                     generateStatement(statement, result_per_page, page, 4);
 
-//                    System.out.println(statement);
+                    //System.out.println(statement);
                 }
             }else if (!request.getParameter("start").equals("null") && !request.getParameter("start").isEmpty()){
                 System.out.println("enter start");
                 String start = request.getParameter("start");
                 if (!start.equals("*")) {
-                    String query = "select movies.id, movies.title as title, movies.year, movies.director, ratings.rating as rating FROM movies, ratings \n" +
-                            "where movies.id=ratings.movieId and movies.title like ? \n" +
+                    String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select distinct(movies.id), movies.title as title, movies.year, movies.director FROM movies \n" +
+                            "where movies.title like ?) as T1 left join ratings on T1.id = ratings.movieId " +
                     "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
@@ -120,11 +120,11 @@ public class MovieListServlet extends HttpServlet{
 
                     statement.setString(1, start + "%");
 
-//                    System.out.println(statement);
+                    //System.out.println(statement);
 
                 } else {
-                    String query = "select movies.id, movies.title as title, movies.year, movies.director, ratings.rating as rating FROM movies, ratings \n" +
-                            "where movies.id=ratings.movieId and movies.title REGEXP '^[^A-Za-z0-9]' \n" +
+                    String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select distinct(movies.id), movies.title as title, movies.year, movies.director FROM movies \n" +
+                            "where movies.title REGEXP '^[^A-Za-z0-9]') as T1 left join ratings on T1.id = ratings.movieId \n" +
                             "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
@@ -135,8 +135,8 @@ public class MovieListServlet extends HttpServlet{
             }else if (!request.getParameter("genre").equals("null") && !request.getParameter("genre").isEmpty()){
                 System.out.println("enter genre");
                 String genre = request.getParameter("genre");
-                String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings, genres, genres_in_movies\n" +
-                        "where movies.id=ratings.movieId and genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id \n" +
+                String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select movies.id, movies.title, movies.year, movies.director FROM movies, genres, genres_in_movies\n" +
+                        "where genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id) as T1 left join ratings on T1.id = ratings.movieId \n" +
                         "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                 statement = dbcon.prepareStatement(query);
@@ -147,8 +147,7 @@ public class MovieListServlet extends HttpServlet{
 
             }else{
                 System.out.println("enter default");
-                String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies, ratings \n" +
-                        "where movies.id=ratings.movieId \n" +
+                String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies left join ratings on movies.id = ratings.movieId \n" +
                         "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                 statement = dbcon.prepareStatement(query);
@@ -156,7 +155,10 @@ public class MovieListServlet extends HttpServlet{
                 generateStatement(statement, result_per_page, page, 1);
             }
 
+            System.out.println(statement);
             rs = statement.executeQuery();
+
+            System.out.println("first statement success");
 
             JsonArray jsonArray = new JsonArray();
 
@@ -165,11 +167,16 @@ public class MovieListServlet extends HttpServlet{
                 ArrayList<String> movie_stars = new ArrayList<>();
                 ArrayList<String> movie_stars_id = new ArrayList<>();
 
+
                 String movie_title = rs.getString("title");
                 String movie_year = rs.getString("year");
                 String movie_director = rs.getString("director");
                 String movie_id = rs.getString("id");
                 String movie_rating = rs.getString("rating");
+
+                if(movie_rating==null){
+                    movie_rating = "N/A";
+                }
 
                 String genre_query = "select genres.name as genres_name from genres, genres_in_movies " +//add first 3 genre
                         "where genres_in_movies.movieId = ? and genres.id = genres_in_movies.genreId ORDER BY genres_name limit 3";
