@@ -45,7 +45,9 @@ public class SingleStarServlet extends HttpServlet {
             Connection dbcon = dataSource.getConnection();
 
             // Construct a query with parameter represented by "?"
-            String query = "SELECT * from stars as s, stars_in_movies as sim, movies as m where m.id = sim.movieId and sim.starId = s.id and s.id = ?";
+            String query = "SELECT * from stars as s, stars_in_movies as sim, movies as m " +
+                    "where m.id = sim.movieId and sim.starId = s.id and s.id = ?" +
+                    "order by m.year desc, m.title asc";
 
             // Declare our statement
             PreparedStatement statement = dbcon.prepareStatement(query);
