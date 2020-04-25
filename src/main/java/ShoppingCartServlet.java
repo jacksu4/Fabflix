@@ -29,6 +29,25 @@ public class ShoppingCartServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");
+        System.out.println(request.getParameter("movie_id"));
+        if(!(request.getParameter("movie_id")==null)){
+            System.out.println("modify item in cart");
+            String id = request.getParameter("movie_id");
+            if(request.getParameter("change").equals("decrease")){
+                System.out.println("decrease "+id);
+                cart.decrease(id);
+            }else if(request.getParameter("change").equals("increase")){
+                System.out.println("increase "+id);
+                cart.add(id);
+            }else if(request.getParameter("change").equals("delete")){
+                System.out.println("delete "+id);
+                cart.delete(id);
+            }else{
+                System.out.println("parameter change unrecognized");
+            }
+            session.setAttribute("cart", cart);
+        }
+        System.out.println("after modifying");
 
         try {
             // Get a connection from dataSource
@@ -53,6 +72,7 @@ public class ShoppingCartServlet extends HttpServlet{
                     movie_price = rs.getInt("price");
                     jo.addProperty("movie_title", movie_title);
                     jo.addProperty("movie_price", movie_price);
+                    jo.addProperty("movie_id", movie_id);
                     jo.addProperty("quantity",quantity);
                 }
                 ja.add(jo);

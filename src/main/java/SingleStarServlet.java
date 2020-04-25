@@ -59,6 +59,11 @@ public class SingleStarServlet extends HttpServlet {
 
             JsonArray jsonArray = new JsonArray();
 
+            JsonObject uo = new JsonObject();
+            String url = (String) request.getSession().getAttribute("movielist_url");
+            uo.addProperty("movielist_url", url);
+            jsonArray.add(uo);
+
             // Iterate through each row of rs
             while (rs.next()) {
 

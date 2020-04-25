@@ -108,6 +108,13 @@ public class SingleMovieServlet extends HttpServlet{
                 jsonArray.add(ro);
             }
 
+            String url = (String) request.getSession().getAttribute("movielist_url");
+            System.out.println("url: "+url);
+
+            JsonObject uo = new JsonObject();
+            uo.addProperty("movielist_url",url);
+            jsonArray.add(uo);
+
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)

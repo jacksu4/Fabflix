@@ -28,15 +28,15 @@ function handleResult(resultData) {
     console.log("handleResult: populating star info from resultData");
 
     let starNameElement = jQuery("#star_name");
-    starNameElement.append("<p>"+resultData[0]["star_name"]+"</p>")
+    starNameElement.append("<p>"+resultData[1]["star_name"]+"</p>")
     // populate the star info h3
     // find the empty h3 body by id "star_info"
     let starInfoElement = jQuery("#star_info");
 
-    if (resultData[0]["star_dob"]==null){
+    if (resultData[1]["star_dob"]==null){
         var star_dob = "N/A";
     }else{
-        var star_dob = resultData[0]["star_dob"];
+        var star_dob = resultData[1]["star_dob"];
     }
     // append two html <p> created to the h3 body, which will refresh the page
     starInfoElement.append('<p>Date Of Birth: <span class="font-weight-light">' + star_dob + "</span></p>");
@@ -48,7 +48,7 @@ function handleResult(resultData) {
     let movieTableBodyElement = jQuery("#movie_table_body");
 
     // Concatenate the html tags with resultData jsonObject to create table rows
-    for (let i = 0; i < Math.min(10, resultData.length); i++) {
+    for (let i = 1; i < Math.min(10, resultData.length); i++) {
         let rowHTML = "";
         rowHTML += "<tr>";
         rowHTML += "<th>" +'<a href="single-movie.html?id='+resultData[i]['movie_id']+'">' + resultData[i]["movie_title"] +'</a>' + "</th>";
@@ -59,6 +59,11 @@ function handleResult(resultData) {
         // Append the row created to the table body, which will refresh the page
         movieTableBodyElement.append(rowHTML);
     }
+    let backButton = jQuery("#backButton");
+    backButton.click(function(){
+        console.log(resultData[0]["movielist_url"]);
+       window.location.href = resultData[0]["movielist_url"];
+    });
 }
 
 /**

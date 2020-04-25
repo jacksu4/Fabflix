@@ -34,4 +34,9 @@ public class Cart {
             }
         }
     }
+    public void delete(String movieId){
+        if(cart.containsKey(movieId)){
+            cart.remove(movieId);
+        }
+    }
 }

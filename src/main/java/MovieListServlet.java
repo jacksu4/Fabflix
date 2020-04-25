@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -38,6 +39,20 @@ public class MovieListServlet extends HttpServlet{
         try {
             // Get a connection from dataSource
             Connection dbcon = dataSource.getConnection();
+
+            String url = "index.html?";
+            Enumeration<String> paramNames = request.getParameterNames();
+            if(paramNames!=null){
+                while(paramNames.hasMoreElements()){
+                    String param = paramNames.nextElement();
+                    if (!request.getParameter(param).equals("null") && !request.getParameter(param).isEmpty()){
+                        url += param + "=" + request.getParameter(param) + "&";
+                    }
+                }
+            }
+            url = url.substring(0,url.length()-1);
+            request.getSession().setAttribute("movielist_url",url);
+            //System.out.println(url);
 
             // Declare our statement
 //            Statement statement = dbcon.createStatement();
@@ -155,7 +170,7 @@ public class MovieListServlet extends HttpServlet{
                 generateStatement(statement, result_per_page, page, 1);
             }
 
-            System.out.println(statement);
+            //System.out.println(statement);
             rs = statement.executeQuery();
 
             System.out.println("first statement success");
