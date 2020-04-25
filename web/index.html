@@ -10,6 +10,7 @@
 
     <script src="https://kit.fontawesome.com/aefb4d54bc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="./open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <title>Movie List</title>
 
 </head>
@@ -51,8 +52,11 @@
                 <!-- Again, id "movieList_table_body" is useful for jQuery to find this html element -->
                 <tbody id=movieList_table_body></tbody>
             </table>
-            <a href="" id="prev" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Prev</a>
-            <a href="" id="next" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Next</a>
+            <hr>
+            <div>
+                <a href="" id="prev" aria-pressed="true" style="float:left;margin-left:30px;font-size:36px"><span class="oi oi-arrow-left"></span></a>
+                <a href="" id="next" aria-pressed="true" style="float:right;margin-right:30px;font-size:36px"><span class="oi oi-arrow-right"></span></a>
+            </div>
         </div>
 
         <!-- Load jQuery and Bootstrap JS -->
@@ -66,8 +70,9 @@
              otherwise the url is relative to the root path-->
         <script src="index.js"></script>
     </div>
-    <a href="search-browse.html" class="btn btn-primary btn-sm active" role="button">Back to Main Page</a>
-    <a href="logout" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Logout</a>
+    <a href="search-browse.html" class="btn btn-outline-primary" role="button">Back to Main Page</a>
+    <a href="shopping-cart.html" class="btn btn-outline-success">CheckOut</a>
+    <a href="logout" class="btn btn-outline-danger" aria-pressed="true">Logout</a>
 
 </body>
 </html>

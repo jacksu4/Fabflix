@@ -41,6 +41,7 @@ function handleResult(resultData){
     }
     let total_price = jQuery("#total-price");
     total_price.append("Total Price: "+total);
+    $("#proceedToPayment").attr("href","payment.html?total="+total);
 }
 let movie_id = getParameterByName('movie_id');
 let change = getParameterByName('change');
