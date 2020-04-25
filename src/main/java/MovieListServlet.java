@@ -191,8 +191,9 @@ public class MovieListServlet extends HttpServlet{
                     movie_genres.add(genre_rs.getString("genres_name"));
                 }
 
-                String star_query = "select stars.name as stars_name, stars.id as stars_id from stars, stars_in_movies " +//need to change for proj2
-                        "where stars_in_movies.movieId =? and stars.id = stars_in_movies.starId limit 3";
+                String star_query = "select stars.name as stars_name, stars.id as stars_id from stars, stars_in_movies " +
+                        "where stars_in_movies.movieId = ? and stars.id = stars_in_movies.starId " +
+                        "order by (select count(stars_in_movies.movieId) from stars_in_movies where stars_in_movies.starId=stars.id) desc limit 3";
 
                 PreparedStatement star_statement = dbcon.prepareStatement(star_query);
 

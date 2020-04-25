@@ -18,10 +18,10 @@ function displayMessage(){
     console.log("successfully added to cart");
     let message = jQuery("#addToCartMessage");
     if(message.css("display")=="none"){
-        console.log("hidden")
+        console.log("hidden");
         message.fadeIn();
     }else{
-        console.log("visible")
+        console.log("visible");
         message.fadeOut();
         message.fadeIn();
     }

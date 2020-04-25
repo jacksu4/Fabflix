@@ -18,15 +18,15 @@
         <h1 class="display-4 mb-3">Movie List </h1>
 
         <select id="result_per_page" name="pageresult">
-            <option disabled>Select number of result displayed</option>
+            <option>Select number of result displayed</option>
         </select>
 
         <select id="first_sort" name="firstsort">
-            <option disabled>Select sorting standard</option>
+            <option>Select sorting standard</option>
         </select>
 
         <select id="page_method" name="pagemethod">
-            <option disabled>select ascending or descending order</option>
+            <option>select ascending or descending order</option>
         </select>
 
         <input type="submit" id="submit_sort">
@@ -43,6 +43,8 @@
                         <th scope="col">Rating</th>
                         <th scope="col">Genres</th>
                         <th scope="col">Stars</th>
+                        <th scope="col">Add to Shopping Cart<span id="addToCartMessage" class="text-success" style="display:none">success!</span></th>
+
                     </tr>
                 </thead>
                 <!-- Table body is left empty here, will be populated with the data retrieved with index.js -->

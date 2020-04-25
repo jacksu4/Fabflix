@@ -33,6 +33,11 @@ function handleMovieListResult(resultData) {
 
         rowHTML += "</th>";
 
+        let parsedMovieId = "'" + resultData[i]['movie_id'] + "'";
+
+        rowHTML += "<th>" + '<button type="button" onclick="add(' + parsedMovieId +
+            ')" class="btn btn-outline-primary stretched-link">Add to Shopping Cart</button>' + "</th>";
+
 
         // rowHTML += "<th>" + resultData[i]["movie_genres_one"] + ", " + resultData[i]["movie_genres_two"] + ", " + resultData[i]["movie_genres_three"] + ", " + "</th>";
         // rowHTML += "<th>" + resultData[i]["movie_stars_one"] + ", " + resultData[i]["movie_stars_two"] + ", " + resultData[i]["movie_stars_three"] + ", " + "</th>";
@@ -92,6 +97,31 @@ function getParameterByName(target) {
 
     // Return the decoded parameter value
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function add(movieId){
+    console.log("function add() is called");
+    $.ajax(
+        "api/addToCart", {
+            method: "get",
+            // Serialize the login form to the data sent by POST request
+            data: {"id":movieId},
+            success: displayMessage
+        }
+    );
+}
+
+function displayMessage(){
+    console.log("success");
+    let message = jQuery("#addToCartMessage");
+    if(message.css("display")=="none"){
+        console.log("hidden");
+        message.fadeIn();
+    }else{
+        console.log("visible");
+        message.fadeOut();
+        message.fadeIn();
+    }
 }
 
 var start = getParameterByName('start');
