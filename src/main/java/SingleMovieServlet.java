@@ -58,11 +58,11 @@ public class SingleMovieServlet extends HttpServlet{
             }
 
             //genres and stars
-            String genre_query = "select genres.name from genres, genres_in_movies where genres_in_movies.movieId=? and genres_in_movies.genreId=genres.id";
+            String genre_query = "select genres.name from genres, genres_in_movies where genres_in_movies.movieId=? and genres_in_movies.genreId=genres.id order by genres.name asc";
             PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);
             genre_statement.setString(1,id);
             ResultSet rs_genre = genre_statement.executeQuery();
-            ArrayList<String> genres = new ArrayList<String>();
+            ArrayList<String> genres = new ArrayList<>();
 
             while (rs_genre.next()){
                 genres.add(rs_genre.getString("name"));
@@ -70,13 +70,13 @@ public class SingleMovieServlet extends HttpServlet{
 
             String star_query = "select stars.name, stars.id from stars, stars_in_movies " +
             "where stars_in_movies.movieId = ? and stars.id = stars_in_movies.starId " +
-            "order by (select count(stars_in_movies.movieId) from stars_in_movies where stars_in_movies.starId=stars.id) desc";
+            "order by (select count(stars_in_movies.movieId) from stars_in_movies where stars_in_movies.starId=stars.id) desc, stars.name asc";
 
             PreparedStatement star_statement = dbcon.prepareStatement(star_query);
             star_statement.setString(1,id);
             ResultSet rs_star = star_statement.executeQuery();
-            ArrayList<String> stars_id = new ArrayList<String>();
-            ArrayList<String> stars_name = new ArrayList<String>();
+            ArrayList<String> stars_id = new ArrayList<>();
+            ArrayList<String> stars_name = new ArrayList<>();
 
             while (rs_star.next()){
                 stars_id.add(rs_star.getString("id"));

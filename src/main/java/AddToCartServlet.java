@@ -27,6 +27,7 @@ public class AddToCartServlet extends HttpServlet{
         HttpSession session=request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");
         String id = request.getParameter("id");
+        System.out.println(id);
         cart.add(id);
         response.setStatus(200);
 
