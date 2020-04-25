@@ -1,6 +1,7 @@
 package main.java;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Cart {
@@ -9,6 +10,9 @@ public class Cart {
     public Cart(String username){
         cart = new HashMap<String, Integer>();
         this.username = username;
+    }
+    public Iterator getIterator(){
+        return cart.entrySet().iterator();
     }
     public int getCount(String movieId){
         if(cart.containsKey(movieId))

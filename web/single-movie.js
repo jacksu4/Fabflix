@@ -17,7 +17,14 @@ function getParameterByName(target) {
 function displayMessage(){
     console.log("successfully added to cart");
     let message = jQuery("#addToCartMessage");
-    message.append('<span>Successfully Added To Shopping Cart!</span>');
+    if(message.css("display")=="none"){
+        console.log("hidden")
+        message.fadeIn();
+    }else{
+        console.log("visible")
+        message.fadeOut();
+        message.fadeIn();
+    }
 }
 
 function add(){
@@ -31,6 +38,10 @@ function add(){
             success: displayMessage
         }
     );
+}
+
+function back(){
+    window.history.back();
 }
 
 function handleResult(resultData){
@@ -62,6 +73,9 @@ function handleResult(resultData){
         movieStarsElement.append('<a class="badge badge-info font-weight-light" href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
             '</a>');
     }
+
+    let backToMovieList = jQuery("#backToMovieList");
+
 }
 let movieId = getParameterByName('id');
 console.log(movieId);
