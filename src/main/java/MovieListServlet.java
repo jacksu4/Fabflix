@@ -1,13 +1,13 @@
 package main.java;
 
 import javax.annotation.Resource;
-import javax.servlet.ServletException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
-import javax.xml.transform.Result;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -17,7 +17,7 @@ import java.util.Enumeration;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.sun.org.glassfish.external.statistics.annotations.Reset;
+
 
 
 @WebServlet(name = "MovieListServlet", urlPatterns = "/api/movielist")
