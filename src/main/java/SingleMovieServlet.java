@@ -68,7 +68,7 @@ public class SingleMovieServlet extends HttpServlet{
                 genres.add(rs_genre.getString("name"));
             }
 
-            String star_query = "select stars.name, stars.id from stars, stars_in_movies use index(idx_stars_in_movies)" +
+            String star_query = "select stars.name, stars.id from stars, stars_in_movies " +
             "where stars_in_movies.movieId = ? and stars.id = stars_in_movies.starId " +
             "order by (select count(stars_in_movies.movieId) from stars_in_movies where stars_in_movies.starId=stars.id) desc, stars.name asc";
 
