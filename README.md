@@ -24,7 +24,7 @@ We use the same way to deploy as instructed:
 
   7. To run the example, follow the instructions in [canvas](https://canvas.eee.uci.edu/courses/26486/pages/intellij-idea-tomcat-configuration)
 
-substring matching design: support substring, e.g. %love, %eat% on __director, title and star_name__
+substring matching design: support substring, e.g. %love, %eat% on __director, title and star name__
 
 #### Members' Contribution
 
