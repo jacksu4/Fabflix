@@ -18,7 +18,12 @@ function handleMovieListResult(resultData) {
         rowHTML += "<th>" + resultData[i]["movie_rating"] + "</th>";
         rowHTML += "<th>";
         for (let y = 0; y<resultData[i]["movie_genres"].length; y++){
-            rowHTML += '<span class="badge badge-secondary font-weight-light">'+resultData[i]["movie_genres"][y] + "</span> ";
+
+            let result = "'" + "index.html?genre=" +
+                resultData[i]["movie_genres"][y] +
+                "&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0" + "'";
+
+            rowHTML += '<a class="badge badge-secondary font-weight-light" href=' + result + '>'+resultData[i]["movie_genres"][y] + "</a> ";
         }
         rowHTML += "</th>";
 

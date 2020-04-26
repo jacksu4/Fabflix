@@ -18,10 +18,10 @@ function handleTitleGenreBrwose(resultData){
         titleList.append(rowNum);
     }
 
-    for (let i = 0; i < 4; i++){ //populating alphabetList
+    for (let i = 0; i < 2; i++){ //populating alphabetList
         let rowAlpha = "";
         rowAlpha += "<li>";
-        for (let y = 0; y < 6; y++){
+        for (let y = 0; y < 13; y++){
             let curElement = alphabetList.shift();
             rowAlpha += "<a href='index.html?start=" +
                 curElement + "&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0'>" + curElement + "</a> ";
