@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.sql.*;
 import java.lang.reflect.Field;
 
-@WebServlet(name = "LoginServlet", urlPatterns = "/api/login")
+@WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     @Resource(name = "jdbc/moviedb")
     private DataSource dataSource;
