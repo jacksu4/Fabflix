@@ -2,7 +2,9 @@
 
 #### Web Demo URL
 
-https://www.youtube.com/watch?v=uHtuv8x6Uwg&feature=youtu.be
+project1: https://www.youtube.com/watch?v=uHtuv8x6Uwg&feature=youtu.be
+
+project2: https://youtu.be/pOBZ5WpE-HE
 
 
 #### Project Deployment Instruction
