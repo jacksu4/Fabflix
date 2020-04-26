@@ -29,7 +29,7 @@ public class ShoppingCartServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");
-        System.out.println(request.getParameter("movie_id"));
+
         if(!(request.getParameter("movie_id")==null)){
             System.out.println("modify item in cart");
             String id = request.getParameter("movie_id");
@@ -47,7 +47,6 @@ public class ShoppingCartServlet extends HttpServlet{
             }
             session.setAttribute("cart", cart);
         }
-        System.out.println("after modifying");
 
         try {
             // Get a connection from dataSource

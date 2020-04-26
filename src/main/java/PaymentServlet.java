@@ -70,6 +70,10 @@ public class PaymentServlet extends HttpServlet{
             }
 
             response.getWriter().write(responseJsonObject.toString());
+            response.setStatus(200);
+            rs.close();
+            statement.close();
+            dbcon.close();
 
         } catch (Exception e) {
             JsonObject jsonObject = new JsonObject();
