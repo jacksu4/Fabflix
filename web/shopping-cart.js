@@ -27,10 +27,10 @@ function handleResult(resultData){
         html += "<th>"+resultData[i]["movie_price"]+"</th>";
 
         html += "<th>"+'<a href="shopping-cart.html?movie_id='+resultData[i]["movie_id"]+'&change=decrease">'
-            +'<span class="oi oi-caret-left" aria-hidden="true"></span></a>'
+            +'<</a>'
             +'&nbsp&nbsp&nbsp'+resultData[i]["quantity"]+'&nbsp&nbsp&nbsp'
             +'<a href="shopping-cart.html?movie_id='+resultData[i]["movie_id"]+'&change=increase">'
-            +'<span class="oi oi-caret-right" aria-hidden="true"></span></a>'+"</th>";
+            +'></a>'+"</th>";
 
         html += "<th>"+'<a class="btn btn-outline-danger stretched-link" href="shopping-cart.html?movie_id='
             +resultData[i]["movie_id"]+'&change=delete">'+"Delete Item</a></th>"
