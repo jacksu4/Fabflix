@@ -4,7 +4,7 @@
 
 project1: https://www.youtube.com/watch?v=uHtuv8x6Uwg&feature=youtu.be
 
-project2: https://youtu.be/pOBZ5WpE-HE
+project2: https://www.youtube.com/watch?v=3mwuI-ZDAhk
 
 
 #### Project Deployment Instruction
