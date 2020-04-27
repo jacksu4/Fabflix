@@ -234,11 +234,11 @@ $("#submit_sort").bind( "click", function(){
         console.log("enter nonsearch");
         window.location.href = "index.html?start=" + start + "&genre=" + genre
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
-            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page;
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
     }else{
         window.location.href = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
-            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page;
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
     }
 });
 
