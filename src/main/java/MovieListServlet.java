@@ -150,8 +150,8 @@ public class MovieListServlet extends HttpServlet{
             }else if (!request.getParameter("genre").equals("null") && !request.getParameter("genre").isEmpty()){
                 System.out.println("enter genre");
                 String genre = request.getParameter("genre");
-                String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select movies.id, movies.title, movies.year, movies.director FROM movies, genres use index(idx_genreId), genres_in_movies \n" +
-                        "where genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id) as T1 left join ratings use index(idx_mov_rating) on T1.id = ratings.movieId \n" +
+                String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select movies.id, movies.title, movies.year, movies.director FROM movies, genres, genres_in_movies \n" +
+                        "where genres.name = ? and genres.id = genres_in_movies.genreId and genres_in_movies.movieId = movies.id) as T1 left join ratings on T1.id = ratings.movieId \n" +
                         "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                 statement = dbcon.prepareStatement(query);
@@ -194,7 +194,7 @@ public class MovieListServlet extends HttpServlet{
                     movie_rating = "N/A";
                 }
 
-                String genre_query = "select genres.name as genres_name from genres, genres_in_movies use index (idx_genres_in_movies) " +//add first 3 genre
+                String genre_query = "select genres.name as genres_name from genres, genres_in_movies " +//add first 3 genre
                         "where genres_in_movies.movieId = ? and genres.id = genres_in_movies.genreId ORDER BY genres_name limit 3";
 
                 PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);

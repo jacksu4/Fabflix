@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>groupId</groupId>
-    <artifactId>cs122b-proj1</artifactId>
+    <artifactId>cs122b-proj2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <dependencies>
@@ -33,7 +33,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>cs122b-proj1</finalName>
+        <finalName>cs122b-proj2</finalName>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
