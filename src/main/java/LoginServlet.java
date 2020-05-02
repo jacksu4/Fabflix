@@ -14,6 +14,8 @@ import java.io.StringWriter;
 import java.sql.*;
 import java.lang.reflect.Field;
 
+import org.jasypt.util.password.StrongPasswordEncryptor;
+
 @WebServlet(name = "LoginServlet", urlPatterns = "/api/login")
 public class LoginServlet extends HttpServlet {
     @Resource(name = "jdbc/moviedb")
@@ -55,7 +57,9 @@ public class LoginServlet extends HttpServlet {
                     responseJsonObject.addProperty("status", "fail");
                     responseJsonObject.addProperty("message", "user " + username + " doesn't exist");
                 } else {
-                    if (!rs.getString("Password").equals(password)) {
+                    String encryptedPassword = rs.getString("password");
+                    boolean success = new StrongPasswordEncryptor().checkPassword(password, encryptedPassword);
+                    if (!success) {
 
                         responseJsonObject.addProperty("status", "fail");
                         responseJsonObject.addProperty("message", "incorrect password");
