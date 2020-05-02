@@ -23,6 +23,7 @@ public class BrowseServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
+
         try {
             // Get a connection from dataSource
             Connection dbcon = dataSource.getConnection();

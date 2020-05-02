@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.sql.*;
 import java.lang.reflect.Field;
 
@@ -25,10 +26,11 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        /* This example only allows username/password to be test/test
-        /  in the real project, you should talk to the database to verify username/password
-        */
         PrintWriter out = response.getWriter();
+
+        String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
+//        System.out.println("gRecaptchaResponse=" + gRecaptchaResponse);
+
         try {
             // Get a connection from dataSource
             Connection dbcon = dataSource.getConnection();
@@ -46,21 +48,28 @@ public class LoginServlet extends HttpServlet {
 
             JsonObject responseJsonObject = new JsonObject();
 
-            if (!rs.next()) {
-                responseJsonObject.addProperty("status", "fail");
-                responseJsonObject.addProperty("message", "user " + username + " doesn't exist");
-            } else {
-                if (!rs.getString("Password").equals(password)) {
+            try{
+                RecaptchaVerifyUtils.verify(gRecaptchaResponse);
 
+                if (!rs.next()) {
                     responseJsonObject.addProperty("status", "fail");
-                    responseJsonObject.addProperty("message", "incorrect password");
+                    responseJsonObject.addProperty("message", "user " + username + " doesn't exist");
                 } else {
-                    request.getSession().setAttribute("user", new User(username));
-                    request.getSession().setAttribute("cart", new Cart(username));
+                    if (!rs.getString("Password").equals(password)) {
 
-                    responseJsonObject.addProperty("status", "success");
-                    responseJsonObject.addProperty("message", "success");
+                        responseJsonObject.addProperty("status", "fail");
+                        responseJsonObject.addProperty("message", "incorrect password");
+                    } else {
+                        request.getSession().setAttribute("user", new User(username));
+                        request.getSession().setAttribute("cart", new Cart(username));
+
+                        responseJsonObject.addProperty("status", "success");
+                        responseJsonObject.addProperty("message", "success");
+                    }
                 }
+            }catch (Exception e){
+                responseJsonObject.addProperty("status", "fail");
+                responseJsonObject.addProperty("message", "recaptcha failed");
             }
 
             response.getWriter().write(responseJsonObject.toString());
