@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees Dashboard</title>
+</head>
+<body>
+    <h1>DashBoard</h1>
+    <h3>Metadata for moviedb</h3>
+    <ul id="metadata">
+    </ul>
+    <br>
+    <h3>Add star</h3>
+    <form id="add_star" method="post" action="#">
+        <label><b>Star Name</b></label>
+        <label>
+            <input name="starname" placeholder="enter star name" type="text" required>
+        </label>
+        <br>
+        <label><b>Star Birth Year</b></label>
+        <label>
+            <input name="starbirthyear" placeholder="Enter star birth year(optional)" type="number">
+        </label>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <div id="star_message"></div>
+
+    <br>
+    <h3>Add movie</h3>
+    <form id="add_movie" method="post" action="#">
+        <label><b>Movie Title</b></label>
+        <label>
+            <input name="movietitle" placeholder="enter movie title" type="text" required>
+        </label>
+        <br>
+        <label><b>Movie Year</b></label>
+        <label>
+            <input name="movieyear" placeholder="Enter movie year" type="number" required>
+        </label>
+        <br>
+        <label><b>Movie Director</b></label>
+        <label>
+            <input name="moviedirector" placeholder="Enter movie director" required>
+        </label>
+        <br>
+        <label><b>Star Name</b></label>
+        <label>
+            <input name="starname" placeholder="Enter Star Name" required>
+        </label>
+        <br>
+        <label><b>Genre Name</b></label>
+        <label>
+            <input name="genrename" placeholder="Enter genre name" required>
+        </label>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <div id="movie_message"></div>
+    <!-- include jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- include our own JS file -->
+    <script src="./_dashboard.js"></script>
+</body>
+</html>

@@ -21,7 +21,7 @@ public class LoginFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
-//        System.out.println("LoginFilter: " + httpRequest.getRequestURI());
+        System.out.println("LoginFilter: " + httpRequest.getRequestURI());
 
         // Check if this URL is allowed to access without logging in
         if (this.isUrlAllowedWithoutLogin(httpRequest.getRequestURI())) {
@@ -30,12 +30,22 @@ public class LoginFilter implements Filter {
             return;
         }
 
-        // Redirect to login page if the "user" attribute doesn't exist in session
+        if(httpRequest.getRequestURI().substring(httpRequest.getRequestURI().length()-15).equals("_dashboard.html")){
+            if(httpRequest.getSession().getAttribute("employee") == null){
+                httpResponse.sendRedirect("login_employees.html");
+            }else{
+                chain.doFilter(request, response);
+            }
+        }else{
         if (httpRequest.getSession().getAttribute("user") == null) {
             httpResponse.sendRedirect("login.html");
+
         } else {
+
             chain.doFilter(request, response);
         }
+        }
+
     }
 
     private boolean isUrlAllowedWithoutLogin(String requestURI) {
@@ -51,6 +61,9 @@ public class LoginFilter implements Filter {
         allowedURIs.add("login.html");
         allowedURIs.add("login.js");
         allowedURIs.add("api/login");
+        allowedURIs.add("login_employees.html");
+        allowedURIs.add("login_employees.js");
+        allowedURIs.add("api/login_employee");
     }
 
     public void destroy() {

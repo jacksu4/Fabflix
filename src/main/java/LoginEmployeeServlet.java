@@ -16,8 +16,8 @@ import java.lang.reflect.Field;
 
 import org.jasypt.util.password.StrongPasswordEncryptor;
 
-@WebServlet(name = "LoginServlet", urlPatterns = "/api/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "LoginEmployeeServlet", urlPatterns = "/api/login_employee")
+public class LoginEmployeeServlet extends HttpServlet {
     @Resource(name = "jdbc/moviedb")
     private DataSource dataSource;
     /**
@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
-        System.out.println("gRecaptchaResponse=" + gRecaptchaResponse);
+//        System.out.println("gRecaptchaResponse=" + gRecaptchaResponse);
 
         try {
             // Get a connection from dataSource
@@ -39,8 +39,8 @@ public class LoginServlet extends HttpServlet {
 
             // Declare our statement
 
-            String query = "select customers.email as Username, customers.password as Password from customers \n" +
-                    "where customers.email = ?";
+            String query = "select employees.email as Username, employees.password as Password from employees \n" +
+                    "where employees.email = ?";
 
             PreparedStatement statement = dbcon.prepareStatement(query);
 
@@ -65,6 +65,7 @@ public class LoginServlet extends HttpServlet {
                         responseJsonObject.addProperty("message", "incorrect password");
                     } else {
                         request.getSession().setAttribute("user", new User(username));
+                        request.getSession().setAttribute("employee", "yes");
                         request.getSession().setAttribute("cart", new Cart(username));
 
                         responseJsonObject.addProperty("status", "success");
@@ -88,4 +89,3 @@ public class LoginServlet extends HttpServlet {
         }
     }
 }
-
