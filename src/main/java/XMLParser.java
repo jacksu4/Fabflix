@@ -156,7 +156,7 @@ public class XMLParser {
                 if(!id.equals("null") && !title.equals("null") && year!=-1 && !director.equals("null")){
                     //check for duplicate movies
                     try{
-                        String query = "select id, title, year, director from movies_temp where movies_temp.title = ?";
+                        String query = "select id, title, year, director from movies where movies.title = ?";
                         PreparedStatement statement = dbcon.prepareStatement(query);
                         statement.setString(1,title);
                         ResultSet rs = statement.executeQuery();
@@ -166,7 +166,7 @@ public class XMLParser {
                             try{
                                 if(!movieSet.contains(id)){
                                     movieSet.add(id);
-                                    String insert_query = "insert into movies_temp (id, title, year, director) values (?,?,?,?)";
+                                    String insert_query = "insert into movies (id, title, year, director) values (?,?,?,?)";
                                     PreparedStatement insert_statement = dbcon.prepareStatement(insert_query);
                                     insert_statement.setString(1, id);
                                     insert_statement.setString(2,title);
@@ -192,18 +192,18 @@ public class XMLParser {
                                             if(catMap.containsKey(genre)){
                                                 genre = catMap.get(genre);
                                                 //Add new genre if not exist in database
-                                                String genre_query = "select * from genres_temp where genres_temp.name = ?";
+                                                String genre_query = "select * from genres where genres.name = ?";
                                                 PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);
                                                 genre_statement.setString(1,genre);
                                                 ResultSet genre_rs = genre_statement.executeQuery();
                                                 if(!genre_rs.next()){
-                                                    String genre_insert = "insert into genres_temp (name) values (?)";
+                                                    String genre_insert = "insert into genres (name) values (?)";
                                                     PreparedStatement genreIS = dbcon.prepareStatement(genre_insert);
                                                     genreIS.setString(1,genre);
                                                     genreIS.executeUpdate();
                                                     genreIS.close();
                                                 }
-                                                String genre_insert = "insert into genres_in_movies_temp (genreId, movieId) values ((select id from genres_temp where genres_temp.name = ?),?)";
+                                                String genre_insert = "insert into genres_in_movies (genreId, movieId) values ((select id from genres where genres.name = ?),?)";
                                                 PreparedStatement genreIS = dbcon.prepareStatement(genre_insert);
                                                 genreIS.setString(1,genre);
                                                 genreIS.setString(2,id);
@@ -265,7 +265,7 @@ public class XMLParser {
                 Element el = (Element) nl.item(i);
 
                 //get id from database
-                String id_query = "select max(id) from stars_temp";
+                String id_query = "select max(id) from stars";
                 PreparedStatement id_qs = dbcon.prepareStatement(id_query);
                 ResultSet id_rs = id_qs.executeQuery();
                 id_rs.next();
@@ -297,7 +297,7 @@ public class XMLParser {
                 //insert data into stars table
                 //check for duplicate data
                 //System.out.println("id: "+id+" name: "+name+" birthYear: "+birthYear);
-                String star_query = "select * from stars_temp where stars_temp.name = ?";
+                String star_query = "select * from stars where stars.name = ?";
                 PreparedStatement star_qs = dbcon.prepareStatement(star_query);
                 star_qs.setString(1,name);
                 ResultSet star_rs = star_qs.executeQuery();
@@ -305,7 +305,7 @@ public class XMLParser {
                     if(!name.equals("null")){
                         if(!starMap.containsKey(name)){
                             starMap.put(name,id);
-                            String star_insert = "insert into stars_temp (id,name,birthYear) values (?,?,?)";
+                            String star_insert = "insert into stars (id,name,birthYear) values (?,?,?)";
                             PreparedStatement star_is = dbcon.prepareStatement(star_insert);
                             star_is.setString(1,id);
                             star_is.setString(2,name);
@@ -376,7 +376,7 @@ public class XMLParser {
 
                 if(!movieId.equals("null")){
                     /*
-                    String movie_query = "select * from movies_temp where movies_temp.id = ?";
+                    String movie_query = "select * from movies where movies.id = ?";
                     PreparedStatement movie_qs = dbcon.prepareStatement(movie_query);
                     movie_qs.setString(1,movieId);
                     ResultSet movie_rs = movie_qs.executeQuery();
@@ -403,7 +403,7 @@ public class XMLParser {
 
                 if(!starName.equals("null") && !starName.equals("sa")){
                     /*
-                    String star_query = "select id from stars_temp where stars_temp.name = ?";
+                    String star_query = "select id from stars where stars.name = ?";
                     PreparedStatement star_qs = dbcon.prepareStatement(star_query);
                     star_qs.setString(1,starName);
                     ResultSet star_rs = star_qs.executeQuery();
@@ -419,7 +419,7 @@ public class XMLParser {
                     }
                     if(!starId.equals("null") && !movieId.equals("null")){
                         /*
-                        String star_insert = "insert into stars_in_movies_temp (starId, movieId) values (?,?)";
+                        String star_insert = "insert into stars_in_movies (starId, movieId) values (?,?)";
                         PreparedStatement star_is = dbcon.prepareStatement(star_insert);
                         star_is.setString(1,starId);
                         star_is.setString(2,movieId);
@@ -437,7 +437,7 @@ public class XMLParser {
             }
         myWriter.close();
         dataWriter.close();
-        String loadData = "load data local infile 'stars_in_movies_data.txt' into table stars_in_movies_temp";
+        String loadData = "load data local infile 'stars_in_movies_data.txt' into table stars_in_movies";
         PreparedStatement loadData_is = dbcon.prepareStatement(loadData);
         loadData_is.executeUpdate();
         loadData_is.close();
