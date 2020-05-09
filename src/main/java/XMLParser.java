@@ -13,6 +13,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class XMLParser {
     Connection dbcon;
     Document dom;
@@ -41,11 +44,22 @@ public class XMLParser {
 
     private void run(){
         try{
+            long startTime = System.nanoTime();
             connectToDatabase();
             System.out.println("Successfully connected to database");
             parseMainsFile();
             parseMovies();
+            System.out.println("End of Parsing Movies");
+            parseActorsFile();
+            parseStars();
+            System.out.println("End of Parsing Stars");
+            parseCastsFile();
+            parseStarsInMovies();
+            System.out.println("End of Parsing StarsInMovies");
             dbcon.close();
+            long endTime = System.nanoTime();
+            long duration = (endTime - startTime);
+            System.out.println(duration/1000000);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -88,7 +102,8 @@ public class XMLParser {
         }
     }
 
-    private void parseMovies() throws SQLException {
+    private void parseMovies() throws SQLException, IOException {
+        FileWriter myWriter = new FileWriter("mains_xml_inconsistency.txt");
         System.out.println("parsing movies");
         Element docEle = dom.getDocumentElement();
         NodeList nl = docEle.getElementsByTagName("film");
@@ -120,7 +135,10 @@ public class XMLParser {
                 }catch(NumberFormatException e){
                     //System.out.println("invalid year");
                     year = -1;
+                }catch(NullPointerException e){
+                    year = -1;
                 }
+
                 try{
                     director = getTextValue(el,"dirn");
                     if(director.trim().length()==0)
@@ -141,7 +159,7 @@ public class XMLParser {
                         statement.setString(1,title);
                         ResultSet rs = statement.executeQuery();
                         if(rs.next() && title == rs.getString("title") && year == rs.getInt("year") && director == rs.getString("director")){
-                            System.out.println("Skip duplicate movie record id: "+id+" title: "+title+" year: "+year+" director: "+director);
+                            myWriter.write("Skip duplicate movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
                         }else{
                             try{
                                 String insert_query = "insert into movies_temp (id, title, year, director) values (?,?,?,?)";
@@ -160,7 +178,13 @@ public class XMLParser {
                                 if(cl!=null && cl.getLength()>0){
                                     for(int j=0;j<cl.getLength();j++){
                                         Element ce = (Element) cl.item(j);
-                                        String genre = ce.getFirstChild().getNodeValue();
+                                        String genre;
+                                        try{
+                                            genre = ce.getFirstChild().getNodeValue();
+                                        }catch(NullPointerException e){
+                                            genre = "null";
+                                        }
+
                                         if(catMap.containsKey(genre)){
                                             genre = catMap.get(genre);
                                             //Add new genre if not exist in database
@@ -189,20 +213,21 @@ public class XMLParser {
 
 
                             }catch(SQLException e){
-                                System.out.println("SQLException catched for movie record id: "+id+" title: "+title+" year: "+year+" director: "+director);
-                                System.out.println(e.getMessage());
+                                myWriter.write("SQLException catched for movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
+                                myWriter.write(e.getMessage()+"\n");
                             }
                         }
                         rs.close();
                         statement.close();
                     }catch(SQLException e){
-                        System.out.println("SQLException catched");
-                        System.out.println(e.getMessage());
+                        myWriter.write("SQLException catched\n");
+                        myWriter.write(e.getMessage()+"\n");
                     }
                 }else{
-                    System.out.println("Skip Invalid movie record id: "+id+" title: "+title+" year: "+year+" director: "+director);
+                    myWriter.write("Skip Invalid movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
                 }
             }
+        myWriter.close();
         }
     }
 
@@ -227,6 +252,79 @@ public class XMLParser {
             ioe.printStackTrace();
         }
     }
+    private void parseStars() throws SQLException, IOException {
+        System.out.println("parsing stars");
+        FileWriter myWriter = new FileWriter("actors_xml_inconsistency.txt");
+        Element docEle = dom.getDocumentElement();
+        NodeList nl = docEle.getElementsByTagName("actor");
+        if(nl!=null && nl.getLength()>0){
+            for(int i=0; i<nl.getLength(); i++){
+                Element el = (Element) nl.item(i);
+
+                //get id from database
+                String id_query = "select max(id) from stars_temp";
+                PreparedStatement id_qs = dbcon.prepareStatement(id_query);
+                ResultSet id_rs = id_qs.executeQuery();
+                id_rs.next();
+                String id = "nm"+(Integer.parseInt(id_rs.getString("max(id)").substring(2))+1);
+                //System.out.println(id);
+                id_rs.close();
+                id_qs.close();
+
+                //get name from xml
+                String name;
+                try{
+                    name = getTextValue(el,"stagename");
+                    if(name.trim().length()==0)
+                        name = "null";
+                }catch(NullPointerException e){
+                    name = "null";
+                }
+
+                //get birthYear from xml
+                int birthYear;
+                try{
+                    birthYear = getIntValue(el, "dob");
+                }catch(NumberFormatException e){
+                    birthYear = -1;
+                }catch(NullPointerException e){
+                    birthYear = -1;
+                }
+
+                //insert data into stars table
+                //check for duplicate data
+                //System.out.println("id: "+id+" name: "+name+" birthYear: "+birthYear);
+                String star_query = "select * from stars_temp where stars_temp.name = ?";
+                PreparedStatement star_qs = dbcon.prepareStatement(star_query);
+                star_qs.setString(1,name);
+                ResultSet star_rs = star_qs.executeQuery();
+                if(!star_rs.next()){
+                    if(!name.equals("null")){
+                        String star_insert = "insert into stars_temp (id,name,birthYear) values (?,?,?)";
+                        PreparedStatement star_is = dbcon.prepareStatement(star_insert);
+                        star_is.setString(1,id);
+                        star_is.setString(2,name);
+                        if(birthYear!=-1){
+                            star_is.setInt(3,birthYear);
+                        }else{
+                            star_is.setNull(3,Types.INTEGER);
+                        }
+                        star_is.executeUpdate();
+                        star_is.close();
+                    }else{
+                        myWriter.write("Skip invalid star record id: "+id+" name: "+name+" birthYear: "+birthYear+"\n");
+                    }
+                }else{
+                    myWriter.write("Skip duplicate star record id: "+id+" name: "+name+" birthYear: "+birthYear+"\n");
+                }
+                star_rs.close();
+                star_qs.close();
+            }
+        myWriter.close();
+        }
+
+    }
+
     private void parseCastsFile(){
         //get the factory
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -245,6 +343,73 @@ public class XMLParser {
             se.printStackTrace();
         } catch (IOException ioe) {
             ioe.printStackTrace();
+        }
+    }
+
+    private void parseStarsInMovies() throws SQLException, IOException {
+        System.out.println("parsing stars in movies");
+        FileWriter myWriter = new FileWriter("casts_xml_inconsistency.txt");
+        Element docEle = dom.getDocumentElement();
+        NodeList nl = docEle.getElementsByTagName("m");
+        if(nl!=null && nl.getLength()>0){
+            for(int i=0; i<nl.getLength(); i++){
+                Element el = (Element) nl.item(i);
+
+                //get fid from xml and check if fid in db
+                String movieId;
+                try{
+                    movieId = getTextValue(el,"f");
+                    if(movieId.trim().length()==0)
+                        movieId = "null";
+                }catch(NullPointerException e){
+                    movieId = "null";
+                }
+
+                if(!movieId.equals("null")){
+                    String movie_query = "select * from movies_temp where movies_temp.id = ?";
+                    PreparedStatement movie_qs = dbcon.prepareStatement(movie_query);
+                    movie_qs.setString(1,movieId);
+                    ResultSet movie_rs = movie_qs.executeQuery();
+                    if(!movie_rs.next()){
+                        movieId = "null";
+                    }
+                    movie_rs.close();
+                    movie_qs.close();
+                }
+
+                //get star name from xml and find starId from db
+                String starName;
+                try{
+                    starName = getTextValue(el,"a");
+                    if(starName.trim().length()==0)
+                        starName = "null";
+                }catch(NullPointerException e){
+                    starName = "null";
+                }
+
+                if(!starName.equals("null") && !starName.equals("sa")){
+                    String star_query = "select id from stars_temp where stars_temp.name = ?";
+                    PreparedStatement star_qs = dbcon.prepareStatement(star_query);
+                    star_qs.setString(1,starName);
+                    ResultSet star_rs = star_qs.executeQuery();
+                    String starId = "null";
+                    if(star_rs.next()){
+                        starId = star_rs.getString("id");
+                    }
+                    if(!starId.equals("null") && !movieId.equals("null")){
+                        String star_insert = "insert into stars_in_movies_temp (starId, movieId) values (?,?)";
+                        PreparedStatement star_is = dbcon.prepareStatement(star_insert);
+                        star_is.setString(1,starId);
+                        star_is.setString(2,movieId);
+                        star_is.executeUpdate();
+                        star_is.close();
+                    }else{
+                        myWriter.write("invalid stars_in_movies record starId: "+starId+" movieId: "+movieId+"\n");
+                    }
+
+                }
+            }
+        myWriter.close();
         }
     }
 

@@ -1,0 +1,156 @@
+Skip Invalid movie record id: MSe10 title: Dough and Dynamite year: 1914 director: null
+Skip Invalid movie record id: MSe15 title: Fatty and Mabel at the San Diego Exposition year: 1915 director: null
+Skip Invalid movie record id: MSe18 title: Fatty and Mabel's Simple Life year: 1915 director: null
+SQLException catched for movie record id: CC80 title: Limelight year: 1952 director: Chaplin
+Duplicate entry 'CC80' for key 'PRIMARY'
+Skip Invalid movie record id: CGl44 title: Mesalina year: 1924 director: null
+SQLException catched for movie record id: ECn107 title: Captain January year: 1924 director: Cline
+Duplicate entry 'ECn107' for key 'PRIMARY'
+SQLException catched for movie record id: JuD11 title: La Fin de Jour year: 1939 director: Duvivier
+Duplicate entry 'JuD11' for key 'PRIMARY'
+SQLException catched for movie record id: FB21 title: Liliom year: 1930 director: Borzage
+Duplicate entry 'FB21' for key 'PRIMARY'
+SQLException catched for movie record id: GCt30 title: The Rat year: 1927 director: Cutts
+Duplicate entry 'GCt30' for key 'PRIMARY'
+SQLException catched for movie record id: FNm10 title: Doctor Jack year: 1922 director: Newmeyer
+Duplicate entry 'FNm10' for key 'PRIMARY'
+SQLException catched for movie record id: RC5 title: Two Timid Souls year: 1928 director: Clair
+Duplicate entry 'RC5' for key 'PRIMARY'
+SQLException catched for movie record id: MLR6 title: Five Star Final year: 1932 director: M.LeRoy
+Duplicate entry 'MLR6' for key 'PRIMARY'
+Skip Invalid movie record id: LB9 title: El grand cavalcodos year: -1 director: Bunuel
+SQLException catched for movie record id: RdR38 title: Upperworld year: 1934 director: delRuth
+Duplicate entry 'RdR38' for key 'PRIMARY'
+Skip Invalid movie record id: null title: Becky Sharp year: 1935 director: Mamoulian
+Skip Invalid movie record id: null title: Rings on her Fingers year: 1942 director: Mamoulian
+Skip Invalid movie record id: null title: Summer Holiday year: 1948 director: Mamoulian
+Skip Invalid movie record id: null title: Silk Stockings year: 1957 director: Mamoulian
+Skip Invalid movie record id: null title: Menschen am Sonntag year: 1929 director: R.Siodmak
+Skip Invalid movie record id: null title: Pi\`eges year: 1939 director: R.Siodmak
+Skip Invalid movie record id: null title: Son of Dracula year: 1943 director: R.Siodmak
+Skip Invalid movie record id: null title: Cobra Woman year: 1944 director: R.Siodmak
+Skip Invalid movie record id: null title: Phantom Lady year: 1944 director: R.Siodmak
+Skip Invalid movie record id: null title: The Spiral Staircase year: 1945 director: R.Siodmak
+Skip Invalid movie record id: null title: Nocturne year: 1946 director: R.Siodmak
+Skip Invalid movie record id: null title: The Killers year: 1946 director: R.Siodmak
+Skip Invalid movie record id: null title: The Dark Mirror year: 1946 director: R.Siodmak
+Skip Invalid movie record id: null title: Criss Cross year: 1948 director: R.Siodmak
+Skip Invalid movie record id: null title: The Spiral Staircase year: 1948 director: R.Siodmak
+Skip Invalid movie record id: null title: The Crimson Pirate year: 1952 director: R.Siodmak
+SQLException catched for movie record id: IAg10 title: Send For Paul Temple year: 1931 director: Argyle
+Duplicate entry 'IAg10' for key 'PRIMARY'
+Skip Invalid movie record id: HBH10 title: null year: 1936 director: Humberstone
+SQLException catched for movie record id: OP13 title: Forever Amber year: 1947 director: Preminger
+Duplicate entry 'OP13' for key 'PRIMARY'
+SQLException catched for movie record id: GSt3 title: The Nitwits year: 1935 director: G.Stevens~sr.
+Duplicate entry 'GSt3' for key 'PRIMARY'
+SQLException catched for movie record id: ChC5 title: Against the Wind year: 1947 director: Ch.Crichton
+Duplicate entry 'ChC5' for key 'PRIMARY'
+SQLException catched for movie record id: ChC12 title: Law and Disorder year: 1958 director: Ch.Crichton
+Duplicate entry 'ChC12' for key 'PRIMARY'
+SQLException catched for movie record id: ChC15 title: Wild Duck year: 1967 director: Ch.Crichton
+Duplicate entry 'ChC15' for key 'PRIMARY'
+SQLException catched for movie record id: PaJ2 title: Ferry Pilot year: 1941 director: P.Jackson
+Duplicate entry 'PaJ2' for key 'PRIMARY'
+SQLException catched for movie record id: FZ8 title: The Men year: 1950 director: Zinneman
+Duplicate entry 'FZ8' for key 'PRIMARY'
+Skip Invalid movie record id: JD7 title: null year: 1947 director: Dassin
+SQLException catched for movie record id: MRs21 title: Peyton Place year: 1958 director: Robson
+Duplicate entry 'MRs21' for key 'PRIMARY'
+SQLException catched for movie record id: LAl4 title: Those Endearing Young Charms year: 1946 director: L.Allan
+Duplicate entry 'LAl4' for key 'PRIMARY'
+SQLException catched for movie record id: CoB1 title: The Seventh Veil year: 1945 director: Bennett
+Duplicate entry 'CoB1' for key 'PRIMARY'
+Skip Invalid movie record id: WS45 title: Catherine of Russia year: -1 director: W.Staudte
+SQLException catched for movie record id: NR1 title: They Live By Night year: 1947 director: N.Ray
+Duplicate entry 'NR1' for key 'PRIMARY'
+Skip Invalid movie record id: WlJ10 title: null year: 1949 director: W.Jackson
+SQLException catched for movie record id: HyC10 title: Last Holiday year: 1950 director: Cass
+Duplicate entry 'HyC10' for key 'PRIMARY'
+SQLException catched for movie record id: JLT50 title: Allan Quatermain and the Lost City of Gold year: 1986 director: LeeThompson
+Duplicate entry 'JLT50' for key 'PRIMARY'
+SQLException catched for movie record id: JIv42 title: The Remains of the Day year: 1993 director: Ivory
+Duplicate entry 'JIv42' for key 'PRIMARY'
+SQLException catched for movie record id: SR45 title: The Adversary year: 1971 director: S.Ray
+Duplicate entry 'SR45' for key 'PRIMARY'
+Skip Invalid movie record id: AS22 title: Morgan Stewart's Coming Home year: -1 director: Alan~Smithee
+Skip Invalid movie record id: AS32 title: Raging Angels year: -1 director: Alan~Smithee
+SQLException catched for movie record id: GeP15 title: Murder Most Foul year: 1964 director: Pollock
+Duplicate entry 'GeP15' for key 'PRIMARY'
+Skip Invalid movie record id: GeP45 title: null year: 1999 director: Pollock
+SQLException catched for movie record id: FileWriter myWriter = new FileWriter("movie_data_inconsistency.txt"); title: Mamie year: 1966 director: Hiller
+Data truncation: Data too long for column 'id' at row 1
+SQLException catched for movie record id: MBo12 title: The Legend of Aneus year: 1962 director: Bonnard
+Duplicate entry 'MBo12' for key 'PRIMARY'
+Skip Invalid movie record id: GxR10 title: null year: 1954 director: G.Reinhardt
+Skip Invalid movie record id: GxR10 title: null year: 1954 director: G.Reinhardt
+SQLException catched for movie record id: JaS13 title: The Dark Pool year: 1963 director: Smight
+Duplicate entry 'JaS13' for key 'PRIMARY'
+Skip Invalid movie record id: RHd2 title: Stop Train 349 year: -1 director: Haedrich 
+SQLException catched for movie record id: KRu25 title: Rainbow year: 1989 director: K.Russell
+Duplicate entry 'KRu25' for key 'PRIMARY'
+SQLException catched for movie record id: MAp43 title: Moving the Mountain year: 1994 director: Apted
+Duplicate entry 'MAp43' for key 'PRIMARY'
+Skip Invalid movie record id: Z6510 title: The Human Duplicators year: 1965 director: null
+SQLException catched for movie record id: FrW10 title: Titicut Follies year: 1967 director: Wiseman
+Duplicate entry 'FrW10' for key 'PRIMARY'
+Skip Invalid movie record id: IAv12 title: Karate Kid year: -1 director: J.G.Avildsen 
+SQLException catched for movie record id: JRl10 title: Virgins and Vampires year: 1972 director: Rollin
+Duplicate entry 'JRl10' for key 'PRIMARY'
+Skip Invalid movie record id: MS0 title: The Eternal City year: -1 director: Scorsese
+Skip Invalid movie record id: MS36 title: Gangs of New York year: -1 director: Scorsese 
+SQLException catched for movie record id: PDu10 title: Experience Preferred...But Not Essential year: 1971 director: M.Laughlin
+Duplicate entry 'PDu10' for key 'PRIMARY'
+SQLException catched for movie record id: MeW10 title: Daughter of Frankenstein year: 1972 director: M.Welles
+Duplicate entry 'MeW10' for key 'PRIMARY'
+SQLException catched for movie record id: JKp35 title: Brokedown Palace year: 1999 director: J.Kaplan
+Duplicate entry 'JKp35' for key 'PRIMARY'
+Skip Invalid movie record id: WiW30 title: Buena Vista Social Club year: -1 director: Wenders
+Skip Invalid movie record id: DLy25 title: Mulholland Drive year: -1 director: D.Lynch
+SQLException catched for movie record id: GeM17 title: Lorenzo's Oil year: 1992 director: Geo.Miller
+Duplicate entry 'GeM17' for key 'PRIMARY'
+Skip Invalid movie record id: MLt15 title: null year: 1984 director: M.Lester
+SQLException catched for movie record id: MxS10 title: Tales from the Vienna Woods year: 1979 director: Schell
+Duplicate entry 'MxS10' for key 'PRIMARY'
+SQLException catched for movie record id: NiM30 title: Star Trek, Generations year: 1994 director: N.Meyer
+Duplicate entry 'NiM30' for key 'PRIMARY'
+SQLException catched for movie record id: DDo15 title: Keiner liebt mich year: 1990 director: Dorrie
+Duplicate entry 'DDo15' for key 'PRIMARY'
+SQLException catched for movie record id: FOR12 title: Scream Queen Hot Tub Party year: 1984 director: F.O.Ray
+Duplicate entry 'FOR12' for key 'PRIMARY'
+SQLException catched for movie record id: PAl4 title: Matador year: 1985 director: Almodovar
+Duplicate entry 'PAl4' for key 'PRIMARY'
+SQLException catched for movie record id: BLe5 title: Tin Men year: 1987 director: B.Levinson
+Duplicate entry 'BLe5' for key 'PRIMARY'
+SQLException catched for movie record id: KaK10 title: Another Way year: 1982 director: Makk
+Duplicate entry 'KaK10' for key 'PRIMARY'
+Skip Invalid movie record id: AEy13 title: Sarabande year: -1 director: Egoyan
+SQLException catched for movie record id: LeN10 title: The Good Mother year: 1988 director: Nimoy
+Duplicate entry 'LeN10' for key 'PRIMARY'
+Skip Invalid movie record id: NIs10 title: Bachelor Party year: 1984 director: null
+SQLException catched for movie record id: AKo15 title: The Inner Circle year: 1992 director: Konchalovsky
+Duplicate entry 'AKo15' for key 'PRIMARY'
+Skip Invalid movie record id: BSi3 title: null year: 1988 director: Silberling
+SQLException catched for movie record id: ThS5 title: Kingfish: A Story of Huey P. Long year: 1995 director: Schlamme
+Duplicate entry 'ThS5' for key 'PRIMARY'
+Skip Invalid movie record id: CsS15 title: Fairy Tale: A True Story year: -1 director: Sturridge
+Skip Invalid movie record id: null title: Cradle will Rock year: 2000 director: T.Robbins
+SQLException catched for movie record id: AnL15 title: Crouching Tiger, Hidden Dragon year: 2000 director: A..Lee
+Duplicate entry 'AnL15' for key 'PRIMARY'
+Skip Invalid movie record id: BeM10 title: Batman, Mask of The Phantasm year: 1993 director: null
+Skip Invalid movie record id: KDo1x title: null year: -1 director: null
+Skip Invalid movie record id: TdC13 title: Jerry and Tom year: -1 director: diCillo
+Skip Invalid movie record id: Z9590 title: The Shanghai Triad year: -1 director: UnYear95
+Skip Invalid movie record id: AbK15 title: Taste of Cherry year: -1 director: Kiarostami
+Skip Invalid movie record id: MkJ11 title: The Matchmaker year: -1 director: M.Joffe
+SQLException catched for movie record id: MiM10 title: I Got the Hook-Up year: 1998 director: M.Martin
+Duplicate entry 'MiM10' for key 'PRIMARY'
+Skip Invalid movie record id: MJu15 title: All is Routine year: -1 director: M.Judge
+SQLException catched for movie record id: NtB10 title: On the Ropes year: 1999 director: Burstein
+Duplicate entry 'NtB10' for key 'PRIMARY'
+SQLException catched for movie record id: PSv10 title: Metroland year: 1999 director: P.Saville
+Duplicate entry 'PSv10' for key 'PRIMARY'
+Skip Invalid movie record id: LDo10 title: Knockout year: 2000 director: null
+Skip Invalid movie record id: RSc10 title: Crime + Punsihment in Suburbia year: 2000 director: null
+SQLException catched for movie record id: SfG1 title: Lost in Translation year: 2003 director: Sofia~Coppola
+Duplicate entry 'SfG1' for key 'PRIMARY'

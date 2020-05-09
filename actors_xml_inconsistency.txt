@@ -1,0 +1,24 @@
+Skip duplicate star record id: nm9423777 name: Kenneth Branagh birthYear: -1
+Skip duplicate star record id: nm9423807 name: Wilford Brimley birthYear: -1
+Skip duplicate star record id: nm9423981 name: Colin Campbell birthYear: 1937
+Skip duplicate star record id: nm9424667 name: William Devane birthYear: -1
+Skip duplicate star record id: nm9424996 name: Derek Farr birthYear: -1
+Skip duplicate star record id: nm9424999 name: Charles Farrell birthYear: 1901
+Skip duplicate star record id: nm9425086 name: Frances Fisher birthYear: -1
+Skip duplicate star record id: nm9425473 name: Peter Graves birthYear: 1911
+Skip duplicate star record id: nm9425729 name: Laurence Harvey birthYear: 1928
+Skip duplicate star record id: nm9425825 name: Nicky Henson birthYear: 1945
+Skip duplicate star record id: nm9425909 name: William Holden birthYear: 1918
+Skip duplicate star record id: nm9426080 name: Rex Ingram birthYear: 1895
+Skip duplicate star record id: nm9426399 name: Charles King birthYear: 1899
+Skip duplicate star record id: nm9426525 name: Jack Lambert birthYear: 1920
+Skip duplicate star record id: nm9426997 name: Jane March birthYear: 1973
+Skip duplicate star record id: nm9427160 name: Spanky McFarland birthYear: -1
+Skip duplicate star record id: nm9427462 name: Mary Morris birthYear: 1915
+Skip duplicate star record id: nm9427782 name: Jennifer ONeill birthYear: 1947
+Skip duplicate star record id: nm9427937 name: Raymond Pellegrin birthYear: -1
+Skip duplicate star record id: nm9428986 name: Harvey Stephens birthYear: 1970
+Skip duplicate star record id: nm9429039 name: Sting birthYear: -1
+Skip duplicate star record id: nm9429277 name: Ann Todd birthYear: 1932
+Skip duplicate star record id: nm9429371 name: Beverly Tyler birthYear: 1924
+Skip duplicate star record id: nm9429751 name: Vanessa Williams birthYear: 1963
