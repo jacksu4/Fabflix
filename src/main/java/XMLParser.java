@@ -17,9 +17,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class XMLParser {
-    Connection dbcon;
-    Document dom;
+    private Connection dbcon;
+    private Document dom;
     private Map<String, String> catMap = new HashMap<String, String>();
+    private Set<String> movieSet = new HashSet<>();
+    private Map<String, String> starMap = new HashMap<>();
 
     public XMLParser(){
         catMap.put("Susp","Thriller");
@@ -162,56 +164,57 @@ public class XMLParser {
                             myWriter.write("Skip duplicate movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
                         }else{
                             try{
-                                String insert_query = "insert into movies_temp (id, title, year, director) values (?,?,?,?)";
-                                PreparedStatement insert_statement = dbcon.prepareStatement(insert_query);
-                                insert_statement.setString(1, id);
-                                insert_statement.setString(2,title);
-                                insert_statement.setInt(3,year);
-                                insert_statement.setString(4,director);
-                                //System.out.println(insert_statement);
+                                if(!movieSet.contains(id)){
+                                    movieSet.add(id);
+                                    String insert_query = "insert into movies_temp (id, title, year, director) values (?,?,?,?)";
+                                    PreparedStatement insert_statement = dbcon.prepareStatement(insert_query);
+                                    insert_statement.setString(1, id);
+                                    insert_statement.setString(2,title);
+                                    insert_statement.setInt(3,year);
+                                    insert_statement.setString(4,director);
+                                    //System.out.println(insert_statement);
 
-                                insert_statement.executeUpdate();
-                                insert_statement.close();
+                                    insert_statement.executeUpdate();
+                                    insert_statement.close();
 
-                                //System.out.println("movie recored successfully inserted");
-                                NodeList cl = el.getElementsByTagName("cat");
-                                if(cl!=null && cl.getLength()>0){
-                                    for(int j=0;j<cl.getLength();j++){
-                                        Element ce = (Element) cl.item(j);
-                                        String genre;
-                                        try{
-                                            genre = ce.getFirstChild().getNodeValue();
-                                        }catch(NullPointerException e){
-                                            genre = "null";
-                                        }
+                                    //System.out.println("movie recored successfully inserted");
+                                    NodeList cl = el.getElementsByTagName("cat");
+                                    if(cl!=null && cl.getLength()>0){
+                                        for(int j=0;j<cl.getLength();j++){
+                                            Element ce = (Element) cl.item(j);
+                                            String genre;
+                                            try{
+                                                genre = ce.getFirstChild().getNodeValue();
+                                            }catch(NullPointerException e){
+                                                genre = "null";
+                                            }
 
-                                        if(catMap.containsKey(genre)){
-                                            genre = catMap.get(genre);
-                                            //Add new genre if not exist in database
-                                            String genre_query = "select * from genres_temp where genres_temp.name = ?";
-                                            PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);
-                                            genre_statement.setString(1,genre);
-                                            ResultSet genre_rs = genre_statement.executeQuery();
-                                            if(!genre_rs.next()){
-                                                String genre_insert = "insert into genres_temp (name) values (?)";
+                                            if(catMap.containsKey(genre)){
+                                                genre = catMap.get(genre);
+                                                //Add new genre if not exist in database
+                                                String genre_query = "select * from genres_temp where genres_temp.name = ?";
+                                                PreparedStatement genre_statement = dbcon.prepareStatement(genre_query);
+                                                genre_statement.setString(1,genre);
+                                                ResultSet genre_rs = genre_statement.executeQuery();
+                                                if(!genre_rs.next()){
+                                                    String genre_insert = "insert into genres_temp (name) values (?)";
+                                                    PreparedStatement genreIS = dbcon.prepareStatement(genre_insert);
+                                                    genreIS.setString(1,genre);
+                                                    genreIS.executeUpdate();
+                                                    genreIS.close();
+                                                }
+                                                String genre_insert = "insert into genres_in_movies_temp (genreId, movieId) values ((select id from genres_temp where genres_temp.name = ?),?)";
                                                 PreparedStatement genreIS = dbcon.prepareStatement(genre_insert);
                                                 genreIS.setString(1,genre);
+                                                genreIS.setString(2,id);
                                                 genreIS.executeUpdate();
                                                 genreIS.close();
+                                            }else{
+                                                //System.out.println("Invalid movie genre id: "+id+" title: "+title+" year: "+year+" director: "+director+" genre: "+genre);
                                             }
-                                            String genre_insert = "insert into genres_in_movies_temp (genreId, movieId) values ((select id from genres_temp where genres_temp.name = ?),?)";
-                                            PreparedStatement genreIS = dbcon.prepareStatement(genre_insert);
-                                            genreIS.setString(1,genre);
-                                            genreIS.setString(2,id);
-                                            genreIS.executeUpdate();
-                                            genreIS.close();
-                                        }else{
-                                            //System.out.println("Invalid movie genre id: "+id+" title: "+title+" year: "+year+" director: "+director+" genre: "+genre);
                                         }
                                     }
                                 }
-
-
                             }catch(SQLException e){
                                 myWriter.write("SQLException catched for movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
                                 myWriter.write(e.getMessage()+"\n");
@@ -300,17 +303,21 @@ public class XMLParser {
                 ResultSet star_rs = star_qs.executeQuery();
                 if(!star_rs.next()){
                     if(!name.equals("null")){
-                        String star_insert = "insert into stars_temp (id,name,birthYear) values (?,?,?)";
-                        PreparedStatement star_is = dbcon.prepareStatement(star_insert);
-                        star_is.setString(1,id);
-                        star_is.setString(2,name);
-                        if(birthYear!=-1){
-                            star_is.setInt(3,birthYear);
-                        }else{
-                            star_is.setNull(3,Types.INTEGER);
+                        if(!starMap.containsKey(name)){
+                            starMap.put(name,id);
+                            String star_insert = "insert into stars_temp (id,name,birthYear) values (?,?,?)";
+                            PreparedStatement star_is = dbcon.prepareStatement(star_insert);
+                            star_is.setString(1,id);
+                            star_is.setString(2,name);
+                            if(birthYear!=-1){
+                                star_is.setInt(3,birthYear);
+                            }else{
+                                star_is.setNull(3,Types.INTEGER);
+                            }
+                            star_is.executeUpdate();
+                            star_is.close();
                         }
-                        star_is.executeUpdate();
-                        star_is.close();
+
                     }else{
                         myWriter.write("Skip invalid star record id: "+id+" name: "+name+" birthYear: "+birthYear+"\n");
                     }
@@ -349,6 +356,8 @@ public class XMLParser {
     private void parseStarsInMovies() throws SQLException, IOException {
         System.out.println("parsing stars in movies");
         FileWriter myWriter = new FileWriter("casts_xml_inconsistency.txt");
+        FileWriter dataWriter = new FileWriter("stars_in_movies_data.txt");
+        dataWriter.write("starId\tmovieId\n");
         Element docEle = dom.getDocumentElement();
         NodeList nl = docEle.getElementsByTagName("m");
         if(nl!=null && nl.getLength()>0){
@@ -366,6 +375,7 @@ public class XMLParser {
                 }
 
                 if(!movieId.equals("null")){
+                    /*
                     String movie_query = "select * from movies_temp where movies_temp.id = ?";
                     PreparedStatement movie_qs = dbcon.prepareStatement(movie_query);
                     movie_qs.setString(1,movieId);
@@ -375,6 +385,10 @@ public class XMLParser {
                     }
                     movie_rs.close();
                     movie_qs.close();
+                     */
+                    if(!movieSet.contains(movieId)){
+                        movieId = "null";
+                    }
                 }
 
                 //get star name from xml and find starId from db
@@ -388,6 +402,7 @@ public class XMLParser {
                 }
 
                 if(!starName.equals("null") && !starName.equals("sa")){
+                    /*
                     String star_query = "select id from stars_temp where stars_temp.name = ?";
                     PreparedStatement star_qs = dbcon.prepareStatement(star_query);
                     star_qs.setString(1,starName);
@@ -396,13 +411,24 @@ public class XMLParser {
                     if(star_rs.next()){
                         starId = star_rs.getString("id");
                     }
+
+                     */
+                    String starId = "null";
+                    if(starMap.containsKey(starName)){
+                        starId = starMap.get(starName);
+                    }
                     if(!starId.equals("null") && !movieId.equals("null")){
+                        /*
                         String star_insert = "insert into stars_in_movies_temp (starId, movieId) values (?,?)";
                         PreparedStatement star_is = dbcon.prepareStatement(star_insert);
                         star_is.setString(1,starId);
                         star_is.setString(2,movieId);
                         star_is.executeUpdate();
                         star_is.close();
+
+                         */
+
+                        dataWriter.write(starId+"\t"+movieId+"\n");
                     }else{
                         myWriter.write("invalid stars_in_movies record starId: "+starId+" movieId: "+movieId+"\n");
                     }
@@ -410,6 +436,11 @@ public class XMLParser {
                 }
             }
         myWriter.close();
+        dataWriter.close();
+        String loadData = "load data local infile 'stars_in_movies_data.txt' into table stars_in_movies_temp";
+        PreparedStatement loadData_is = dbcon.prepareStatement(loadData);
+        loadData_is.executeUpdate();
+        loadData_is.close();
         }
     }
 

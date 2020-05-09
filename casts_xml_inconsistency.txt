@@ -36,15 +36,21 @@ invalid stars_in_movies record starId: null movieId: AAn10
 invalid stars_in_movies record starId: null movieId: AAn12
 invalid stars_in_movies record starId: null movieId: AAn12
 invalid stars_in_movies record starId: null movieId: AAn12
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
-invalid stars_in_movies record starId: null movieId: AAn14
+invalid stars_in_movies record starId: nm9428479 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9426931 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9423497 movieId: null
+invalid stars_in_movies record starId: nm9423403 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9429159 movieId: null
+invalid stars_in_movies record starId: nm9429755 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: AAr10
 invalid stars_in_movies record starId: null movieId: AAr10
 invalid stars_in_movies record starId: null movieId: AAr10
@@ -82,6 +88,7 @@ invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: ABl10
 invalid stars_in_movies record starId: null movieId: ABo10
 invalid stars_in_movies record starId: null movieId: ABo10
 invalid stars_in_movies record starId: null movieId: ABo10
@@ -139,6 +146,7 @@ invalid stars_in_movies record starId: null movieId: ACj115
 invalid stars_in_movies record starId: null movieId: ACj115
 invalid stars_in_movies record starId: null movieId: ACj115
 invalid stars_in_movies record starId: null movieId: ACj116
+invalid stars_in_movies record starId: null movieId: ACj117
 invalid stars_in_movies record starId: null movieId: ACj117
 invalid stars_in_movies record starId: null movieId: ACj117
 invalid stars_in_movies record starId: null movieId: ACj118
@@ -271,6 +279,7 @@ invalid stars_in_movies record starId: null movieId: ADw72
 invalid stars_in_movies record starId: null movieId: ADw75
 invalid stars_in_movies record starId: null movieId: ADw75
 invalid stars_in_movies record starId: null movieId: ADw75
+invalid stars_in_movies record starId: null movieId: ADw75
 invalid stars_in_movies record starId: null movieId: ADw78
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
@@ -308,6 +317,7 @@ invalid stars_in_movies record starId: null movieId: AEG25
 invalid stars_in_movies record starId: null movieId: AEG25
 invalid stars_in_movies record starId: null movieId: AEG25
 invalid stars_in_movies record starId: null movieId: AEG41
+invalid stars_in_movies record starId: null movieId: AEG50
 invalid stars_in_movies record starId: null movieId: AEG50
 invalid stars_in_movies record starId: null movieId: AEG70
 invalid stars_in_movies record starId: null movieId: AEG70
@@ -559,6 +569,7 @@ invalid stars_in_movies record starId: null movieId: AL14
 invalid stars_in_movies record starId: null movieId: AL21
 invalid stars_in_movies record starId: null movieId: AL21
 invalid stars_in_movies record starId: null movieId: AL22
+invalid stars_in_movies record starId: null movieId: AL22
 invalid stars_in_movies record starId: null movieId: AL27
 invalid stars_in_movies record starId: null movieId: AL27
 invalid stars_in_movies record starId: null movieId: AL27
@@ -585,6 +596,7 @@ invalid stars_in_movies record starId: null movieId: AlG11
 invalid stars_in_movies record starId: null movieId: AlG11
 invalid stars_in_movies record starId: null movieId: AlH8
 invalid stars_in_movies record starId: null movieId: AlH8
+invalid stars_in_movies record starId: null movieId: AlH24
 invalid stars_in_movies record starId: null movieId: AlH24
 invalid stars_in_movies record starId: null movieId: AlH24
 invalid stars_in_movies record starId: null movieId: AlH24
@@ -631,6 +643,8 @@ invalid stars_in_movies record starId: null movieId: AlZ4
 invalid stars_in_movies record starId: null movieId: AlZ4
 invalid stars_in_movies record starId: null movieId: AlZ4
 invalid stars_in_movies record starId: null movieId: AlZ4
+invalid stars_in_movies record starId: null movieId: AlZ4
+invalid stars_in_movies record starId: null movieId: AlZ5
 invalid stars_in_movies record starId: null movieId: AlZ5
 invalid stars_in_movies record starId: null movieId: AlZ5
 invalid stars_in_movies record starId: null movieId: AlZ5
@@ -664,6 +678,7 @@ invalid stars_in_movies record starId: null movieId: AM31
 invalid stars_in_movies record starId: null movieId: AM35
 invalid stars_in_movies record starId: null movieId: AM35
 invalid stars_in_movies record starId: null movieId: AM36
+invalid stars_in_movies record starId: null movieId: AMa10
 invalid stars_in_movies record starId: null movieId: AMa50
 invalid stars_in_movies record starId: null movieId: AMa50
 invalid stars_in_movies record starId: null movieId: AMa50
@@ -729,11 +744,17 @@ invalid stars_in_movies record starId: null movieId: AmM10
 invalid stars_in_movies record starId: null movieId: AmM10
 invalid stars_in_movies record starId: null movieId: AmM10
 invalid stars_in_movies record starId: null movieId: AmM10
-invalid stars_in_movies record starId: null movieId: Amo13
-invalid stars_in_movies record starId: null movieId: Amo13
-invalid stars_in_movies record starId: null movieId: Amo13
-invalid stars_in_movies record starId: null movieId: AMp1
-invalid stars_in_movies record starId: null movieId: AMp1
+invalid stars_in_movies record starId: nm9427321 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427411 movieId: null
+invalid stars_in_movies record starId: nm9427876 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9426024 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9429832 movieId: null
+invalid stars_in_movies record starId: nm9426604 movieId: null
 invalid stars_in_movies record starId: null movieId: AMr10
 invalid stars_in_movies record starId: null movieId: AMr10
 invalid stars_in_movies record starId: null movieId: AMr15
@@ -1084,7 +1105,8 @@ invalid stars_in_movies record starId: null movieId: AtB11
 invalid stars_in_movies record starId: null movieId: AtB11
 invalid stars_in_movies record starId: null movieId: ATk10
 invalid stars_in_movies record starId: null movieId: ATk10
-invalid stars_in_movies record starId: null movieId: ATk12
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9429598 movieId: null
 invalid stars_in_movies record starId: null movieId: ATu1
 invalid stars_in_movies record starId: null movieId: ATu1
 invalid stars_in_movies record starId: null movieId: ATu1
@@ -1122,6 +1144,7 @@ invalid stars_in_movies record starId: null movieId: AuJ10
 invalid stars_in_movies record starId: null movieId: AVa12
 invalid stars_in_movies record starId: null movieId: AVL11
 invalid stars_in_movies record starId: null movieId: AVL11
+invalid stars_in_movies record starId: null movieId: AVL13
 invalid stars_in_movies record starId: null movieId: AVL13
 invalid stars_in_movies record starId: null movieId: AVL13
 invalid stars_in_movies record starId: null movieId: AVo10
@@ -1207,6 +1230,7 @@ invalid stars_in_movies record starId: null movieId: AxP10
 invalid stars_in_movies record starId: null movieId: AxP10
 invalid stars_in_movies record starId: null movieId: AxP10
 invalid stars_in_movies record starId: null movieId: AxS10
+invalid stars_in_movies record starId: null movieId: AxS10
 invalid stars_in_movies record starId: null movieId: AyW10
 invalid stars_in_movies record starId: null movieId: AyW11
 invalid stars_in_movies record starId: null movieId: AZu25
@@ -1218,6 +1242,7 @@ invalid stars_in_movies record starId: null movieId: BaD13
 invalid stars_in_movies record starId: null movieId: BaD13
 invalid stars_in_movies record starId: null movieId: BaD22
 invalid stars_in_movies record starId: null movieId: BaD22
+invalid stars_in_movies record starId: null movieId: BaD26
 invalid stars_in_movies record starId: null movieId: BaD26
 invalid stars_in_movies record starId: null movieId: BaD26
 invalid stars_in_movies record starId: null movieId: BaD28
@@ -1340,6 +1365,7 @@ invalid stars_in_movies record starId: null movieId: BDC8
 invalid stars_in_movies record starId: null movieId: BDH10
 invalid stars_in_movies record starId: null movieId: BDH10
 invalid stars_in_movies record starId: null movieId: BDH10
+invalid stars_in_movies record starId: null movieId: BDH30
 invalid stars_in_movies record starId: null movieId: BDH30
 invalid stars_in_movies record starId: null movieId: BDH30
 invalid stars_in_movies record starId: null movieId: BDH30
@@ -1522,6 +1548,7 @@ invalid stars_in_movies record starId: null movieId: BGi14
 invalid stars_in_movies record starId: null movieId: BGi16
 invalid stars_in_movies record starId: null movieId: BGi17
 invalid stars_in_movies record starId: null movieId: BGi18
+invalid stars_in_movies record starId: null movieId: BGi18
 invalid stars_in_movies record starId: null movieId: BGi19
 invalid stars_in_movies record starId: null movieId: BGi20
 invalid stars_in_movies record starId: null movieId: BGu10
@@ -1649,12 +1676,13 @@ invalid stars_in_movies record starId: null movieId: BmF10
 invalid stars_in_movies record starId: null movieId: BmF10
 invalid stars_in_movies record starId: null movieId: BMo10
 invalid stars_in_movies record starId: null movieId: BMo10
-invalid stars_in_movies record starId: null movieId: Bmy14
-invalid stars_in_movies record starId: null movieId: Bmy14
-invalid stars_in_movies record starId: null movieId: Bmy14
-invalid stars_in_movies record starId: null movieId: Bmy14
-invalid stars_in_movies record starId: null movieId: Bmy14
-invalid stars_in_movies record starId: null movieId: Bmy14
+invalid stars_in_movies record starId: nm9428258 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: BnG1
 invalid stars_in_movies record starId: null movieId: BnG1
 invalid stars_in_movies record starId: null movieId: BnG12
@@ -1745,6 +1773,7 @@ invalid stars_in_movies record starId: null movieId: BRf2
 invalid stars_in_movies record starId: null movieId: BRf2
 invalid stars_in_movies record starId: null movieId: BRf2
 invalid stars_in_movies record starId: null movieId: BRf2
+invalid stars_in_movies record starId: null movieId: BRf4
 invalid stars_in_movies record starId: null movieId: BRf4
 invalid stars_in_movies record starId: null movieId: BRf4
 invalid stars_in_movies record starId: null movieId: BRf4
@@ -1946,6 +1975,7 @@ invalid stars_in_movies record starId: null movieId: BTh13
 invalid stars_in_movies record starId: null movieId: BTh13
 invalid stars_in_movies record starId: null movieId: BTh13
 invalid stars_in_movies record starId: null movieId: BTh13
+invalid stars_in_movies record starId: null movieId: BTh13
 invalid stars_in_movies record starId: null movieId: BTh15
 invalid stars_in_movies record starId: null movieId: BTh15
 invalid stars_in_movies record starId: null movieId: BTh15
@@ -1991,6 +2021,8 @@ invalid stars_in_movies record starId: null movieId: BVS3
 invalid stars_in_movies record starId: null movieId: BW2
 invalid stars_in_movies record starId: null movieId: BW2
 invalid stars_in_movies record starId: null movieId: BW3
+invalid stars_in_movies record starId: null movieId: BW3
+invalid stars_in_movies record starId: null movieId: BW3
 invalid stars_in_movies record starId: null movieId: BW4
 invalid stars_in_movies record starId: null movieId: BW4
 invalid stars_in_movies record starId: null movieId: BW4
@@ -1999,6 +2031,8 @@ invalid stars_in_movies record starId: null movieId: BW4
 invalid stars_in_movies record starId: null movieId: BW4
 invalid stars_in_movies record starId: null movieId: BW5
 invalid stars_in_movies record starId: null movieId: BW7
+invalid stars_in_movies record starId: null movieId: BW8
+invalid stars_in_movies record starId: null movieId: BW8
 invalid stars_in_movies record starId: null movieId: BW9
 invalid stars_in_movies record starId: null movieId: BW9
 invalid stars_in_movies record starId: null movieId: BW11
@@ -2007,6 +2041,7 @@ invalid stars_in_movies record starId: null movieId: BW16
 invalid stars_in_movies record starId: null movieId: BW18
 invalid stars_in_movies record starId: null movieId: BW18
 invalid stars_in_movies record starId: null movieId: BW18
+invalid stars_in_movies record starId: null movieId: BW19
 invalid stars_in_movies record starId: null movieId: BW19
 invalid stars_in_movies record starId: null movieId: BW19
 invalid stars_in_movies record starId: null movieId: BW21
@@ -2025,8 +2060,10 @@ invalid stars_in_movies record starId: null movieId: ByB10
 invalid stars_in_movies record starId: null movieId: ByH5
 invalid stars_in_movies record starId: null movieId: ByH5
 invalid stars_in_movies record starId: null movieId: ByH5
+invalid stars_in_movies record starId: null movieId: ByH5
 invalid stars_in_movies record starId: null movieId: ByH8
 invalid stars_in_movies record starId: null movieId: ByH8
+invalid stars_in_movies record starId: null movieId: ByH10
 invalid stars_in_movies record starId: null movieId: ByH10
 invalid stars_in_movies record starId: null movieId: ByH10
 invalid stars_in_movies record starId: null movieId: ByH13
@@ -2094,6 +2131,8 @@ invalid stars_in_movies record starId: null movieId: C135
 invalid stars_in_movies record starId: null movieId: C135
 invalid stars_in_movies record starId: null movieId: C135
 invalid stars_in_movies record starId: null movieId: C135
+invalid stars_in_movies record starId: null movieId: C135
+invalid stars_in_movies record starId: null movieId: C135
 invalid stars_in_movies record starId: null movieId: C136
 invalid stars_in_movies record starId: null movieId: C136
 invalid stars_in_movies record starId: null movieId: C136
@@ -2143,6 +2182,9 @@ invalid stars_in_movies record starId: null movieId: CAL36
 invalid stars_in_movies record starId: null movieId: CAL36
 invalid stars_in_movies record starId: null movieId: CAL46
 invalid stars_in_movies record starId: null movieId: CAm30
+invalid stars_in_movies record starId: null movieId: CaR1
+invalid stars_in_movies record starId: null movieId: CaR1
+invalid stars_in_movies record starId: null movieId: CaR5
 invalid stars_in_movies record starId: null movieId: CaR15
 invalid stars_in_movies record starId: null movieId: CaR22
 invalid stars_in_movies record starId: null movieId: CaR22
@@ -2355,6 +2397,7 @@ invalid stars_in_movies record starId: null movieId: CCw2
 invalid stars_in_movies record starId: null movieId: CCw2
 invalid stars_in_movies record starId: null movieId: CCw2
 invalid stars_in_movies record starId: null movieId: CCw2
+invalid stars_in_movies record starId: null movieId: CCw2
 invalid stars_in_movies record starId: null movieId: CCw5
 invalid stars_in_movies record starId: null movieId: CCw5
 invalid stars_in_movies record starId: null movieId: CCw5
@@ -2417,6 +2460,7 @@ invalid stars_in_movies record starId: null movieId: CDM64
 invalid stars_in_movies record starId: null movieId: CDM64
 invalid stars_in_movies record starId: null movieId: CDM64
 invalid stars_in_movies record starId: null movieId: CDM73
+invalid stars_in_movies record starId: null movieId: CDM77
 invalid stars_in_movies record starId: null movieId: CDM78
 invalid stars_in_movies record starId: null movieId: CDM78
 invalid stars_in_movies record starId: null movieId: CDM78
@@ -2575,6 +2619,7 @@ invalid stars_in_movies record starId: null movieId: ChH3
 invalid stars_in_movies record starId: null movieId: ChH3
 invalid stars_in_movies record starId: null movieId: ChH3
 invalid stars_in_movies record starId: null movieId: ChH3
+invalid stars_in_movies record starId: null movieId: ChH3
 invalid stars_in_movies record starId: null movieId: ChH10
 invalid stars_in_movies record starId: null movieId: ChH10
 invalid stars_in_movies record starId: null movieId: CH5
@@ -2597,6 +2642,7 @@ invalid stars_in_movies record starId: null movieId: ChM20
 invalid stars_in_movies record starId: null movieId: CHo5
 invalid stars_in_movies record starId: null movieId: ChR10
 invalid stars_in_movies record starId: null movieId: ChR13
+invalid stars_in_movies record starId: null movieId: ChR50
 invalid stars_in_movies record starId: null movieId: ChR60
 invalid stars_in_movies record starId: null movieId: ChS10
 invalid stars_in_movies record starId: null movieId: ChS13
@@ -2618,6 +2664,8 @@ invalid stars_in_movies record starId: null movieId: ChV35
 invalid stars_in_movies record starId: null movieId: ChV35
 invalid stars_in_movies record starId: null movieId: ChV35
 invalid stars_in_movies record starId: null movieId: ChV45
+invalid stars_in_movies record starId: null movieId: ChV45
+invalid stars_in_movies record starId: null movieId: ChV46
 invalid stars_in_movies record starId: null movieId: ChV46
 invalid stars_in_movies record starId: null movieId: ChW2
 invalid stars_in_movies record starId: null movieId: ChW2
@@ -2633,6 +2681,7 @@ invalid stars_in_movies record starId: null movieId: ChW7
 invalid stars_in_movies record starId: null movieId: ChW7
 invalid stars_in_movies record starId: null movieId: ChW7
 invalid stars_in_movies record starId: null movieId: ChW16
+invalid stars_in_movies record starId: null movieId: ChW16
 invalid stars_in_movies record starId: null movieId: ChW25
 invalid stars_in_movies record starId: null movieId: CiS10
 invalid stars_in_movies record starId: null movieId: CiS10
@@ -2643,6 +2692,7 @@ invalid stars_in_movies record starId: null movieId: CiS40
 invalid stars_in_movies record starId: null movieId: CiS40
 invalid stars_in_movies record starId: null movieId: CiS40
 invalid stars_in_movies record starId: null movieId: CiS40
+invalid stars_in_movies record starId: null movieId: CJ2
 invalid stars_in_movies record starId: null movieId: CJ2
 invalid stars_in_movies record starId: null movieId: CJ2
 invalid stars_in_movies record starId: null movieId: CJ2
@@ -2678,6 +2728,7 @@ invalid stars_in_movies record starId: nm9423439 movieId: null
 invalid stars_in_movies record starId: null movieId: ClC8
 invalid stars_in_movies record starId: null movieId: ClC8
 invalid stars_in_movies record starId: null movieId: ClC8
+invalid stars_in_movies record starId: null movieId: ClC18
 invalid stars_in_movies record starId: null movieId: ClC21
 invalid stars_in_movies record starId: nm9425475 movieId: null
 invalid stars_in_movies record starId: null movieId: ClC35
@@ -2779,10 +2830,12 @@ invalid stars_in_movies record starId: null movieId: CPR10
 invalid stars_in_movies record starId: null movieId: CPR10
 invalid stars_in_movies record starId: null movieId: CPR10
 invalid stars_in_movies record starId: null movieId: CR10
+invalid stars_in_movies record starId: null movieId: CR10
 invalid stars_in_movies record starId: null movieId: CR12
 invalid stars_in_movies record starId: null movieId: CR12
 invalid stars_in_movies record starId: null movieId: CR12
 invalid stars_in_movies record starId: null movieId: CR13
+invalid stars_in_movies record starId: null movieId: CR14
 invalid stars_in_movies record starId: null movieId: CR14
 invalid stars_in_movies record starId: null movieId: CR14
 invalid stars_in_movies record starId: null movieId: CR14
@@ -2866,6 +2919,7 @@ invalid stars_in_movies record starId: null movieId: CTK12
 invalid stars_in_movies record starId: null movieId: CTK12
 invalid stars_in_movies record starId: null movieId: CuB32
 invalid stars_in_movies record starId: null movieId: CuB34
+invalid stars_in_movies record starId: null movieId: CuB37
 invalid stars_in_movies record starId: null movieId: CuB44
 invalid stars_in_movies record starId: null movieId: CVi10
 invalid stars_in_movies record starId: null movieId: CVi10
@@ -2942,6 +2996,7 @@ invalid stars_in_movies record starId: null movieId: DAl10
 invalid stars_in_movies record starId: null movieId: DAl10
 invalid stars_in_movies record starId: null movieId: DAl10
 invalid stars_in_movies record starId: null movieId: DAl10
+invalid stars_in_movies record starId: null movieId: DaM3
 invalid stars_in_movies record starId: null movieId: DaM4
 invalid stars_in_movies record starId: null movieId: DaM5
 invalid stars_in_movies record starId: null movieId: DaM6
@@ -2960,6 +3015,7 @@ invalid stars_in_movies record starId: null movieId: DAz5
 invalid stars_in_movies record starId: null movieId: DAz5
 invalid stars_in_movies record starId: null movieId: DAz5
 invalid stars_in_movies record starId: null movieId: DAz5
+invalid stars_in_movies record starId: null movieId: DAz6
 invalid stars_in_movies record starId: null movieId: DAz6
 invalid stars_in_movies record starId: null movieId: DAz6
 invalid stars_in_movies record starId: null movieId: DAz6
@@ -3092,6 +3148,7 @@ invalid stars_in_movies record starId: null movieId: DeD75
 invalid stars_in_movies record starId: null movieId: DeD77
 invalid stars_in_movies record starId: null movieId: DeD77
 invalid stars_in_movies record starId: null movieId: DeD77
+invalid stars_in_movies record starId: null movieId: DeH10
 invalid stars_in_movies record starId: null movieId: DeJ10
 invalid stars_in_movies record starId: null movieId: DeJ28
 invalid stars_in_movies record starId: null movieId: DeJ28
@@ -3110,6 +3167,7 @@ invalid stars_in_movies record starId: null movieId: DEl10
 invalid stars_in_movies record starId: null movieId: DeM1
 invalid stars_in_movies record starId: null movieId: DeM2
 invalid stars_in_movies record starId: null movieId: DeM2
+invalid stars_in_movies record starId: null movieId: DeM4
 invalid stars_in_movies record starId: null movieId: DeM10
 invalid stars_in_movies record starId: null movieId: DeM20
 invalid stars_in_movies record starId: null movieId: DeM20
@@ -3267,7 +3325,9 @@ invalid stars_in_movies record starId: null movieId: DLo19
 invalid stars_in_movies record starId: null movieId: DLo19
 invalid stars_in_movies record starId: null movieId: DLo19
 invalid stars_in_movies record starId: null movieId: DLR3
+invalid stars_in_movies record starId: null movieId: DLR3
 invalid stars_in_movies record starId: null movieId: DLR10
+invalid stars_in_movies record starId: null movieId: DLR15
 invalid stars_in_movies record starId: null movieId: DLu10
 invalid stars_in_movies record starId: null movieId: DLu10
 invalid stars_in_movies record starId: null movieId: DLv10
@@ -3558,6 +3618,7 @@ invalid stars_in_movies record starId: null movieId: DTa104
 invalid stars_in_movies record starId: null movieId: DTa104
 invalid stars_in_movies record starId: null movieId: DTa104
 invalid stars_in_movies record starId: null movieId: DTa104
+invalid stars_in_movies record starId: null movieId: DTa104
 invalid stars_in_movies record starId: null movieId: DTa106
 invalid stars_in_movies record starId: null movieId: DTa106
 invalid stars_in_movies record starId: null movieId: DTa150
@@ -3589,6 +3650,7 @@ invalid stars_in_movies record starId: null movieId: DvD10
 invalid stars_in_movies record starId: null movieId: DvD10
 invalid stars_in_movies record starId: null movieId: DvD10
 invalid stars_in_movies record starId: null movieId: DvD10
+invalid stars_in_movies record starId: null movieId: DvF10
 invalid stars_in_movies record starId: null movieId: DvF10
 invalid stars_in_movies record starId: null movieId: DvF10
 invalid stars_in_movies record starId: null movieId: DvF10
@@ -3632,6 +3694,7 @@ invalid stars_in_movies record starId: null movieId: DWG50
 invalid stars_in_movies record starId: null movieId: DWG50
 invalid stars_in_movies record starId: null movieId: DWG50
 invalid stars_in_movies record starId: null movieId: DWG51
+invalid stars_in_movies record starId: null movieId: DWG52
 invalid stars_in_movies record starId: null movieId: DWG52
 invalid stars_in_movies record starId: null movieId: DWG52
 invalid stars_in_movies record starId: null movieId: DWG52
@@ -3717,7 +3780,7 @@ invalid stars_in_movies record starId: null movieId: EBe32
 invalid stars_in_movies record starId: null movieId: EBe32
 invalid stars_in_movies record starId: null movieId: EBS50
 invalid stars_in_movies record starId: null movieId: EBS50
-invalid stars_in_movies record starId: null movieId: EBu5
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: EBu8
 invalid stars_in_movies record starId: null movieId: EBu8
 invalid stars_in_movies record starId: null movieId: EBu8
@@ -3807,6 +3870,7 @@ invalid stars_in_movies record starId: null movieId: EdS50
 invalid stars_in_movies record starId: null movieId: EdS75
 invalid stars_in_movies record starId: null movieId: EDW10
 invalid stars_in_movies record starId: null movieId: EDW10
+invalid stars_in_movies record starId: null movieId: EDW10
 invalid stars_in_movies record starId: null movieId: EDW14
 invalid stars_in_movies record starId: null movieId: EDW22
 invalid stars_in_movies record starId: null movieId: EDW22
@@ -3893,10 +3957,15 @@ invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
-invalid stars_in_movies record starId: null movieId: EL9
-invalid stars_in_movies record starId: null movieId: EL9
-invalid stars_in_movies record starId: null movieId: EL13
-invalid stars_in_movies record starId: null movieId: EL15
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427811 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9426125 movieId: null
+invalid stars_in_movies record starId: nm9427811 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427811 movieId: null
+invalid stars_in_movies record starId: nm9426125 movieId: null
 invalid stars_in_movies record starId: null movieId: EL19
 invalid stars_in_movies record starId: null movieId: EL19
 invalid stars_in_movies record starId: null movieId: EL21
@@ -3913,8 +3982,9 @@ invalid stars_in_movies record starId: null movieId: EL33
 invalid stars_in_movies record starId: null movieId: EL34
 invalid stars_in_movies record starId: null movieId: EL34
 invalid stars_in_movies record starId: null movieId: EL34
-invalid stars_in_movies record starId: null movieId: EL35
-invalid stars_in_movies record starId: null movieId: EL35
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427811 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: EL36
 invalid stars_in_movies record starId: null movieId: EL36
 invalid stars_in_movies record starId: null movieId: EL36
@@ -3995,6 +4065,7 @@ invalid stars_in_movies record starId: null movieId: ELM15
 invalid stars_in_movies record starId: null movieId: ELM17
 invalid stars_in_movies record starId: null movieId: ELM17
 invalid stars_in_movies record starId: null movieId: ELM17
+invalid stars_in_movies record starId: null movieId: ELM19
 invalid stars_in_movies record starId: null movieId: ELM21
 invalid stars_in_movies record starId: null movieId: ELM22
 invalid stars_in_movies record starId: null movieId: ELM26
@@ -4012,6 +4083,7 @@ invalid stars_in_movies record starId: null movieId: ElN10
 invalid stars_in_movies record starId: null movieId: ElN10
 invalid stars_in_movies record starId: null movieId: ElN14
 invalid stars_in_movies record starId: null movieId: ElN14
+invalid stars_in_movies record starId: null movieId: ElN15
 invalid stars_in_movies record starId: null movieId: ElN20
 invalid stars_in_movies record starId: null movieId: ElP30
 invalid stars_in_movies record starId: null movieId: ElS2
@@ -4140,6 +4212,7 @@ invalid stars_in_movies record starId: null movieId: ERz10
 invalid stars_in_movies record starId: null movieId: ERz10
 invalid stars_in_movies record starId: null movieId: ERz10
 invalid stars_in_movies record starId: null movieId: ESc10
+invalid stars_in_movies record starId: null movieId: ESc10
 invalid stars_in_movies record starId: null movieId: ESl30
 invalid stars_in_movies record starId: null movieId: ESP9
 invalid stars_in_movies record starId: null movieId: ESP11
@@ -4191,13 +4264,17 @@ invalid stars_in_movies record starId: null movieId: EuF51
 invalid stars_in_movies record starId: null movieId: EuF51
 invalid stars_in_movies record starId: null movieId: EuL10
 invalid stars_in_movies record starId: null movieId: EuL10
+invalid stars_in_movies record starId: null movieId: EuL10
 invalid stars_in_movies record starId: null movieId: EuL20
+invalid stars_in_movies record starId: null movieId: EvS1
+invalid stars_in_movies record starId: null movieId: EvS3
 invalid stars_in_movies record starId: null movieId: EvS6
 invalid stars_in_movies record starId: null movieId: EvS6
 invalid stars_in_movies record starId: null movieId: EvS7
 invalid stars_in_movies record starId: null movieId: EvS7
 invalid stars_in_movies record starId: null movieId: EvS7
 invalid stars_in_movies record starId: null movieId: EvS7
+invalid stars_in_movies record starId: null movieId: EvS7
 invalid stars_in_movies record starId: null movieId: EwD10
 invalid stars_in_movies record starId: null movieId: EwD10
 invalid stars_in_movies record starId: null movieId: EwD10
@@ -4219,6 +4296,7 @@ invalid stars_in_movies record starId: null movieId: EZo10
 invalid stars_in_movies record starId: null movieId: EZw1
 invalid stars_in_movies record starId: null movieId: EZw1
 invalid stars_in_movies record starId: null movieId: EZw1
+invalid stars_in_movies record starId: null movieId: EZw4
 invalid stars_in_movies record starId: null movieId: EZw4
 invalid stars_in_movies record starId: null movieId: EZw5
 invalid stars_in_movies record starId: null movieId: EZw6
@@ -4249,6 +4327,7 @@ invalid stars_in_movies record starId: null movieId: FB42
 invalid stars_in_movies record starId: null movieId: FB42
 invalid stars_in_movies record starId: null movieId: FB42
 invalid stars_in_movies record starId: null movieId: FB43
+invalid stars_in_movies record starId: null movieId: FB43
 invalid stars_in_movies record starId: null movieId: FB45
 invalid stars_in_movies record starId: null movieId: FB51
 invalid stars_in_movies record starId: null movieId: FB51
@@ -4273,6 +4352,14 @@ invalid stars_in_movies record starId: null movieId: FC22
 invalid stars_in_movies record starId: null movieId: FC23
 invalid stars_in_movies record starId: null movieId: FC23
 invalid stars_in_movies record starId: null movieId: FC23
+invalid stars_in_movies record starId: nm9428421 movieId: null
+invalid stars_in_movies record starId: nm9429723 movieId: null
+invalid stars_in_movies record starId: nm9426376 movieId: null
+invalid stars_in_movies record starId: nm9424999 movieId: null
+invalid stars_in_movies record starId: nm9428923 movieId: null
+invalid stars_in_movies record starId: nm9427874 movieId: null
+invalid stars_in_movies record starId: nm9427940 movieId: null
+invalid stars_in_movies record starId: nm9424299 movieId: null
 invalid stars_in_movies record starId: null movieId: FC26
 invalid stars_in_movies record starId: null movieId: FC26
 invalid stars_in_movies record starId: null movieId: FC27
@@ -4335,6 +4422,7 @@ invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9429759 movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9426481 movieId: null
+invalid stars_in_movies record starId: null movieId: FF1
 invalid stars_in_movies record starId: null movieId: FF1
 invalid stars_in_movies record starId: null movieId: FF2
 invalid stars_in_movies record starId: null movieId: FF2
@@ -4478,6 +4566,7 @@ invalid stars_in_movies record starId: null movieId: FKr20
 invalid stars_in_movies record starId: null movieId: FKr20
 invalid stars_in_movies record starId: null movieId: FKr20
 invalid stars_in_movies record starId: null movieId: FKr20
+invalid stars_in_movies record starId: null movieId: FKr20
 invalid stars_in_movies record starId: null movieId: FkS10
 invalid stars_in_movies record starId: null movieId: FkS10
 invalid stars_in_movies record starId: null movieId: FkS10
@@ -4544,6 +4633,8 @@ invalid stars_in_movies record starId: null movieId: FLl85
 invalid stars_in_movies record starId: null movieId: FLl85
 invalid stars_in_movies record starId: null movieId: FLl85
 invalid stars_in_movies record starId: null movieId: FLl85
+invalid stars_in_movies record starId: null movieId: FLl85
+invalid stars_in_movies record starId: null movieId: FLl85
 invalid stars_in_movies record starId: null movieId: FLl89
 invalid stars_in_movies record starId: null movieId: FLl99
 invalid stars_in_movies record starId: null movieId: FLl99
@@ -4562,6 +4653,7 @@ invalid stars_in_movies record starId: null movieId: FLl99
 invalid stars_in_movies record starId: null movieId: FLl99
 invalid stars_in_movies record starId: null movieId: FlM1
 invalid stars_in_movies record starId: null movieId: FlM1
+invalid stars_in_movies record starId: null movieId: FlM3
 invalid stars_in_movies record starId: null movieId: FlM3
 invalid stars_in_movies record starId: null movieId: FLr10
 invalid stars_in_movies record starId: null movieId: FLr10
@@ -4735,8 +4827,10 @@ invalid stars_in_movies record starId: null movieId: FRo20
 invalid stars_in_movies record starId: null movieId: FRo20
 invalid stars_in_movies record starId: null movieId: FRo20
 invalid stars_in_movies record starId: null movieId: FRo20
-invalid stars_in_movies record starId: null movieId: FRo28
-invalid stars_in_movies record starId: null movieId: FRo28
+invalid stars_in_movies record starId: nm9429432 movieId: null
+invalid stars_in_movies record starId: nm9424487 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: FrR17
 invalid stars_in_movies record starId: null movieId: FrR17
 invalid stars_in_movies record starId: null movieId: FrR17
@@ -4767,6 +4861,7 @@ invalid stars_in_movies record starId: null movieId: FrT16
 invalid stars_in_movies record starId: null movieId: FrT20
 invalid stars_in_movies record starId: null movieId: FrT20
 invalid stars_in_movies record starId: null movieId: FrT22
+invalid stars_in_movies record starId: null movieId: FrT32
 invalid stars_in_movies record starId: null movieId: FrT32
 invalid stars_in_movies record starId: null movieId: FrT32
 invalid stars_in_movies record starId: null movieId: FrV10
@@ -4829,6 +4924,7 @@ invalid stars_in_movies record starId: null movieId: FT6
 invalid stars_in_movies record starId: null movieId: FT6
 invalid stars_in_movies record starId: null movieId: FT6
 invalid stars_in_movies record starId: null movieId: FT6
+invalid stars_in_movies record starId: null movieId: FT6
 invalid stars_in_movies record starId: null movieId: FT8
 invalid stars_in_movies record starId: null movieId: FT8
 invalid stars_in_movies record starId: null movieId: FT9
@@ -4862,6 +4958,7 @@ invalid stars_in_movies record starId: null movieId: FT22
 invalid stars_in_movies record starId: null movieId: FT22
 invalid stars_in_movies record starId: null movieId: FT22
 invalid stars_in_movies record starId: null movieId: FT22
+invalid stars_in_movies record starId: nm9424632 movieId: null
 invalid stars_in_movies record starId: null movieId: FT24
 invalid stars_in_movies record starId: null movieId: FT24
 invalid stars_in_movies record starId: null movieId: FT28
@@ -4892,9 +4989,20 @@ invalid stars_in_movies record starId: null movieId: FTu19
 invalid stars_in_movies record starId: null movieId: FTu19
 invalid stars_in_movies record starId: null movieId: FTu20
 invalid stars_in_movies record starId: null movieId: FTu20
-invalid stars_in_movies record starId: null movieId: FTu25
-invalid stars_in_movies record starId: null movieId: FTu25
+invalid stars_in_movies record starId: nm9424421 movieId: null
+invalid stars_in_movies record starId: nm9424018 movieId: null
+invalid stars_in_movies record starId: nm9429888 movieId: null
+invalid stars_in_movies record starId: nm9428850 movieId: null
+invalid stars_in_movies record starId: nm9427823 movieId: null
+invalid stars_in_movies record starId: nm9429153 movieId: null
+invalid stars_in_movies record starId: nm9423285 movieId: null
+invalid stars_in_movies record starId: nm9428165 movieId: null
+invalid stars_in_movies record starId: nm9424712 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427303 movieId: null
 invalid stars_in_movies record starId: null movieId: FTu50
+invalid stars_in_movies record starId: null movieId: FTu60
 invalid stars_in_movies record starId: null movieId: FWh5
 invalid stars_in_movies record starId: null movieId: FWh5
 invalid stars_in_movies record starId: null movieId: FWh10
@@ -4995,6 +5103,7 @@ invalid stars_in_movies record starId: null movieId: GAr59
 invalid stars_in_movies record starId: null movieId: GAr59
 invalid stars_in_movies record starId: null movieId: GAr60
 invalid stars_in_movies record starId: null movieId: GAr60
+invalid stars_in_movies record starId: null movieId: GAr60
 invalid stars_in_movies record starId: null movieId: GaT7
 invalid stars_in_movies record starId: null movieId: GaT10
 invalid stars_in_movies record starId: null movieId: GaT10
@@ -5042,6 +5151,7 @@ invalid stars_in_movies record starId: null movieId: GC10
 invalid stars_in_movies record starId: null movieId: GC10
 invalid stars_in_movies record starId: null movieId: GC10
 invalid stars_in_movies record starId: null movieId: GC11
+invalid stars_in_movies record starId: null movieId: GC13
 invalid stars_in_movies record starId: null movieId: GC13
 invalid stars_in_movies record starId: null movieId: GC13
 invalid stars_in_movies record starId: null movieId: GC13
@@ -5143,7 +5253,7 @@ invalid stars_in_movies record starId: null movieId: GeE10
 invalid stars_in_movies record starId: null movieId: GeE10
 invalid stars_in_movies record starId: null movieId: GeE10
 invalid stars_in_movies record starId: null movieId: GeE10
-invalid stars_in_movies record starId: null movieId: Gee10
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: GeE10
 invalid stars_in_movies record starId: null movieId: GeE10
 invalid stars_in_movies record starId: null movieId: GeE10
@@ -5181,12 +5291,15 @@ invalid stars_in_movies record starId: null movieId: GeP10
 invalid stars_in_movies record starId: null movieId: GeP10
 invalid stars_in_movies record starId: null movieId: GeP10
 invalid stars_in_movies record starId: null movieId: GeP10
+invalid stars_in_movies record starId: null movieId: GeP10
 invalid stars_in_movies record starId: null movieId: GeP15
 invalid stars_in_movies record starId: null movieId: GeP15
 invalid stars_in_movies record starId: null movieId: GeP18
 invalid stars_in_movies record starId: null movieId: GeQ10
+invalid stars_in_movies record starId: null movieId: GeR1
 invalid stars_in_movies record starId: null movieId: GeS15
 invalid stars_in_movies record starId: null movieId: GeS15
+invalid stars_in_movies record starId: null movieId: GeS17
 invalid stars_in_movies record starId: null movieId: GeS27
 invalid stars_in_movies record starId: null movieId: GeS27
 invalid stars_in_movies record starId: null movieId: GeS27
@@ -5200,6 +5313,7 @@ invalid stars_in_movies record starId: null movieId: GF150
 invalid stars_in_movies record starId: null movieId: GF150
 invalid stars_in_movies record starId: null movieId: GF150
 invalid stars_in_movies record starId: null movieId: GF160
+invalid stars_in_movies record starId: null movieId: GF160
 invalid stars_in_movies record starId: null movieId: GF170
 invalid stars_in_movies record starId: null movieId: GF170
 invalid stars_in_movies record starId: null movieId: GF170
@@ -5211,13 +5325,14 @@ invalid stars_in_movies record starId: null movieId: GFi1
 invalid stars_in_movies record starId: null movieId: GFi1
 invalid stars_in_movies record starId: null movieId: GFi1
 invalid stars_in_movies record starId: nm9423391 movieId: null
-invalid stars_in_movies record starId: null movieId: GFi2
-invalid stars_in_movies record starId: null movieId: GFi2
-invalid stars_in_movies record starId: null movieId: GFi2
-invalid stars_in_movies record starId: null movieId: GFi2
-invalid stars_in_movies record starId: null movieId: GFi2
-invalid stars_in_movies record starId: null movieId: GFi2
-invalid stars_in_movies record starId: null movieId: GFi2
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9426160 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: GFj10
 invalid stars_in_movies record starId: null movieId: GFj10
 invalid stars_in_movies record starId: null movieId: GFj10
@@ -5264,6 +5379,7 @@ invalid stars_in_movies record starId: null movieId: GGM10
 invalid stars_in_movies record starId: null movieId: GGr8
 invalid stars_in_movies record starId: null movieId: GGr8
 invalid stars_in_movies record starId: null movieId: GGr8
+invalid stars_in_movies record starId: null movieId: GGr18
 invalid stars_in_movies record starId: null movieId: GGr18
 invalid stars_in_movies record starId: null movieId: GgW10
 invalid stars_in_movies record starId: null movieId: GgW10
@@ -5314,6 +5430,7 @@ invalid stars_in_movies record starId: null movieId: GiC3
 invalid stars_in_movies record starId: null movieId: GiC10
 invalid stars_in_movies record starId: null movieId: GiC10
 invalid stars_in_movies record starId: null movieId: GiC10
+invalid stars_in_movies record starId: null movieId: GiF10
 invalid stars_in_movies record starId: null movieId: GiF10
 invalid stars_in_movies record starId: null movieId: GiG10
 invalid stars_in_movies record starId: null movieId: GiG10
@@ -5405,6 +5522,7 @@ invalid stars_in_movies record starId: null movieId: GM227
 invalid stars_in_movies record starId: null movieId: GM227
 invalid stars_in_movies record starId: null movieId: GM227
 invalid stars_in_movies record starId: null movieId: GM227
+invalid stars_in_movies record starId: null movieId: GM227
 invalid stars_in_movies record starId: null movieId: GM235
 invalid stars_in_movies record starId: null movieId: GM237
 invalid stars_in_movies record starId: null movieId: GM237
@@ -5447,10 +5565,18 @@ invalid stars_in_movies record starId: null movieId: GMy20
 invalid stars_in_movies record starId: null movieId: GMy20
 invalid stars_in_movies record starId: null movieId: GMy20
 invalid stars_in_movies record starId: null movieId: GMy20
-invalid stars_in_movies record starId: null movieId: GMy25
-invalid stars_in_movies record starId: null movieId: GMy25
-invalid stars_in_movies record starId: null movieId: GMy25
-invalid stars_in_movies record starId: null movieId: GMy35
+invalid stars_in_movies record starId: nm9426518 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9426050 movieId: null
+invalid stars_in_movies record starId: nm9427579 movieId: null
+invalid stars_in_movies record starId: nm9426325 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9424095 movieId: null
+invalid stars_in_movies record starId: nm9425876 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9423650 movieId: null
 invalid stars_in_movies record starId: null movieId: GMy45
 invalid stars_in_movies record starId: null movieId: GMx3
 invalid stars_in_movies record starId: null movieId: GMx3
@@ -5465,6 +5591,7 @@ invalid stars_in_movies record starId: null movieId: GnA10
 invalid stars_in_movies record starId: null movieId: GnA10
 invalid stars_in_movies record starId: null movieId: GnA10
 invalid stars_in_movies record starId: null movieId: GnA13
+invalid stars_in_movies record starId: null movieId: GNe5
 invalid stars_in_movies record starId: null movieId: GNe5
 invalid stars_in_movies record starId: null movieId: GNj1
 invalid stars_in_movies record starId: null movieId: GNj1
@@ -5502,6 +5629,7 @@ invalid stars_in_movies record starId: null movieId: GOl1
 invalid stars_in_movies record starId: null movieId: GOl1
 invalid stars_in_movies record starId: null movieId: GOl1
 invalid stars_in_movies record starId: null movieId: GOl1
+invalid stars_in_movies record starId: null movieId: GoP12
 invalid stars_in_movies record starId: null movieId: GoP12
 invalid stars_in_movies record starId: null movieId: GoP12
 invalid stars_in_movies record starId: null movieId: GOu20
@@ -5590,6 +5718,7 @@ invalid stars_in_movies record starId: null movieId: GRi10
 invalid stars_in_movies record starId: null movieId: GRi10
 invalid stars_in_movies record starId: null movieId: GRi10
 invalid stars_in_movies record starId: null movieId: GRi10
+invalid stars_in_movies record starId: null movieId: GRi50
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
@@ -5670,7 +5799,9 @@ invalid stars_in_movies record starId: null movieId: GSj2
 invalid stars_in_movies record starId: null movieId: GSj2
 invalid stars_in_movies record starId: null movieId: GSj2
 invalid stars_in_movies record starId: null movieId: GSj2
+invalid stars_in_movies record starId: null movieId: GSj2
 invalid stars_in_movies record starId: null movieId: GSK1
+invalid stars_in_movies record starId: null movieId: GSn6
 invalid stars_in_movies record starId: null movieId: GSn6
 invalid stars_in_movies record starId: null movieId: GSn6
 invalid stars_in_movies record starId: null movieId: GSn6
@@ -5941,6 +6072,7 @@ invalid stars_in_movies record starId: null movieId: H32
 invalid stars_in_movies record starId: null movieId: H32
 invalid stars_in_movies record starId: null movieId: H32
 invalid stars_in_movies record starId: null movieId: H32
+invalid stars_in_movies record starId: null movieId: H32
 invalid stars_in_movies record starId: null movieId: H33
 invalid stars_in_movies record starId: null movieId: H33
 invalid stars_in_movies record starId: null movieId: H34
@@ -5993,6 +6125,7 @@ invalid stars_in_movies record starId: null movieId: H69
 invalid stars_in_movies record starId: null movieId: H69
 invalid stars_in_movies record starId: null movieId: H80
 invalid stars_in_movies record starId: null movieId: H83
+invalid stars_in_movies record starId: null movieId: H83
 invalid stars_in_movies record starId: null movieId: H54
 invalid stars_in_movies record starId: null movieId: H54
 invalid stars_in_movies record starId: null movieId: H54
@@ -6023,6 +6156,7 @@ invalid stars_in_movies record starId: null movieId: H67
 invalid stars_in_movies record starId: null movieId: H67
 invalid stars_in_movies record starId: null movieId: H70
 invalid stars_in_movies record starId: null movieId: H71
+invalid stars_in_movies record starId: null movieId: H71
 invalid stars_in_movies record starId: null movieId: H72
 invalid stars_in_movies record starId: null movieId: H72
 invalid stars_in_movies record starId: null movieId: H72
@@ -6034,6 +6168,7 @@ invalid stars_in_movies record starId: null movieId: H76
 invalid stars_in_movies record starId: null movieId: H76
 invalid stars_in_movies record starId: null movieId: HaB3
 invalid stars_in_movies record starId: null movieId: HaB9
+invalid stars_in_movies record starId: null movieId: HaB35
 invalid stars_in_movies record starId: null movieId: HaB35
 invalid stars_in_movies record starId: null movieId: HaC10
 invalid stars_in_movies record starId: null movieId: HaF23
@@ -6099,6 +6234,7 @@ invalid stars_in_movies record starId: null movieId: HBe10
 invalid stars_in_movies record starId: null movieId: HBe15
 invalid stars_in_movies record starId: null movieId: HBe15
 invalid stars_in_movies record starId: null movieId: HBe15
+invalid stars_in_movies record starId: null movieId: HBe15
 invalid stars_in_movies record starId: null movieId: HBe18
 invalid stars_in_movies record starId: null movieId: HBe18
 invalid stars_in_movies record starId: null movieId: HBe18
@@ -6122,6 +6258,7 @@ invalid stars_in_movies record starId: null movieId: HBH90
 invalid stars_in_movies record starId: null movieId: HBl10
 invalid stars_in_movies record starId: null movieId: HBl20
 invalid stars_in_movies record starId: null movieId: HBl20
+invalid stars_in_movies record starId: null movieId: HBl20
 invalid stars_in_movies record starId: null movieId: HBn8
 invalid stars_in_movies record starId: null movieId: HBn8
 invalid stars_in_movies record starId: null movieId: HBn8
@@ -6132,6 +6269,7 @@ invalid stars_in_movies record starId: null movieId: HBn8
 invalid stars_in_movies record starId: null movieId: HBn8
 invalid stars_in_movies record starId: null movieId: HBn8
 invalid stars_in_movies record starId: null movieId: HBn8
+invalid stars_in_movies record starId: null movieId: HBn25
 invalid stars_in_movies record starId: null movieId: HBn25
 invalid stars_in_movies record starId: null movieId: HBn25
 invalid stars_in_movies record starId: null movieId: HBn25
@@ -6154,6 +6292,7 @@ invalid stars_in_movies record starId: null movieId: HbR17
 invalid stars_in_movies record starId: null movieId: HbR17
 invalid stars_in_movies record starId: null movieId: HbR17
 invalid stars_in_movies record starId: null movieId: HbR17
+invalid stars_in_movies record starId: null movieId: HbR22
 invalid stars_in_movies record starId: null movieId: HbR22
 invalid stars_in_movies record starId: null movieId: HbR22
 invalid stars_in_movies record starId: null movieId: HbR22
@@ -6305,6 +6444,7 @@ invalid stars_in_movies record starId: null movieId: HGC5
 invalid stars_in_movies record starId: null movieId: HGC5
 invalid stars_in_movies record starId: null movieId: HGC6
 invalid stars_in_movies record starId: null movieId: HGC14
+invalid stars_in_movies record starId: null movieId: HGC16
 invalid stars_in_movies record starId: null movieId: HGC17
 invalid stars_in_movies record starId: null movieId: HGC19
 invalid stars_in_movies record starId: null movieId: HGC19
@@ -6359,6 +6499,9 @@ invalid stars_in_movies record starId: null movieId: HH36
 invalid stars_in_movies record starId: null movieId: HH36
 invalid stars_in_movies record starId: null movieId: HH41
 invalid stars_in_movies record starId: null movieId: HHa3
+invalid stars_in_movies record starId: nm9425618 movieId: null
+invalid stars_in_movies record starId: nm9427386 movieId: null
+invalid stars_in_movies record starId: nm9428544 movieId: null
 invalid stars_in_movies record starId: null movieId: HHa10
 invalid stars_in_movies record starId: null movieId: HHa12
 invalid stars_in_movies record starId: null movieId: HHa12
@@ -6375,6 +6518,7 @@ invalid stars_in_movies record starId: null movieId: HHa27
 invalid stars_in_movies record starId: null movieId: HHa28
 invalid stars_in_movies record starId: null movieId: HHa32
 invalid stars_in_movies record starId: null movieId: HHa32
+invalid stars_in_movies record starId: null movieId: HHa38
 invalid stars_in_movies record starId: null movieId: HHa38
 invalid stars_in_movies record starId: null movieId: HHa38
 invalid stars_in_movies record starId: null movieId: HHa38
@@ -6463,6 +6607,7 @@ invalid stars_in_movies record starId: null movieId: HKl23
 invalid stars_in_movies record starId: null movieId: HKl23
 invalid stars_in_movies record starId: null movieId: HKl30
 invalid stars_in_movies record starId: null movieId: HKl30
+invalid stars_in_movies record starId: null movieId: HKl40
 invalid stars_in_movies record starId: null movieId: HKo6
 invalid stars_in_movies record starId: null movieId: HKo10
 invalid stars_in_movies record starId: null movieId: HKo13
@@ -6536,6 +6681,7 @@ invalid stars_in_movies record starId: null movieId: HlH3
 invalid stars_in_movies record starId: null movieId: HlH9
 invalid stars_in_movies record starId: null movieId: HlH9
 invalid stars_in_movies record starId: null movieId: HLS10
+invalid stars_in_movies record starId: null movieId: HLS10
 invalid stars_in_movies record starId: null movieId: HLv10
 invalid stars_in_movies record starId: null movieId: HLv10
 invalid stars_in_movies record starId: null movieId: HLv10
@@ -6578,6 +6724,7 @@ invalid stars_in_movies record starId: null movieId: HoF10
 invalid stars_in_movies record starId: null movieId: HoG10
 invalid stars_in_movies record starId: null movieId: HoG10
 invalid stars_in_movies record starId: null movieId: HoH10
+invalid stars_in_movies record starId: null movieId: HoH12
 invalid stars_in_movies record starId: null movieId: HoH12
 invalid stars_in_movies record starId: null movieId: HoK5
 invalid stars_in_movies record starId: null movieId: HoK8
@@ -6644,6 +6791,7 @@ invalid stars_in_movies record starId: null movieId: HSc5
 invalid stars_in_movies record starId: null movieId: HSc15
 invalid stars_in_movies record starId: null movieId: HSc15
 invalid stars_in_movies record starId: null movieId: HSc15
+invalid stars_in_movies record starId: null movieId: HSc15
 invalid stars_in_movies record starId: null movieId: HSh5
 invalid stars_in_movies record starId: null movieId: HSh10
 invalid stars_in_movies record starId: null movieId: HSr10
@@ -6674,6 +6822,7 @@ invalid stars_in_movies record starId: null movieId: HVe10
 invalid stars_in_movies record starId: null movieId: HVe10
 invalid stars_in_movies record starId: null movieId: HVe11
 invalid stars_in_movies record starId: null movieId: HvH10
+invalid stars_in_movies record starId: null movieId: HvH11
 invalid stars_in_movies record starId: null movieId: HvH12
 invalid stars_in_movies record starId: null movieId: HvH12
 invalid stars_in_movies record starId: null movieId: HvH12
@@ -6703,6 +6852,7 @@ invalid stars_in_movies record starId: null movieId: HY17
 invalid stars_in_movies record starId: null movieId: HY17
 invalid stars_in_movies record starId: null movieId: HY20
 invalid stars_in_movies record starId: null movieId: HY20
+invalid stars_in_movies record starId: null movieId: HyA2
 invalid stars_in_movies record starId: null movieId: HyA2
 invalid stars_in_movies record starId: null movieId: HyA2
 invalid stars_in_movies record starId: null movieId: HyA2
@@ -6876,6 +7026,7 @@ invalid stars_in_movies record starId: null movieId: ICr7
 invalid stars_in_movies record starId: null movieId: ICr7
 invalid stars_in_movies record starId: null movieId: ICr10
 invalid stars_in_movies record starId: null movieId: ICr25
+invalid stars_in_movies record starId: null movieId: ICr25
 invalid stars_in_movies record starId: null movieId: ICr27
 invalid stars_in_movies record starId: null movieId: ICr30
 invalid stars_in_movies record starId: null movieId: ICr30
@@ -6907,6 +7058,7 @@ invalid stars_in_movies record starId: null movieId: IDa19
 invalid stars_in_movies record starId: null movieId: IDa19
 invalid stars_in_movies record starId: null movieId: IDa19
 invalid stars_in_movies record starId: null movieId: IDa19
+invalid stars_in_movies record starId: null movieId: IDk10
 invalid stars_in_movies record starId: null movieId: IDk10
 invalid stars_in_movies record starId: null movieId: IDk10
 invalid stars_in_movies record starId: null movieId: IDk30
@@ -6947,6 +7099,7 @@ invalid stars_in_movies record starId: null movieId: IDu24
 invalid stars_in_movies record starId: null movieId: IDu24
 invalid stars_in_movies record starId: null movieId: IDu24
 invalid stars_in_movies record starId: null movieId: IDu24
+invalid stars_in_movies record starId: null movieId: IDu24
 invalid stars_in_movies record starId: null movieId: IDu28
 invalid stars_in_movies record starId: null movieId: IDu28
 invalid stars_in_movies record starId: null movieId: IDx5
@@ -6980,6 +7133,7 @@ invalid stars_in_movies record starId: null movieId: IF78
 invalid stars_in_movies record starId: null movieId: IF78
 invalid stars_in_movies record starId: null movieId: IF79
 invalid stars_in_movies record starId: null movieId: IF79
+invalid stars_in_movies record starId: null movieId: IF81
 invalid stars_in_movies record starId: null movieId: IF87
 invalid stars_in_movies record starId: null movieId: IF88
 invalid stars_in_movies record starId: null movieId: IF90
@@ -6994,6 +7148,7 @@ invalid stars_in_movies record starId: null movieId: IF112
 invalid stars_in_movies record starId: null movieId: IF115
 invalid stars_in_movies record starId: null movieId: IF115
 invalid stars_in_movies record starId: null movieId: IF115
+invalid stars_in_movies record starId: null movieId: IF115
 invalid stars_in_movies record starId: null movieId: IF125
 invalid stars_in_movies record starId: null movieId: IF129
 invalid stars_in_movies record starId: null movieId: IF135
@@ -7003,9 +7158,12 @@ invalid stars_in_movies record starId: null movieId: IFa17
 invalid stars_in_movies record starId: null movieId: IFa18
 invalid stars_in_movies record starId: null movieId: IFa18
 invalid stars_in_movies record starId: null movieId: IFa18
+invalid stars_in_movies record starId: null movieId: IFa18
 invalid stars_in_movies record starId: null movieId: IFa24
 invalid stars_in_movies record starId: null movieId: IFa25
+invalid stars_in_movies record starId: null movieId: IFa45
 invalid stars_in_movies record starId: null movieId: IFa50
+invalid stars_in_movies record starId: null movieId: IFD25
 invalid stars_in_movies record starId: null movieId: IFD25
 invalid stars_in_movies record starId: null movieId: IFD25
 invalid stars_in_movies record starId: null movieId: IFD25
@@ -7041,6 +7199,7 @@ invalid stars_in_movies record starId: null movieId: IFr52
 invalid stars_in_movies record starId: null movieId: IFr52
 invalid stars_in_movies record starId: null movieId: IFr52
 invalid stars_in_movies record starId: null movieId: IFr52
+invalid stars_in_movies record starId: null movieId: IG4
 invalid stars_in_movies record starId: null movieId: IG4
 invalid stars_in_movies record starId: null movieId: IG4
 invalid stars_in_movies record starId: null movieId: IG5
@@ -7086,6 +7245,7 @@ invalid stars_in_movies record starId: null movieId: IGu31
 invalid stars_in_movies record starId: null movieId: IGu31
 invalid stars_in_movies record starId: null movieId: IGu31
 invalid stars_in_movies record starId: null movieId: IGy10
+invalid stars_in_movies record starId: null movieId: IH1
 invalid stars_in_movies record starId: null movieId: IH1
 invalid stars_in_movies record starId: null movieId: IH1
 invalid stars_in_movies record starId: null movieId: IH1
@@ -7292,6 +7452,7 @@ invalid stars_in_movies record starId: null movieId: IMN12
 invalid stars_in_movies record starId: null movieId: IMN15
 invalid stars_in_movies record starId: null movieId: IMN15
 invalid stars_in_movies record starId: null movieId: IMN15
+invalid stars_in_movies record starId: null movieId: IMN15
 invalid stars_in_movies record starId: null movieId: IMR10
 invalid stars_in_movies record starId: null movieId: IMR10
 invalid stars_in_movies record starId: null movieId: IMR10
@@ -7355,6 +7516,7 @@ invalid stars_in_movies record starId: null movieId: IMu20
 invalid stars_in_movies record starId: null movieId: IMu20
 invalid stars_in_movies record starId: null movieId: IMu20
 invalid stars_in_movies record starId: null movieId: IMu20
+invalid stars_in_movies record starId: null movieId: IMx10
 invalid stars_in_movies record starId: null movieId: IMx10
 invalid stars_in_movies record starId: null movieId: IMx10
 invalid stars_in_movies record starId: null movieId: IMz10
@@ -7519,6 +7681,7 @@ invalid stars_in_movies record starId: null movieId: IrP11
 invalid stars_in_movies record starId: null movieId: IrP18
 invalid stars_in_movies record starId: null movieId: IrP18
 invalid stars_in_movies record starId: null movieId: IrP27
+invalid stars_in_movies record starId: null movieId: IrP27
 invalid stars_in_movies record starId: null movieId: IrR5
 invalid stars_in_movies record starId: null movieId: IrR6
 invalid stars_in_movies record starId: null movieId: IrR6
@@ -7612,6 +7775,9 @@ invalid stars_in_movies record starId: null movieId: IsS11
 invalid stars_in_movies record starId: null movieId: IsS15
 invalid stars_in_movies record starId: null movieId: IsS15
 invalid stars_in_movies record starId: null movieId: IsS15
+invalid stars_in_movies record starId: null movieId: ISt20
+invalid stars_in_movies record starId: null movieId: ISt24
+invalid stars_in_movies record starId: null movieId: ISt24
 invalid stars_in_movies record starId: null movieId: ISt24
 invalid stars_in_movies record starId: null movieId: ISt26
 invalid stars_in_movies record starId: null movieId: ISt29
@@ -7783,6 +7949,7 @@ invalid stars_in_movies record starId: null movieId: JaB10
 invalid stars_in_movies record starId: null movieId: JaB10
 invalid stars_in_movies record starId: null movieId: JaC28
 invalid stars_in_movies record starId: null movieId: JaC28
+invalid stars_in_movies record starId: null movieId: JaC28
 invalid stars_in_movies record starId: null movieId: JAl20
 invalid stars_in_movies record starId: null movieId: JAl20
 invalid stars_in_movies record starId: null movieId: JAl20
@@ -7796,7 +7963,7 @@ invalid stars_in_movies record starId: null movieId: JaR10
 invalid stars_in_movies record starId: null movieId: JaS10
 invalid stars_in_movies record starId: null movieId: JaS10
 invalid stars_in_movies record starId: null movieId: JaS13
-invalid stars_in_movies record starId: null movieId: Jas13
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: JaS20
 invalid stars_in_movies record starId: nm9427622 movieId: null
 invalid stars_in_movies record starId: nm9423360 movieId: null
@@ -7913,6 +8080,7 @@ invalid stars_in_movies record starId: null movieId: JC11
 invalid stars_in_movies record starId: null movieId: JCa4
 invalid stars_in_movies record starId: null movieId: JCa7
 invalid stars_in_movies record starId: null movieId: JCa7
+invalid stars_in_movies record starId: null movieId: JCa7
 invalid stars_in_movies record starId: null movieId: JCa9
 invalid stars_in_movies record starId: null movieId: JcC10
 invalid stars_in_movies record starId: null movieId: JcC10
@@ -7989,6 +8157,7 @@ invalid stars_in_movies record starId: null movieId: JCw44
 invalid stars_in_movies record starId: null movieId: JCw50
 invalid stars_in_movies record starId: null movieId: JCw61
 invalid stars_in_movies record starId: null movieId: JCw61
+invalid stars_in_movies record starId: null movieId: JCw69
 invalid stars_in_movies record starId: nm9426532 movieId: null
 invalid stars_in_movies record starId: nm9423625 movieId: null
 invalid stars_in_movies record starId: nm9424420 movieId: null
@@ -8177,7 +8346,14 @@ invalid stars_in_movies record starId: null movieId: JFr12
 invalid stars_in_movies record starId: null movieId: JFr15
 invalid stars_in_movies record starId: null movieId: JFr15
 invalid stars_in_movies record starId: null movieId: JFr15
+invalid stars_in_movies record starId: null movieId: JFr22
 invalid stars_in_movies record starId: null movieId: JFs10
+invalid stars_in_movies record starId: nm9423572 movieId: null
+invalid stars_in_movies record starId: nm9425547 movieId: null
+invalid stars_in_movies record starId: nm9424836 movieId: null
+invalid stars_in_movies record starId: nm9423572 movieId: null
+invalid stars_in_movies record starId: nm9425547 movieId: null
+invalid stars_in_movies record starId: nm9424836 movieId: null
 invalid stars_in_movies record starId: null movieId: JGb10
 invalid stars_in_movies record starId: null movieId: JGb10
 invalid stars_in_movies record starId: null movieId: JGb10
@@ -8201,6 +8377,7 @@ invalid stars_in_movies record starId: null movieId: JGo10
 invalid stars_in_movies record starId: null movieId: JGo10
 invalid stars_in_movies record starId: null movieId: JGo10
 invalid stars_in_movies record starId: null movieId: JGo10
+invalid stars_in_movies record starId: null movieId: JGo13
 invalid stars_in_movies record starId: null movieId: JGr5
 invalid stars_in_movies record starId: null movieId: JGr5
 invalid stars_in_movies record starId: null movieId: JGr30
@@ -8223,6 +8400,7 @@ invalid stars_in_movies record starId: null movieId: JHi7
 invalid stars_in_movies record starId: null movieId: JHj10
 invalid stars_in_movies record starId: null movieId: JHL12
 invalid stars_in_movies record starId: null movieId: JHo20
+invalid stars_in_movies record starId: null movieId: JHo24
 invalid stars_in_movies record starId: null movieId: JHo24
 invalid stars_in_movies record starId: null movieId: JHo40
 invalid stars_in_movies record starId: null movieId: JHp10
@@ -8278,6 +8456,7 @@ invalid stars_in_movies record starId: null movieId: JiG10
 invalid stars_in_movies record starId: null movieId: JiG10
 invalid stars_in_movies record starId: null movieId: JiG10
 invalid stars_in_movies record starId: null movieId: JiS10
+invalid stars_in_movies record starId: null movieId: JiS10
 invalid stars_in_movies record starId: null movieId: JIv8
 invalid stars_in_movies record starId: null movieId: JIv8
 invalid stars_in_movies record starId: null movieId: JIv15
@@ -8316,6 +8495,8 @@ invalid stars_in_movies record starId: null movieId: JIv45
 invalid stars_in_movies record starId: null movieId: JIv45
 invalid stars_in_movies record starId: null movieId: JIv45
 invalid stars_in_movies record starId: null movieId: JIv45
+invalid stars_in_movies record starId: nm9425937 movieId: null
+invalid stars_in_movies record starId: nm9427411 movieId: null
 invalid stars_in_movies record starId: null movieId: JIv51
 invalid stars_in_movies record starId: null movieId: JIv51
 invalid stars_in_movies record starId: null movieId: JIv51
@@ -8478,6 +8659,8 @@ invalid stars_in_movies record starId: null movieId: JLa10
 invalid stars_in_movies record starId: null movieId: JLa10
 invalid stars_in_movies record starId: null movieId: JLa10
 invalid stars_in_movies record starId: null movieId: JLa10
+invalid stars_in_movies record starId: null movieId: JLa10
+invalid stars_in_movies record starId: null movieId: JLB1
 invalid stars_in_movies record starId: null movieId: JLB12
 invalid stars_in_movies record starId: null movieId: JLB12
 invalid stars_in_movies record starId: null movieId: JLB14
@@ -8558,12 +8741,14 @@ invalid stars_in_movies record starId: null movieId: JLG55
 invalid stars_in_movies record starId: null movieId: JLG55
 invalid stars_in_movies record starId: null movieId: JLG63
 invalid stars_in_movies record starId: null movieId: JLM2
+invalid stars_in_movies record starId: null movieId: JLM3
 invalid stars_in_movies record starId: null movieId: JLM6
 invalid stars_in_movies record starId: null movieId: JLM6
 invalid stars_in_movies record starId: null movieId: JLM8
 invalid stars_in_movies record starId: null movieId: JLM8
 invalid stars_in_movies record starId: null movieId: JLM8
 invalid stars_in_movies record starId: null movieId: JLM9
+invalid stars_in_movies record starId: null movieId: JLM12
 invalid stars_in_movies record starId: null movieId: JLM13
 invalid stars_in_movies record starId: null movieId: JLM13
 invalid stars_in_movies record starId: null movieId: JLM13
@@ -8575,6 +8760,7 @@ invalid stars_in_movies record starId: null movieId: JLo4
 invalid stars_in_movies record starId: null movieId: JLo17
 invalid stars_in_movies record starId: null movieId: JLo17
 invalid stars_in_movies record starId: null movieId: JLo18
+invalid stars_in_movies record starId: null movieId: JLo25
 invalid stars_in_movies record starId: null movieId: JLo25
 invalid stars_in_movies record starId: null movieId: JLo25
 invalid stars_in_movies record starId: null movieId: JLo25
@@ -8731,6 +8917,7 @@ invalid stars_in_movies record starId: null movieId: JnL13
 invalid stars_in_movies record starId: null movieId: JnL13
 invalid stars_in_movies record starId: null movieId: JnL13
 invalid stars_in_movies record starId: null movieId: JnL15
+invalid stars_in_movies record starId: null movieId: JnL15
 invalid stars_in_movies record starId: null movieId: JnL18
 invalid stars_in_movies record starId: null movieId: JnL18
 invalid stars_in_movies record starId: null movieId: JnL18
@@ -8749,6 +8936,8 @@ invalid stars_in_movies record starId: null movieId: JNm64
 invalid stars_in_movies record starId: null movieId: JNm65
 invalid stars_in_movies record starId: null movieId: JNm66
 invalid stars_in_movies record starId: null movieId: JNm66
+invalid stars_in_movies record starId: null movieId: JNm67
+invalid stars_in_movies record starId: null movieId: JNm68
 invalid stars_in_movies record starId: null movieId: JNm68
 invalid stars_in_movies record starId: nm9428541 movieId: null
 invalid stars_in_movies record starId: nm9425331 movieId: null
@@ -8790,6 +8979,7 @@ invalid stars_in_movies record starId: null movieId: JNs112
 invalid stars_in_movies record starId: null movieId: JNs112
 invalid stars_in_movies record starId: null movieId: JNs210
 invalid stars_in_movies record starId: null movieId: JNs210
+invalid stars_in_movies record starId: null movieId: JoA10
 invalid stars_in_movies record starId: null movieId: JoA10
 invalid stars_in_movies record starId: null movieId: JoA10
 invalid stars_in_movies record starId: null movieId: JoA10
@@ -8877,6 +9067,7 @@ invalid stars_in_movies record starId: null movieId: JoM15
 invalid stars_in_movies record starId: null movieId: JoM15
 invalid stars_in_movies record starId: null movieId: JoP2
 invalid stars_in_movies record starId: null movieId: JoP2
+invalid stars_in_movies record starId: null movieId: JoP41
 invalid stars_in_movies record starId: null movieId: JoP42
 invalid stars_in_movies record starId: null movieId: JoP42
 invalid stars_in_movies record starId: null movieId: JoP42
@@ -9015,6 +9206,7 @@ invalid stars_in_movies record starId: null movieId: JqF40
 invalid stars_in_movies record starId: null movieId: JqF40
 invalid stars_in_movies record starId: null movieId: JqR43
 invalid stars_in_movies record starId: null movieId: JqF50
+invalid stars_in_movies record starId: null movieId: JqF50
 invalid stars_in_movies record starId: null movieId: JqM10
 invalid stars_in_movies record starId: null movieId: JqM10
 invalid stars_in_movies record starId: null movieId: JqM11
@@ -9057,6 +9249,7 @@ invalid stars_in_movies record starId: null movieId: JR50
 invalid stars_in_movies record starId: null movieId: JR55
 invalid stars_in_movies record starId: null movieId: JR55
 invalid stars_in_movies record starId: null movieId: JR55
+invalid stars_in_movies record starId: null movieId: JR55
 invalid stars_in_movies record starId: null movieId: JR60
 invalid stars_in_movies record starId: null movieId: JR60
 invalid stars_in_movies record starId: null movieId: JR65
@@ -9076,6 +9269,7 @@ invalid stars_in_movies record starId: null movieId: JR70
 invalid stars_in_movies record starId: null movieId: JR70
 invalid stars_in_movies record starId: null movieId: JR70
 invalid stars_in_movies record starId: null movieId: JR75
+invalid stars_in_movies record starId: null movieId: JR77
 invalid stars_in_movies record starId: null movieId: JR77
 invalid stars_in_movies record starId: null movieId: JR77
 invalid stars_in_movies record starId: null movieId: JR77
@@ -9227,6 +9421,7 @@ invalid stars_in_movies record starId: null movieId: JtF1
 invalid stars_in_movies record starId: null movieId: JtF1
 invalid stars_in_movies record starId: null movieId: JtF1
 invalid stars_in_movies record starId: null movieId: JtF1
+invalid stars_in_movies record starId: null movieId: JtF1
 invalid stars_in_movies record starId: null movieId: JtF3
 invalid stars_in_movies record starId: null movieId: JtF3
 invalid stars_in_movies record starId: null movieId: JtF3
@@ -9239,6 +9434,7 @@ invalid stars_in_movies record starId: null movieId: JtF3
 invalid stars_in_movies record starId: null movieId: JtF3
 invalid stars_in_movies record starId: null movieId: JtF3
 invalid stars_in_movies record starId: null movieId: JtF3
+invalid stars_in_movies record starId: null movieId: JTg5
 invalid stars_in_movies record starId: null movieId: JTg5
 invalid stars_in_movies record starId: null movieId: JTg5
 invalid stars_in_movies record starId: null movieId: JTg7
@@ -9270,6 +9466,7 @@ invalid stars_in_movies record starId: null movieId: JTu14
 invalid stars_in_movies record starId: null movieId: JTu14
 invalid stars_in_movies record starId: null movieId: JuA102
 invalid stars_in_movies record starId: null movieId: JuA102
+invalid stars_in_movies record starId: null movieId: JuA102
 invalid stars_in_movies record starId: null movieId: JuA103
 invalid stars_in_movies record starId: null movieId: JuA103
 invalid stars_in_movies record starId: null movieId: JuA103
@@ -9292,6 +9489,7 @@ invalid stars_in_movies record starId: null movieId: JuB104
 invalid stars_in_movies record starId: null movieId: JuD8
 invalid stars_in_movies record starId: null movieId: JuD8
 invalid stars_in_movies record starId: null movieId: JuD8
+invalid stars_in_movies record starId: null movieId: JuD10
 invalid stars_in_movies record starId: null movieId: JuD10
 invalid stars_in_movies record starId: null movieId: JuD13
 invalid stars_in_movies record starId: null movieId: JuD13
@@ -9363,6 +9561,7 @@ invalid stars_in_movies record starId: null movieId: JW1
 invalid stars_in_movies record starId: null movieId: JW1
 invalid stars_in_movies record starId: null movieId: JW2
 invalid stars_in_movies record starId: null movieId: JW2
+invalid stars_in_movies record starId: null movieId: JW2
 invalid stars_in_movies record starId: null movieId: JW4
 invalid stars_in_movies record starId: null movieId: JW4
 invalid stars_in_movies record starId: null movieId: JW9
@@ -9378,6 +9577,7 @@ invalid stars_in_movies record starId: null movieId: JWB10
 invalid stars_in_movies record starId: null movieId: JWB10
 invalid stars_in_movies record starId: null movieId: JWe1
 invalid stars_in_movies record starId: null movieId: JWe1
+invalid stars_in_movies record starId: null movieId: JWe6
 invalid stars_in_movies record starId: null movieId: JWe6
 invalid stars_in_movies record starId: null movieId: JWe12
 invalid stars_in_movies record starId: null movieId: JWe12
@@ -9451,8 +9651,10 @@ invalid stars_in_movies record starId: null movieId: KBg10
 invalid stars_in_movies record starId: null movieId: KBg10
 invalid stars_in_movies record starId: null movieId: KBg10
 invalid stars_in_movies record starId: null movieId: KBg10
+invalid stars_in_movies record starId: null movieId: KBg10
 invalid stars_in_movies record starId: null movieId: KBg15
 invalid stars_in_movies record starId: null movieId: KBi5
+invalid stars_in_movies record starId: null movieId: KBi10
 invalid stars_in_movies record starId: null movieId: KBi10
 invalid stars_in_movies record starId: null movieId: KBr1
 invalid stars_in_movies record starId: null movieId: KBr1
@@ -9507,9 +9709,11 @@ invalid stars_in_movies record starId: null movieId: KeA31
 invalid stars_in_movies record starId: null movieId: KeA31
 invalid stars_in_movies record starId: null movieId: KeA31
 invalid stars_in_movies record starId: null movieId: KeA31
+invalid stars_in_movies record starId: null movieId: KeA31
 invalid stars_in_movies record starId: null movieId: KeA34
 invalid stars_in_movies record starId: null movieId: KeA36
 invalid stars_in_movies record starId: null movieId: KeA36
+invalid stars_in_movies record starId: null movieId: KeA43
 invalid stars_in_movies record starId: null movieId: KeA43
 invalid stars_in_movies record starId: null movieId: KeA43
 invalid stars_in_movies record starId: null movieId: KeA43
@@ -9569,7 +9773,7 @@ invalid stars_in_movies record starId: null movieId: KgD10
 invalid stars_in_movies record starId: null movieId: KgD10
 invalid stars_in_movies record starId: null movieId: KgD10
 invalid stars_in_movies record starId: null movieId: KHe10
-invalid stars_in_movies record starId: null movieId: KHi20
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: KHt1
 invalid stars_in_movies record starId: null movieId: KHt1
 invalid stars_in_movies record starId: null movieId: KHt1
@@ -9654,6 +9858,7 @@ invalid stars_in_movies record starId: null movieId: KrK38
 invalid stars_in_movies record starId: null movieId: KrK38
 invalid stars_in_movies record starId: null movieId: KrK38
 invalid stars_in_movies record starId: null movieId: KrK39
+invalid stars_in_movies record starId: null movieId: KRu6
 invalid stars_in_movies record starId: null movieId: KRu6
 invalid stars_in_movies record starId: null movieId: KRu6
 invalid stars_in_movies record starId: null movieId: KRu6
@@ -9751,7 +9956,9 @@ invalid stars_in_movies record starId: null movieId: KuF11
 invalid stars_in_movies record starId: null movieId: KuN4
 invalid stars_in_movies record starId: null movieId: KuN4
 invalid stars_in_movies record starId: null movieId: KuN12
+invalid stars_in_movies record starId: null movieId: KuN30
 invalid stars_in_movies record starId: null movieId: KuN33
+invalid stars_in_movies record starId: null movieId: KuN36
 invalid stars_in_movies record starId: null movieId: KuN36
 invalid stars_in_movies record starId: null movieId: KuN40
 invalid stars_in_movies record starId: null movieId: KuN40
@@ -9834,6 +10041,7 @@ invalid stars_in_movies record starId: null movieId: LaC20
 invalid stars_in_movies record starId: null movieId: LaC35
 invalid stars_in_movies record starId: null movieId: LaC35
 invalid stars_in_movies record starId: null movieId: LaC35
+invalid stars_in_movies record starId: null movieId: LaH10
 invalid stars_in_movies record starId: null movieId: LaH10
 invalid stars_in_movies record starId: null movieId: LAl2
 invalid stars_in_movies record starId: null movieId: LAl4
@@ -9944,6 +10152,7 @@ invalid stars_in_movies record starId: null movieId: LCa10
 invalid stars_in_movies record starId: null movieId: LCa10
 invalid stars_in_movies record starId: null movieId: LCa14
 invalid stars_in_movies record starId: null movieId: LCa14
+invalid stars_in_movies record starId: null movieId: LCh1
 invalid stars_in_movies record starId: null movieId: LCh2
 invalid stars_in_movies record starId: null movieId: LCh5
 invalid stars_in_movies record starId: null movieId: LCh14
@@ -9969,11 +10178,15 @@ invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: LeG12
 invalid stars_in_movies record starId: null movieId: LeG36
 invalid stars_in_movies record starId: null movieId: LeG36
 invalid stars_in_movies record starId: null movieId: LeG36
 invalid stars_in_movies record starId: null movieId: LeG36
 invalid stars_in_movies record starId: null movieId: LeG40
+invalid stars_in_movies record starId: nm9428877 movieId: null
+invalid stars_in_movies record starId: nm9425503 movieId: null
+invalid stars_in_movies record starId: nm9429626 movieId: null
 invalid stars_in_movies record starId: null movieId: Leh21
 invalid stars_in_movies record starId: null movieId: Leh21
 invalid stars_in_movies record starId: null movieId: LeJ8
@@ -10030,6 +10243,7 @@ invalid stars_in_movies record starId: null movieId: LFl70
 invalid stars_in_movies record starId: null movieId: LFl70
 invalid stars_in_movies record starId: null movieId: LFl70
 invalid stars_in_movies record starId: null movieId: LgC10
+invalid stars_in_movies record starId: null movieId: LgC10
 invalid stars_in_movies record starId: null movieId: LgC30
 invalid stars_in_movies record starId: null movieId: LgC30
 invalid stars_in_movies record starId: null movieId: LgC30
@@ -10041,6 +10255,8 @@ invalid stars_in_movies record starId: null movieId: LGt19
 invalid stars_in_movies record starId: null movieId: LGt31
 invalid stars_in_movies record starId: null movieId: LGt31
 invalid stars_in_movies record starId: null movieId: LGt31
+invalid stars_in_movies record starId: null movieId: LGt31
+invalid stars_in_movies record starId: null movieId: LGt32
 invalid stars_in_movies record starId: null movieId: LGt33
 invalid stars_in_movies record starId: null movieId: LGt40
 invalid stars_in_movies record starId: null movieId: LGt45
@@ -10288,12 +10504,15 @@ invalid stars_in_movies record starId: null movieId: LoK9
 invalid stars_in_movies record starId: null movieId: LoK9
 invalid stars_in_movies record starId: null movieId: LoK20
 invalid stars_in_movies record starId: null movieId: LoK50
+invalid stars_in_movies record starId: null movieId: LoK50
 invalid stars_in_movies record starId: null movieId: LOl1
 invalid stars_in_movies record starId: null movieId: LOl1
 invalid stars_in_movies record starId: null movieId: LOl1
 invalid stars_in_movies record starId: null movieId: LOl1
 invalid stars_in_movies record starId: null movieId: LOl1
 invalid stars_in_movies record starId: null movieId: LOl1
+invalid stars_in_movies record starId: null movieId: LOl3
+invalid stars_in_movies record starId: null movieId: LOl3
 invalid stars_in_movies record starId: null movieId: LOl3
 invalid stars_in_movies record starId: null movieId: LOl4
 invalid stars_in_movies record starId: null movieId: LoM2
@@ -10369,6 +10588,7 @@ invalid stars_in_movies record starId: null movieId: LuD1
 invalid stars_in_movies record starId: null movieId: LuD1
 invalid stars_in_movies record starId: null movieId: LuD1
 invalid stars_in_movies record starId: null movieId: LuD1
+invalid stars_in_movies record starId: null movieId: LuD4
 invalid stars_in_movies record starId: null movieId: LUl10
 invalid stars_in_movies record starId: null movieId: LuM10
 invalid stars_in_movies record starId: null movieId: LuM10
@@ -10410,6 +10630,7 @@ invalid stars_in_movies record starId: null movieId: LuV3
 invalid stars_in_movies record starId: null movieId: LuV20
 invalid stars_in_movies record starId: null movieId: LuV20
 invalid stars_in_movies record starId: null movieId: LuV30
+invalid stars_in_movies record starId: null movieId: LuV40
 invalid stars_in_movies record starId: null movieId: LuV40
 invalid stars_in_movies record starId: null movieId: LuV40
 invalid stars_in_movies record starId: null movieId: LuV40
@@ -10593,6 +10814,7 @@ invalid stars_in_movies record starId: null movieId: MB15
 invalid stars_in_movies record starId: null movieId: MB15
 invalid stars_in_movies record starId: null movieId: MB15
 invalid stars_in_movies record starId: null movieId: MB15
+invalid stars_in_movies record starId: null movieId: MB15
 invalid stars_in_movies record starId: null movieId: MB17
 invalid stars_in_movies record starId: null movieId: MB17
 invalid stars_in_movies record starId: null movieId: MB22
@@ -10644,7 +10866,7 @@ invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9424385 movieId: null
 invalid stars_in_movies record starId: nm9423597 movieId: null
 invalid stars_in_movies record starId: null movieId: null
-invalid stars_in_movies record starId: nm9424634 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9425542 movieId: null
 invalid stars_in_movies record starId: nm9426464 movieId: null
 invalid stars_in_movies record starId: null movieId: null
@@ -10692,9 +10914,10 @@ invalid stars_in_movies record starId: null movieId: MCC12
 invalid stars_in_movies record starId: null movieId: MCC12
 invalid stars_in_movies record starId: null movieId: MCC12
 invalid stars_in_movies record starId: null movieId: MCC12
-invalid stars_in_movies record starId: null movieId: MCr10
-invalid stars_in_movies record starId: null movieId: MCr10
-invalid stars_in_movies record starId: null movieId: MCr10
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9423403 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: MCg10
 invalid stars_in_movies record starId: null movieId: MCh2
 invalid stars_in_movies record starId: null movieId: MCh2
@@ -10838,6 +11061,7 @@ invalid stars_in_movies record starId: null movieId: MF9
 invalid stars_in_movies record starId: null movieId: MF15
 invalid stars_in_movies record starId: null movieId: MF15
 invalid stars_in_movies record starId: null movieId: MF15
+invalid stars_in_movies record starId: nm9425307 movieId: null
 invalid stars_in_movies record starId: null movieId: MFe40
 invalid stars_in_movies record starId: null movieId: MFe40
 invalid stars_in_movies record starId: null movieId: MFe40
@@ -10920,6 +11144,7 @@ invalid stars_in_movies record starId: null movieId: MiA8
 invalid stars_in_movies record starId: null movieId: MiA18
 invalid stars_in_movies record starId: null movieId: MiA18
 invalid stars_in_movies record starId: null movieId: MiA18
+invalid stars_in_movies record starId: null movieId: MiA18
 invalid stars_in_movies record starId: null movieId: MiA25
 invalid stars_in_movies record starId: null movieId: MiA25
 invalid stars_in_movies record starId: null movieId: MiA25
@@ -10973,6 +11198,7 @@ invalid stars_in_movies record starId: null movieId: MiJ10
 invalid stars_in_movies record starId: null movieId: MiJ10
 invalid stars_in_movies record starId: null movieId: MiJ10
 invalid stars_in_movies record starId: null movieId: MiJ10
+invalid stars_in_movies record starId: null movieId: MiJ12
 invalid stars_in_movies record starId: null movieId: MiJ12
 invalid stars_in_movies record starId: null movieId: MiJ12
 invalid stars_in_movies record starId: null movieId: MiJ12
@@ -11208,12 +11434,14 @@ invalid stars_in_movies record starId: null movieId: MLR12
 invalid stars_in_movies record starId: null movieId: MLR14
 invalid stars_in_movies record starId: null movieId: MLR14
 invalid stars_in_movies record starId: null movieId: MLR16
+invalid stars_in_movies record starId: null movieId: MLR16
 invalid stars_in_movies record starId: null movieId: MLR18
 invalid stars_in_movies record starId: null movieId: MLR18
 invalid stars_in_movies record starId: null movieId: MLR18
 invalid stars_in_movies record starId: null movieId: MLR22
 invalid stars_in_movies record starId: null movieId: MLR22
 invalid stars_in_movies record starId: null movieId: MLR27
+invalid stars_in_movies record starId: null movieId: MLR29
 invalid stars_in_movies record starId: null movieId: MLR29
 invalid stars_in_movies record starId: null movieId: MLR30
 invalid stars_in_movies record starId: null movieId: MLR31
@@ -11409,6 +11637,7 @@ invalid stars_in_movies record starId: null movieId: MOp20
 invalid stars_in_movies record starId: null movieId: MOp20
 invalid stars_in_movies record starId: null movieId: MOp21
 invalid stars_in_movies record starId: null movieId: MOp21
+invalid stars_in_movies record starId: null movieId: MOp21
 invalid stars_in_movies record starId: null movieId: MOp22
 invalid stars_in_movies record starId: null movieId: MOp22
 invalid stars_in_movies record starId: null movieId: MoT1
@@ -11482,6 +11711,7 @@ invalid stars_in_movies record starId: null movieId: MPo10
 invalid stars_in_movies record starId: null movieId: MPr4
 invalid stars_in_movies record starId: null movieId: MPr4
 invalid stars_in_movies record starId: null movieId: MPr4
+invalid stars_in_movies record starId: null movieId: MPr6
 invalid stars_in_movies record starId: null movieId: MPr11
 invalid stars_in_movies record starId: null movieId: MPr25
 invalid stars_in_movies record starId: null movieId: MPr25
@@ -11491,6 +11721,7 @@ invalid stars_in_movies record starId: null movieId: MPr25
 invalid stars_in_movies record starId: null movieId: MR2
 invalid stars_in_movies record starId: null movieId: MR4
 invalid stars_in_movies record starId: null movieId: MR4
+invalid stars_in_movies record starId: null movieId: MR11
 invalid stars_in_movies record starId: null movieId: MR11
 invalid stars_in_movies record starId: null movieId: MR12
 invalid stars_in_movies record starId: null movieId: MR13
@@ -11800,6 +12031,7 @@ invalid stars_in_movies record starId: null movieId: MTU10
 invalid stars_in_movies record starId: null movieId: MTU10
 invalid stars_in_movies record starId: null movieId: MTU10
 invalid stars_in_movies record starId: null movieId: MuB5
+invalid stars_in_movies record starId: null movieId: MuB5
 invalid stars_in_movies record starId: null movieId: MuK10
 invalid stars_in_movies record starId: null movieId: MuK10
 invalid stars_in_movies record starId: null movieId: MuK10
@@ -11897,6 +12129,7 @@ invalid stars_in_movies record starId: null movieId: MyS10
 invalid stars_in_movies record starId: null movieId: MyS10
 invalid stars_in_movies record starId: null movieId: MyS10
 invalid stars_in_movies record starId: null movieId: MZ1
+invalid stars_in_movies record starId: null movieId: MZ1
 invalid stars_in_movies record starId: null movieId: MZ15
 invalid stars_in_movies record starId: null movieId: MZa5
 invalid stars_in_movies record starId: null movieId: MZa10
@@ -11992,6 +12225,7 @@ invalid stars_in_movies record starId: null movieId: NF13
 invalid stars_in_movies record starId: null movieId: NF13
 invalid stars_in_movies record starId: null movieId: NF13
 invalid stars_in_movies record starId: null movieId: NF13
+invalid stars_in_movies record starId: null movieId: NF13
 invalid stars_in_movies record starId: null movieId: NF16
 invalid stars_in_movies record starId: null movieId: NF29
 invalid stars_in_movies record starId: null movieId: NF29
@@ -12002,6 +12236,8 @@ invalid stars_in_movies record starId: null movieId: NGr10
 invalid stars_in_movies record starId: null movieId: NGr10
 invalid stars_in_movies record starId: null movieId: NGr10
 invalid stars_in_movies record starId: null movieId: NGr10
+invalid stars_in_movies record starId: null movieId: NGr20
+invalid stars_in_movies record starId: null movieId: NGr20
 invalid stars_in_movies record starId: null movieId: NHa10
 invalid stars_in_movies record starId: null movieId: NHa10
 invalid stars_in_movies record starId: null movieId: NHa10
@@ -12097,6 +12333,7 @@ invalid stars_in_movies record starId: null movieId: NJu12
 invalid stars_in_movies record starId: null movieId: NJu12
 invalid stars_in_movies record starId: null movieId: NJu12
 invalid stars_in_movies record starId: null movieId: NJu20
+invalid stars_in_movies record starId: null movieId: NkM10
 invalid stars_in_movies record starId: null movieId: NkM10
 invalid stars_in_movies record starId: null movieId: NkM10
 invalid stars_in_movies record starId: null movieId: NkM10
@@ -12282,8 +12519,8 @@ invalid stars_in_movies record starId: null movieId: NoL26
 invalid stars_in_movies record starId: null movieId: NoL26
 invalid stars_in_movies record starId: null movieId: NOs2
 invalid stars_in_movies record starId: null movieId: NOs3
-invalid stars_in_movies record starId: null movieId: Nos12
-invalid stars_in_movies record starId: null movieId: Nos12
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: NOs30
 invalid stars_in_movies record starId: null movieId: NOs30
 invalid stars_in_movies record starId: null movieId: NOs35
@@ -12340,6 +12577,7 @@ invalid stars_in_movies record starId: null movieId: NT32
 invalid stars_in_movies record starId: null movieId: NT36
 invalid stars_in_movies record starId: null movieId: NT36
 invalid stars_in_movies record starId: null movieId: NT40
+invalid stars_in_movies record starId: null movieId: NT40
 invalid stars_in_movies record starId: null movieId: NT44
 invalid stars_in_movies record starId: null movieId: NT44
 invalid stars_in_movies record starId: null movieId: NT44
@@ -12366,6 +12604,7 @@ invalid stars_in_movies record starId: null movieId: NT127
 invalid stars_in_movies record starId: null movieId: NT128
 invalid stars_in_movies record starId: null movieId: NT128
 invalid stars_in_movies record starId: null movieId: NT128
+invalid stars_in_movies record starId: null movieId: NuJ1
 invalid stars_in_movies record starId: null movieId: NuJ1
 invalid stars_in_movies record starId: null movieId: NuJ2
 invalid stars_in_movies record starId: null movieId: NuJ2
@@ -12472,6 +12711,7 @@ invalid stars_in_movies record starId: null movieId: OP30
 invalid stars_in_movies record starId: null movieId: OP30
 invalid stars_in_movies record starId: null movieId: OP31
 invalid stars_in_movies record starId: null movieId: OP40
+invalid stars_in_movies record starId: null movieId: OP40
 invalid stars_in_movies record starId: null movieId: OP44
 invalid stars_in_movies record starId: null movieId: OP50
 invalid stars_in_movies record starId: null movieId: OP50
@@ -12481,11 +12721,15 @@ invalid stars_in_movies record starId: null movieId: OPa1
 invalid stars_in_movies record starId: null movieId: OPa1
 invalid stars_in_movies record starId: null movieId: OPa1
 invalid stars_in_movies record starId: null movieId: OPa1
-invalid stars_in_movies record starId: null movieId: OPa2
-invalid stars_in_movies record starId: null movieId: OPa2
-invalid stars_in_movies record starId: null movieId: OPa2
-invalid stars_in_movies record starId: null movieId: OPa2
-invalid stars_in_movies record starId: null movieId: OPa2
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427411 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9424788 movieId: null
+invalid stars_in_movies record starId: nm9426466 movieId: null
+invalid stars_in_movies record starId: nm9429819 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: OSo10
 invalid stars_in_movies record starId: null movieId: OSo10
 invalid stars_in_movies record starId: null movieId: OSo10
@@ -12502,6 +12746,7 @@ invalid stars_in_movies record starId: null movieId: OW4
 invalid stars_in_movies record starId: null movieId: OW4
 invalid stars_in_movies record starId: null movieId: OW4
 invalid stars_in_movies record starId: null movieId: OW5
+invalid stars_in_movies record starId: null movieId: OW6
 invalid stars_in_movies record starId: null movieId: OW6
 invalid stars_in_movies record starId: null movieId: OW7
 invalid stars_in_movies record starId: null movieId: OW7
@@ -12532,6 +12777,7 @@ invalid stars_in_movies record starId: null movieId: PAd13
 invalid stars_in_movies record starId: null movieId: PAd17
 invalid stars_in_movies record starId: null movieId: PAd17
 invalid stars_in_movies record starId: null movieId: PaF10
+invalid stars_in_movies record starId: null movieId: PaH50
 invalid stars_in_movies record starId: null movieId: PaH50
 invalid stars_in_movies record starId: null movieId: PaH50
 invalid stars_in_movies record starId: null movieId: PaH50
@@ -12632,10 +12878,10 @@ invalid stars_in_movies record starId: null movieId: PAl18
 invalid stars_in_movies record starId: null movieId: PAl18
 invalid stars_in_movies record starId: null movieId: PAl18
 invalid stars_in_movies record starId: null movieId: PAl18
-invalid stars_in_movies record starId: null movieId: PAl20
-invalid stars_in_movies record starId: null movieId: PAl20
-invalid stars_in_movies record starId: null movieId: PAl20
-invalid stars_in_movies record starId: null movieId: PAl20
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: PAl21
 invalid stars_in_movies record starId: null movieId: PAl21
 invalid stars_in_movies record starId: null movieId: PAl21
@@ -12800,6 +13046,7 @@ invalid stars_in_movies record starId: null movieId: PFa10
 invalid stars_in_movies record starId: null movieId: PFa10
 invalid stars_in_movies record starId: null movieId: PFa10
 invalid stars_in_movies record starId: null movieId: PFa10
+invalid stars_in_movies record starId: null movieId: PFa10
 invalid stars_in_movies record starId: null movieId: PFC10
 invalid stars_in_movies record starId: null movieId: PFo10
 invalid stars_in_movies record starId: null movieId: PFo15
@@ -12885,7 +13132,8 @@ invalid stars_in_movies record starId: nm9423819 movieId: null
 invalid stars_in_movies record starId: nm9428531 movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9428102 movieId: null
-invalid stars_in_movies record starId: null movieId: PhG10
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9426628 movieId: null
 invalid stars_in_movies record starId: null movieId: PhH10
 invalid stars_in_movies record starId: null movieId: PhH10
 invalid stars_in_movies record starId: null movieId: PhH10
@@ -13101,6 +13349,7 @@ invalid stars_in_movies record starId: null movieId: PMo17
 invalid stars_in_movies record starId: null movieId: PMo17
 invalid stars_in_movies record starId: null movieId: PMo17
 invalid stars_in_movies record starId: null movieId: PMo17
+invalid stars_in_movies record starId: null movieId: PMo22
 invalid stars_in_movies record starId: null movieId: PMo22
 invalid stars_in_movies record starId: null movieId: PMo22
 invalid stars_in_movies record starId: null movieId: PMo22
@@ -13400,7 +13649,11 @@ invalid stars_in_movies record starId: null movieId: QTa1
 invalid stars_in_movies record starId: null movieId: QTa1
 invalid stars_in_movies record starId: null movieId: QTa1
 invalid stars_in_movies record starId: null movieId: QTa1
-invalid stars_in_movies record starId: null movieId: Qta6
+invalid stars_in_movies record starId: nm9425524 movieId: null
+invalid stars_in_movies record starId: nm9425135 movieId: null
+invalid stars_in_movies record starId: nm9426102 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9425109 movieId: null
 invalid stars_in_movies record starId: null movieId: RA3
 invalid stars_in_movies record starId: null movieId: RA5
 invalid stars_in_movies record starId: null movieId: RA5
@@ -13462,8 +13715,10 @@ invalid stars_in_movies record starId: null movieId: RAl20
 invalid stars_in_movies record starId: null movieId: RAl20
 invalid stars_in_movies record starId: null movieId: RAl50
 invalid stars_in_movies record starId: null movieId: RAl55
+invalid stars_in_movies record starId: null movieId: RAl55
 invalid stars_in_movies record starId: null movieId: RAl69
 invalid stars_in_movies record starId: null movieId: RAl69
+invalid stars_in_movies record starId: null movieId: RAl70
 invalid stars_in_movies record starId: null movieId: RAl72
 invalid stars_in_movies record starId: null movieId: RAl72
 invalid stars_in_movies record starId: null movieId: RAl73
@@ -13525,6 +13780,7 @@ invalid stars_in_movies record starId: null movieId: RAu10
 invalid stars_in_movies record starId: null movieId: RaW2
 invalid stars_in_movies record starId: null movieId: RaW2
 invalid stars_in_movies record starId: null movieId: RaW2
+invalid stars_in_movies record starId: null movieId: RaW20
 invalid stars_in_movies record starId: null movieId: RaW59
 invalid stars_in_movies record starId: null movieId: RaW59
 invalid stars_in_movies record starId: null movieId: RaW59
@@ -13541,6 +13797,8 @@ invalid stars_in_movies record starId: null movieId: RaW61
 invalid stars_in_movies record starId: null movieId: RaW61
 invalid stars_in_movies record starId: null movieId: RaW61
 invalid stars_in_movies record starId: null movieId: RaW62
+invalid stars_in_movies record starId: null movieId: RaW63
+invalid stars_in_movies record starId: null movieId: RaW63
 invalid stars_in_movies record starId: null movieId: RaW63
 invalid stars_in_movies record starId: null movieId: RaW63
 invalid stars_in_movies record starId: null movieId: RaW66
@@ -13578,6 +13836,7 @@ invalid stars_in_movies record starId: null movieId: RbD3
 invalid stars_in_movies record starId: null movieId: RbD3
 invalid stars_in_movies record starId: null movieId: RbD3
 invalid stars_in_movies record starId: null movieId: RbD3
+invalid stars_in_movies record starId: null movieId: RBe1
 invalid stars_in_movies record starId: null movieId: RBe2
 invalid stars_in_movies record starId: null movieId: RBe5
 invalid stars_in_movies record starId: null movieId: RBe5
@@ -13626,6 +13885,7 @@ invalid stars_in_movies record starId: null movieId: RBS15
 invalid stars_in_movies record starId: null movieId: RBt6
 invalid stars_in_movies record starId: null movieId: RBt17
 invalid stars_in_movies record starId: null movieId: RBt17
+invalid stars_in_movies record starId: nm9425699 movieId: null
 invalid stars_in_movies record starId: null movieId: RBt20
 invalid stars_in_movies record starId: null movieId: RbW10
 invalid stars_in_movies record starId: null movieId: RBx10
@@ -13644,6 +13904,7 @@ invalid stars_in_movies record starId: null movieId: RC19
 invalid stars_in_movies record starId: null movieId: RC21
 invalid stars_in_movies record starId: null movieId: RC22
 invalid stars_in_movies record starId: null movieId: RcB1
+invalid stars_in_movies record starId: null movieId: RcB3
 invalid stars_in_movies record starId: null movieId: RcB3
 invalid stars_in_movies record starId: null movieId: RcB3
 invalid stars_in_movies record starId: null movieId: RcB5
@@ -13703,6 +13964,7 @@ invalid stars_in_movies record starId: null movieId: RCo14
 invalid stars_in_movies record starId: null movieId: RCo14
 invalid stars_in_movies record starId: null movieId: RCo14
 invalid stars_in_movies record starId: null movieId: RCo14
+invalid stars_in_movies record starId: null movieId: RCo14
 invalid stars_in_movies record starId: null movieId: RCo15
 invalid stars_in_movies record starId: null movieId: RCo15
 invalid stars_in_movies record starId: null movieId: RCo15
@@ -13733,6 +13995,7 @@ invalid stars_in_movies record starId: null movieId: RCo44
 invalid stars_in_movies record starId: null movieId: RCo44
 invalid stars_in_movies record starId: null movieId: RCo47
 invalid stars_in_movies record starId: null movieId: RCo47
+invalid stars_in_movies record starId: null movieId: RCo47
 invalid stars_in_movies record starId: null movieId: RCo48
 invalid stars_in_movies record starId: null movieId: RCo48
 invalid stars_in_movies record starId: null movieId: RCo48
@@ -13759,6 +14022,7 @@ invalid stars_in_movies record starId: null movieId: RD5
 invalid stars_in_movies record starId: null movieId: RD5
 invalid stars_in_movies record starId: null movieId: RD8
 invalid stars_in_movies record starId: null movieId: RD9
+invalid stars_in_movies record starId: null movieId: RD15
 invalid stars_in_movies record starId: null movieId: RD15
 invalid stars_in_movies record starId: null movieId: RD15
 invalid stars_in_movies record starId: null movieId: RD15
@@ -13808,6 +14072,7 @@ invalid stars_in_movies record starId: null movieId: RDL17
 invalid stars_in_movies record starId: null movieId: RDL19
 invalid stars_in_movies record starId: null movieId: RDL20
 invalid stars_in_movies record starId: null movieId: RDL24
+invalid stars_in_movies record starId: null movieId: RdM8
 invalid stars_in_movies record starId: null movieId: RdM8
 invalid stars_in_movies record starId: null movieId: RdM8
 invalid stars_in_movies record starId: null movieId: RdM18
@@ -13870,6 +14135,9 @@ invalid stars_in_movies record starId: null movieId: RdR54
 invalid stars_in_movies record starId: null movieId: RdR54
 invalid stars_in_movies record starId: null movieId: RdR56
 invalid stars_in_movies record starId: null movieId: RdR56
+invalid stars_in_movies record starId: null movieId: RdR56
+invalid stars_in_movies record starId: null movieId: RdR66
+invalid stars_in_movies record starId: null movieId: RdR66
 invalid stars_in_movies record starId: null movieId: RdR90
 invalid stars_in_movies record starId: null movieId: RdR90
 invalid stars_in_movies record starId: null movieId: RDu10
@@ -13920,9 +14188,15 @@ invalid stars_in_movies record starId: null movieId: REn30
 invalid stars_in_movies record starId: null movieId: REn45
 invalid stars_in_movies record starId: null movieId: REn45
 invalid stars_in_movies record starId: null movieId: REn50
-invalid stars_in_movies record starId: null movieId: ReN53
-invalid stars_in_movies record starId: null movieId: ReN53
-invalid stars_in_movies record starId: null movieId: ReN53
+invalid stars_in_movies record starId: nm9424688 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9429609 movieId: null
+invalid stars_in_movies record starId: nm9426735 movieId: null
+invalid stars_in_movies record starId: nm9424005 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9425876 movieId: null
+invalid stars_in_movies record starId: nm9427713 movieId: null
 invalid stars_in_movies record starId: null movieId: REn55
 invalid stars_in_movies record starId: null movieId: RFG1
 invalid stars_in_movies record starId: null movieId: RFG1
@@ -14173,6 +14447,7 @@ invalid stars_in_movies record starId: null movieId: RiF10
 invalid stars_in_movies record starId: null movieId: RiF10
 invalid stars_in_movies record starId: null movieId: RiF13
 invalid stars_in_movies record starId: null movieId: RiF13
+invalid stars_in_movies record starId: null movieId: RiF15
 invalid stars_in_movies record starId: null movieId: RiF18
 invalid stars_in_movies record starId: null movieId: RiF18
 invalid stars_in_movies record starId: null movieId: RiF20
@@ -14345,7 +14620,7 @@ invalid stars_in_movies record starId: nm9425110 movieId: null
 invalid stars_in_movies record starId: nm9424406 movieId: null
 invalid stars_in_movies record starId: nm9423935 movieId: null
 invalid stars_in_movies record starId: nm9428460 movieId: null
-invalid stars_in_movies record starId: nm9424607 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9426053 movieId: null
 invalid stars_in_movies record starId: nm9427422 movieId: null
 invalid stars_in_movies record starId: nm9427101 movieId: null
@@ -14498,6 +14773,10 @@ invalid stars_in_movies record starId: null movieId: RoA32
 invalid stars_in_movies record starId: null movieId: RoA32
 invalid stars_in_movies record starId: null movieId: RoA32
 invalid stars_in_movies record starId: null movieId: RoA32
+invalid stars_in_movies record starId: nm9423955 movieId: null
+invalid stars_in_movies record starId: nm9428402 movieId: null
+invalid stars_in_movies record starId: nm9425110 movieId: null
+invalid stars_in_movies record starId: null movieId: RoA48
 invalid stars_in_movies record starId: null movieId: RoA57
 invalid stars_in_movies record starId: null movieId: RoA66
 invalid stars_in_movies record starId: null movieId: RoA66
@@ -14548,6 +14827,7 @@ invalid stars_in_movies record starId: null movieId: RoP6
 invalid stars_in_movies record starId: null movieId: RoP7
 invalid stars_in_movies record starId: null movieId: RoP7
 invalid stars_in_movies record starId: null movieId: RoP9
+invalid stars_in_movies record starId: null movieId: RoP9
 invalid stars_in_movies record starId: null movieId: RoP10
 invalid stars_in_movies record starId: null movieId: RoP10
 invalid stars_in_movies record starId: null movieId: RoP10
@@ -14562,6 +14842,7 @@ invalid stars_in_movies record starId: null movieId: RoR1
 invalid stars_in_movies record starId: null movieId: RoR1
 invalid stars_in_movies record starId: null movieId: RoR2
 invalid stars_in_movies record starId: null movieId: RoR5
+invalid stars_in_movies record starId: null movieId: RoR6
 invalid stars_in_movies record starId: null movieId: RoR10
 invalid stars_in_movies record starId: null movieId: RoR10
 invalid stars_in_movies record starId: null movieId: RoS3
@@ -14589,6 +14870,7 @@ invalid stars_in_movies record starId: null movieId: RoS85
 invalid stars_in_movies record starId: null movieId: RoS90
 invalid stars_in_movies record starId: null movieId: RoS90
 invalid stars_in_movies record starId: null movieId: RoS90
+invalid stars_in_movies record starId: null movieId: RoS90
 invalid stars_in_movies record starId: null movieId: RoS94
 invalid stars_in_movies record starId: null movieId: RoS100
 invalid stars_in_movies record starId: null movieId: RoS112
@@ -14596,6 +14878,7 @@ invalid stars_in_movies record starId: null movieId: RoS112
 invalid stars_in_movies record starId: null movieId: RoS112
 invalid stars_in_movies record starId: null movieId: RoS112
 invalid stars_in_movies record starId: null movieId: RoS112
+invalid stars_in_movies record starId: null movieId: RoT20
 invalid stars_in_movies record starId: null movieId: RoT20
 invalid stars_in_movies record starId: null movieId: RoV1
 invalid stars_in_movies record starId: null movieId: RoV1
@@ -14609,6 +14892,7 @@ invalid stars_in_movies record starId: null movieId: RoV7
 invalid stars_in_movies record starId: null movieId: RoV7
 invalid stars_in_movies record starId: null movieId: RoV10
 invalid stars_in_movies record starId: null movieId: RoV15
+invalid stars_in_movies record starId: null movieId: RPa10
 invalid stars_in_movies record starId: null movieId: RPa10
 invalid stars_in_movies record starId: null movieId: RPa10
 invalid stars_in_movies record starId: null movieId: RPe8
@@ -14680,6 +14964,7 @@ invalid stars_in_movies record starId: null movieId: RRw15
 invalid stars_in_movies record starId: null movieId: RRw20
 invalid stars_in_movies record starId: null movieId: RRw20
 invalid stars_in_movies record starId: null movieId: RRw32
+invalid stars_in_movies record starId: null movieId: RRw33
 invalid stars_in_movies record starId: null movieId: RRw33
 invalid stars_in_movies record starId: null movieId: RRw33
 invalid stars_in_movies record starId: null movieId: RRw33
@@ -14878,6 +15163,7 @@ invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: nm9429207 movieId: null
 invalid stars_in_movies record starId: nm9425461 movieId: null
+invalid stars_in_movies record starId: null movieId: RSp10
 invalid stars_in_movies record starId: null movieId: RSp20
 invalid stars_in_movies record starId: null movieId: RSp20
 invalid stars_in_movies record starId: null movieId: RSp20
@@ -14904,6 +15190,7 @@ invalid stars_in_movies record starId: null movieId: RSt105
 invalid stars_in_movies record starId: null movieId: RSt105
 invalid stars_in_movies record starId: null movieId: RSt105
 invalid stars_in_movies record starId: null movieId: RSt105
+invalid stars_in_movies record starId: null movieId: RSt106
 invalid stars_in_movies record starId: null movieId: RSt107
 invalid stars_in_movies record starId: null movieId: RSt107
 invalid stars_in_movies record starId: null movieId: RSt107
@@ -15046,6 +15333,7 @@ invalid stars_in_movies record starId: null movieId: RtB14
 invalid stars_in_movies record starId: null movieId: RtB14
 invalid stars_in_movies record starId: null movieId: RtD12
 invalid stars_in_movies record starId: null movieId: RTh3
+invalid stars_in_movies record starId: null movieId: RTh3
 invalid stars_in_movies record starId: null movieId: RTh4
 invalid stars_in_movies record starId: null movieId: RTh4
 invalid stars_in_movies record starId: null movieId: RTh6
@@ -15054,6 +15342,7 @@ invalid stars_in_movies record starId: null movieId: RTh9
 invalid stars_in_movies record starId: null movieId: RTh10
 invalid stars_in_movies record starId: null movieId: RTh10
 invalid stars_in_movies record starId: null movieId: RTh12
+invalid stars_in_movies record starId: null movieId: RTh15
 invalid stars_in_movies record starId: nm9428081 movieId: null
 invalid stars_in_movies record starId: nm9426835 movieId: null
 invalid stars_in_movies record starId: nm9427444 movieId: null
@@ -15276,6 +15565,8 @@ invalid stars_in_movies record starId: null movieId: RWg16
 invalid stars_in_movies record starId: null movieId: RWg16
 invalid stars_in_movies record starId: null movieId: RWh8
 invalid stars_in_movies record starId: null movieId: RWh10
+invalid stars_in_movies record starId: null movieId: RWh10
+invalid stars_in_movies record starId: null movieId: RWh10
 invalid stars_in_movies record starId: null movieId: RWi1
 invalid stars_in_movies record starId: null movieId: RWi1
 invalid stars_in_movies record starId: null movieId: RWi1
@@ -15389,6 +15680,7 @@ invalid stars_in_movies record starId: null movieId: S1
 invalid stars_in_movies record starId: null movieId: S1
 invalid stars_in_movies record starId: null movieId: S1
 invalid stars_in_movies record starId: null movieId: S5
+invalid stars_in_movies record starId: null movieId: S5
 invalid stars_in_movies record starId: null movieId: S6
 invalid stars_in_movies record starId: null movieId: S9
 invalid stars_in_movies record starId: null movieId: S9
@@ -15405,6 +15697,7 @@ invalid stars_in_movies record starId: null movieId: S14
 invalid stars_in_movies record starId: null movieId: S14
 invalid stars_in_movies record starId: null movieId: S15
 invalid stars_in_movies record starId: null movieId: S25
+invalid stars_in_movies record starId: null movieId: S25
 invalid stars_in_movies record starId: null movieId: SaD10
 invalid stars_in_movies record starId: null movieId: SaD10
 invalid stars_in_movies record starId: null movieId: SaD10
@@ -15412,6 +15705,7 @@ invalid stars_in_movies record starId: null movieId: SaF13
 invalid stars_in_movies record starId: null movieId: SaF13
 invalid stars_in_movies record starId: null movieId: SaF19
 invalid stars_in_movies record starId: null movieId: SaF19
+invalid stars_in_movies record starId: null movieId: SaF20
 invalid stars_in_movies record starId: null movieId: SaF20
 invalid stars_in_movies record starId: null movieId: SaG10
 invalid stars_in_movies record starId: null movieId: SAo10
@@ -15525,6 +15819,8 @@ invalid stars_in_movies record starId: null movieId: SE25
 invalid stars_in_movies record starId: null movieId: SE26
 invalid stars_in_movies record starId: null movieId: SeG10
 invalid stars_in_movies record starId: null movieId: SeL3
+invalid stars_in_movies record starId: null movieId: SeL26
+invalid stars_in_movies record starId: null movieId: SeL30
 invalid stars_in_movies record starId: nm9424634 movieId: null
 invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: null
@@ -15689,6 +15985,8 @@ invalid stars_in_movies record starId: null movieId: SiA10
 invalid stars_in_movies record starId: null movieId: SIC10
 invalid stars_in_movies record starId: null movieId: SIC10
 invalid stars_in_movies record starId: null movieId: SIC10
+invalid stars_in_movies record starId: null movieId: SIC10
+invalid stars_in_movies record starId: null movieId: SIC10
 invalid stars_in_movies record starId: null movieId: SiG10
 invalid stars_in_movies record starId: null movieId: SiG10
 invalid stars_in_movies record starId: null movieId: SiG10
@@ -15731,6 +16029,7 @@ invalid stars_in_movies record starId: null movieId: SiW14
 invalid stars_in_movies record starId: null movieId: SiW14
 invalid stars_in_movies record starId: null movieId: SJF17
 invalid stars_in_movies record starId: null movieId: SJF19
+invalid stars_in_movies record starId: null movieId: SK2
 invalid stars_in_movies record starId: null movieId: SK3
 invalid stars_in_movies record starId: null movieId: SK3
 invalid stars_in_movies record starId: null movieId: SK3
@@ -15742,6 +16041,7 @@ invalid stars_in_movies record starId: null movieId: SK5
 invalid stars_in_movies record starId: null movieId: SK8
 invalid stars_in_movies record starId: null movieId: SK8
 invalid stars_in_movies record starId: null movieId: SK10
+invalid stars_in_movies record starId: null movieId: SK12
 invalid stars_in_movies record starId: null movieId: SK12
 invalid stars_in_movies record starId: null movieId: SK12
 invalid stars_in_movies record starId: null movieId: SK12
@@ -15792,6 +16092,7 @@ invalid stars_in_movies record starId: null movieId: SL33
 invalid stars_in_movies record starId: null movieId: SL33
 invalid stars_in_movies record starId: null movieId: SL33
 invalid stars_in_movies record starId: null movieId: SL33
+invalid stars_in_movies record starId: null movieId: SL35
 invalid stars_in_movies record starId: null movieId: SL44
 invalid stars_in_movies record starId: null movieId: SL50
 invalid stars_in_movies record starId: null movieId: SL50
@@ -15905,6 +16206,7 @@ invalid stars_in_movies record starId: null movieId: SLr10
 invalid stars_in_movies record starId: null movieId: SM3
 invalid stars_in_movies record starId: null movieId: SM3
 invalid stars_in_movies record starId: null movieId: SM6
+invalid stars_in_movies record starId: null movieId: SM6
 invalid stars_in_movies record starId: null movieId: SM7
 invalid stars_in_movies record starId: null movieId: SMe1
 invalid stars_in_movies record starId: null movieId: SMe1
@@ -15916,10 +16218,12 @@ invalid stars_in_movies record starId: null movieId: SMf10
 invalid stars_in_movies record starId: null movieId: SMf10
 invalid stars_in_movies record starId: null movieId: SMf10
 invalid stars_in_movies record starId: null movieId: SMf10
-invalid stars_in_movies record starId: null movieId: SMi3
-invalid stars_in_movies record starId: null movieId: SMi3
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9427852 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: Smi5
-invalid stars_in_movies record starId: null movieId: SMi5
+invalid stars_in_movies record starId: nm9427852 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: SMi10
 invalid stars_in_movies record starId: null movieId: SMi10
 invalid stars_in_movies record starId: null movieId: SMi14
@@ -15992,6 +16296,12 @@ invalid stars_in_movies record starId: null movieId: SpJ13
 invalid stars_in_movies record starId: null movieId: SpJ13
 invalid stars_in_movies record starId: null movieId: SpJ13
 invalid stars_in_movies record starId: null movieId: SPo2
+invalid stars_in_movies record starId: nm9429713 movieId: null
+invalid stars_in_movies record starId: nm9428160 movieId: null
+invalid stars_in_movies record starId: nm9428150 movieId: null
+invalid stars_in_movies record starId: nm9429702 movieId: null
+invalid stars_in_movies record starId: nm9428117 movieId: null
+invalid stars_in_movies record starId: nm9428904 movieId: null
 invalid stars_in_movies record starId: null movieId: SpS10
 invalid stars_in_movies record starId: null movieId: SpS10
 invalid stars_in_movies record starId: null movieId: SpS10
@@ -16070,6 +16380,7 @@ invalid stars_in_movies record starId: null movieId: SRa5
 invalid stars_in_movies record starId: null movieId: SRa5
 invalid stars_in_movies record starId: null movieId: SRa5
 invalid stars_in_movies record starId: null movieId: SRf21
+invalid stars_in_movies record starId: null movieId: SRf21
 invalid stars_in_movies record starId: null movieId: SRi2
 invalid stars_in_movies record starId: null movieId: SRi5
 invalid stars_in_movies record starId: null movieId: SRi5
@@ -16086,6 +16397,7 @@ invalid stars_in_movies record starId: null movieId: SRm1
 invalid stars_in_movies record starId: null movieId: SRm1
 invalid stars_in_movies record starId: null movieId: SRo1
 invalid stars_in_movies record starId: null movieId: SRo1
+invalid stars_in_movies record starId: null movieId: SRo2
 invalid stars_in_movies record starId: null movieId: SRo2
 invalid stars_in_movies record starId: null movieId: SRo2
 invalid stars_in_movies record starId: null movieId: SRo2
@@ -16192,6 +16504,7 @@ invalid stars_in_movies record starId: null movieId: SSS45
 invalid stars_in_movies record starId: null movieId: SSS45
 invalid stars_in_movies record starId: null movieId: SSS58
 invalid stars_in_movies record starId: null movieId: SSS58
+invalid stars_in_movies record starId: null movieId: SSu10
 invalid stars_in_movies record starId: null movieId: SSu10
 invalid stars_in_movies record starId: null movieId: SSu10
 invalid stars_in_movies record starId: null movieId: SSu10
@@ -16375,6 +16688,13 @@ invalid stars_in_movies record starId: null movieId: STu11
 invalid stars_in_movies record starId: null movieId: STu11
 invalid stars_in_movies record starId: null movieId: STu11
 invalid stars_in_movies record starId: null movieId: STu11
+invalid stars_in_movies record starId: nm9426018 movieId: null
+invalid stars_in_movies record starId: nm9427746 movieId: null
+invalid stars_in_movies record starId: nm9425891 movieId: null
+invalid stars_in_movies record starId: nm9423935 movieId: null
+invalid stars_in_movies record starId: nm9427089 movieId: null
+invalid stars_in_movies record starId: nm9429262 movieId: null
+invalid stars_in_movies record starId: nm9425526 movieId: null
 invalid stars_in_movies record starId: null movieId: StZ1
 invalid stars_in_movies record starId: null movieId: StZ1
 invalid stars_in_movies record starId: null movieId: StZ1
@@ -16512,6 +16832,7 @@ invalid stars_in_movies record starId: null movieId: SWm6
 invalid stars_in_movies record starId: null movieId: SWm6
 invalid stars_in_movies record starId: null movieId: SWm6
 invalid stars_in_movies record starId: null movieId: SWm6
+invalid stars_in_movies record starId: null movieId: SWm6
 invalid stars_in_movies record starId: null movieId: SWm10
 invalid stars_in_movies record starId: null movieId: SwS10
 invalid stars_in_movies record starId: null movieId: SwS10
@@ -16519,8 +16840,18 @@ invalid stars_in_movies record starId: null movieId: SwS10
 invalid stars_in_movies record starId: null movieId: SyC10
 invalid stars_in_movies record starId: null movieId: SyC10
 invalid stars_in_movies record starId: null movieId: SyC10
-invalid stars_in_movies record starId: null movieId: Sys1
-invalid stars_in_movies record starId: null movieId: Sys2
+invalid stars_in_movies record starId: nm9428943 movieId: null
+invalid stars_in_movies record starId: nm9429879 movieId: null
+invalid stars_in_movies record starId: nm9428786 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9429616 movieId: null
+invalid stars_in_movies record starId: nm9428943 movieId: null
+invalid stars_in_movies record starId: nm9429879 movieId: null
+invalid stars_in_movies record starId: nm9428786 movieId: null
+invalid stars_in_movies record starId: nm9427251 movieId: null
+invalid stars_in_movies record starId: nm9429616 movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: nm9425898 movieId: null
 invalid stars_in_movies record starId: null movieId: Sys3
 invalid stars_in_movies record starId: null movieId: SZi10
 invalid stars_in_movies record starId: null movieId: SZi10
@@ -16557,7 +16888,10 @@ invalid stars_in_movies record starId: null movieId: TAn12
 invalid stars_in_movies record starId: null movieId: TAn12
 invalid stars_in_movies record starId: null movieId: TAn12
 invalid stars_in_movies record starId: null movieId: TAn16
-invalid stars_in_movies record starId: null movieId: Tan21
+invalid stars_in_movies record starId: nm9429490 movieId: null
+invalid stars_in_movies record starId: nm9426302 movieId: null
+invalid stars_in_movies record starId: nm9425258 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: TAv1
 invalid stars_in_movies record starId: null movieId: TB55
 invalid stars_in_movies record starId: null movieId: TB60
@@ -16652,7 +16986,8 @@ invalid stars_in_movies record starId: null movieId: TFi9
 invalid stars_in_movies record starId: null movieId: TFi9
 invalid stars_in_movies record starId: null movieId: TFi9
 invalid stars_in_movies record starId: null movieId: TFi9
-invalid stars_in_movies record starId: null movieId: TFI10
+invalid stars_in_movies record starId: null movieId: TFi9
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: TFi12
 invalid stars_in_movies record starId: null movieId: TFi15
 invalid stars_in_movies record starId: null movieId: TFi15
@@ -16660,6 +16995,8 @@ invalid stars_in_movies record starId: null movieId: TFi20
 invalid stars_in_movies record starId: null movieId: TFi20
 invalid stars_in_movies record starId: null movieId: TFi20
 invalid stars_in_movies record starId: null movieId: TFi20
+invalid stars_in_movies record starId: null movieId: TFi20
+invalid stars_in_movies record starId: null movieId: TFi24
 invalid stars_in_movies record starId: null movieId: TFi24
 invalid stars_in_movies record starId: null movieId: TFi24
 invalid stars_in_movies record starId: null movieId: TFi30
@@ -16707,6 +17044,7 @@ invalid stars_in_movies record starId: nm9424133 movieId: null
 invalid stars_in_movies record starId: nm9425360 movieId: null
 invalid stars_in_movies record starId: nm9426210 movieId: null
 invalid stars_in_movies record starId: nm9427849 movieId: null
+invalid stars_in_movies record starId: null movieId: TGi4
 invalid stars_in_movies record starId: null movieId: TGi5
 invalid stars_in_movies record starId: null movieId: TGi5
 invalid stars_in_movies record starId: null movieId: TGi5
@@ -16735,6 +17073,7 @@ invalid stars_in_movies record starId: null movieId: ThB10
 invalid stars_in_movies record starId: null movieId: ThB30
 invalid stars_in_movies record starId: null movieId: ThB30
 invalid stars_in_movies record starId: null movieId: ThB30
+invalid stars_in_movies record starId: nm9427981 movieId: null
 invalid stars_in_movies record starId: null movieId: ThB70
 invalid stars_in_movies record starId: null movieId: ThC40
 invalid stars_in_movies record starId: null movieId: ThC40
@@ -16849,6 +17188,7 @@ invalid stars_in_movies record starId: null movieId: TiB6
 invalid stars_in_movies record starId: null movieId: TiB6
 invalid stars_in_movies record starId: null movieId: TiB8
 invalid stars_in_movies record starId: null movieId: TiB12
+invalid stars_in_movies record starId: null movieId: TiB12
 invalid stars_in_movies record starId: null movieId: TiB14
 invalid stars_in_movies record starId: null movieId: TiB17
 invalid stars_in_movies record starId: null movieId: TiB17
@@ -16938,7 +17278,7 @@ invalid stars_in_movies record starId: nm9426406 movieId: null
 invalid stars_in_movies record starId: nm9428349 movieId: null
 invalid stars_in_movies record starId: nm9424632 movieId: null
 invalid stars_in_movies record starId: nm9428592 movieId: null
-invalid stars_in_movies record starId: nm9424679 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: ToS5
 invalid stars_in_movies record starId: null movieId: ToS5
 invalid stars_in_movies record starId: null movieId: ToS10
@@ -17087,6 +17427,7 @@ invalid stars_in_movies record starId: null movieId: TTy10
 invalid stars_in_movies record starId: null movieId: TTy10
 invalid stars_in_movies record starId: null movieId: TTz2
 invalid stars_in_movies record starId: null movieId: TTz4
+invalid stars_in_movies record starId: null movieId: TTz4
 invalid stars_in_movies record starId: null movieId: TTz10
 invalid stars_in_movies record starId: null movieId: TTz10
 invalid stars_in_movies record starId: null movieId: TTz10
@@ -17110,6 +17451,7 @@ invalid stars_in_movies record starId: null movieId: TVw10
 invalid stars_in_movies record starId: null movieId: TVw10
 invalid stars_in_movies record starId: null movieId: TVw10
 invalid stars_in_movies record starId: null movieId: TVw10
+invalid stars_in_movies record starId: null movieId: TWa10
 invalid stars_in_movies record starId: null movieId: TWa10
 invalid stars_in_movies record starId: null movieId: TWh20
 invalid stars_in_movies record starId: null movieId: TWh20
@@ -17136,8 +17478,11 @@ invalid stars_in_movies record starId: null movieId: TYg17
 invalid stars_in_movies record starId: null movieId: TYg17
 invalid stars_in_movies record starId: null movieId: TYg17
 invalid stars_in_movies record starId: null movieId: TYg17
+invalid stars_in_movies record starId: null movieId: TYg21
+invalid stars_in_movies record starId: null movieId: TYg25
 invalid stars_in_movies record starId: null movieId: TyK10
 invalid stars_in_movies record starId: null movieId: TyK10
+invalid stars_in_movies record starId: null movieId: TyN10
 invalid stars_in_movies record starId: null movieId: TyN10
 invalid stars_in_movies record starId: null movieId: TyN10
 invalid stars_in_movies record starId: null movieId: TyN10
@@ -17156,6 +17501,7 @@ invalid stars_in_movies record starId: null movieId: UgF12
 invalid stars_in_movies record starId: null movieId: UgF12
 invalid stars_in_movies record starId: null movieId: UgF12
 invalid stars_in_movies record starId: null movieId: UlG3
+invalid stars_in_movies record starId: null movieId: UlG10
 invalid stars_in_movies record starId: null movieId: UlG22
 invalid stars_in_movies record starId: null movieId: UlG22
 invalid stars_in_movies record starId: null movieId: UlO10
@@ -17210,7 +17556,9 @@ invalid stars_in_movies record starId: null movieId: VdS6
 invalid stars_in_movies record starId: null movieId: VdS7
 invalid stars_in_movies record starId: null movieId: VdS7
 invalid stars_in_movies record starId: null movieId: VdS7
+invalid stars_in_movies record starId: null movieId: VdS8
 invalid stars_in_movies record starId: null movieId: VdS15
+invalid stars_in_movies record starId: null movieId: VdS21
 invalid stars_in_movies record starId: null movieId: VdS24
 invalid stars_in_movies record starId: null movieId: VdS24
 invalid stars_in_movies record starId: null movieId: VF19
@@ -17224,6 +17572,7 @@ invalid stars_in_movies record starId: null movieId: VF25
 invalid stars_in_movies record starId: null movieId: VF31
 invalid stars_in_movies record starId: null movieId: VF36
 invalid stars_in_movies record starId: null movieId: VF37
+invalid stars_in_movies record starId: null movieId: VF38
 invalid stars_in_movies record starId: null movieId: VF38
 invalid stars_in_movies record starId: null movieId: VF38
 invalid stars_in_movies record starId: null movieId: VF38
@@ -17301,6 +17650,7 @@ invalid stars_in_movies record starId: null movieId: VM8
 invalid stars_in_movies record starId: null movieId: VM8
 invalid stars_in_movies record starId: null movieId: VM8
 invalid stars_in_movies record starId: nm9426038 movieId: null
+invalid stars_in_movies record starId: nm9429307 movieId: null
 invalid stars_in_movies record starId: null movieId: VM9
 invalid stars_in_movies record starId: null movieId: VM9
 invalid stars_in_movies record starId: null movieId: VM10
@@ -17317,8 +17667,10 @@ invalid stars_in_movies record starId: null movieId: VME9
 invalid stars_in_movies record starId: null movieId: VME9
 invalid stars_in_movies record starId: null movieId: VME9
 invalid stars_in_movies record starId: null movieId: VME9
+invalid stars_in_movies record starId: null movieId: VME9
 invalid stars_in_movies record starId: null movieId: VME11
 invalid stars_in_movies record starId: null movieId: VME11
+invalid stars_in_movies record starId: null movieId: VME13
 invalid stars_in_movies record starId: null movieId: VME13
 invalid stars_in_movies record starId: null movieId: VME14
 invalid stars_in_movies record starId: null movieId: VME14
@@ -17385,6 +17737,7 @@ invalid stars_in_movies record starId: null movieId: VSh9
 invalid stars_in_movies record starId: null movieId: VSh10
 invalid stars_in_movies record starId: null movieId: VSh15
 invalid stars_in_movies record starId: null movieId: VSh15
+invalid stars_in_movies record starId: null movieId: VSh23
 invalid stars_in_movies record starId: null movieId: VSh23
 invalid stars_in_movies record starId: null movieId: VSh23
 invalid stars_in_movies record starId: null movieId: VSh25
@@ -17460,6 +17813,9 @@ invalid stars_in_movies record starId: null movieId: W90
 invalid stars_in_movies record starId: null movieId: W90
 invalid stars_in_movies record starId: null movieId: W100
 invalid stars_in_movies record starId: null movieId: W100
+invalid stars_in_movies record starId: null movieId: W100
+invalid stars_in_movies record starId: null movieId: W100
+invalid stars_in_movies record starId: null movieId: W100
 invalid stars_in_movies record starId: null movieId: WA2
 invalid stars_in_movies record starId: null movieId: WA2
 invalid stars_in_movies record starId: null movieId: WA2
@@ -17467,6 +17823,7 @@ invalid stars_in_movies record starId: null movieId: WA5
 invalid stars_in_movies record starId: null movieId: WA6
 invalid stars_in_movies record starId: null movieId: WA6
 invalid stars_in_movies record starId: null movieId: WA8
+invalid stars_in_movies record starId: null movieId: WA9
 invalid stars_in_movies record starId: null movieId: WA9
 invalid stars_in_movies record starId: null movieId: WA11
 invalid stars_in_movies record starId: null movieId: WA11
@@ -17587,16 +17944,16 @@ invalid stars_in_movies record starId: null movieId: WAS115
 invalid stars_in_movies record starId: null movieId: WAS130
 invalid stars_in_movies record starId: null movieId: WaW3
 invalid stars_in_movies record starId: null movieId: WaW3
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
-invalid stars_in_movies record starId: null movieId: Waw4
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: WaW5
 invalid stars_in_movies record starId: null movieId: WaW10
 invalid stars_in_movies record starId: null movieId: WaW10
@@ -17651,6 +18008,7 @@ invalid stars_in_movies record starId: null movieId: WBe10
 invalid stars_in_movies record starId: null movieId: WBe10
 invalid stars_in_movies record starId: null movieId: WBe10
 invalid stars_in_movies record starId: null movieId: WBe10
+invalid stars_in_movies record starId: null movieId: WBe10
 invalid stars_in_movies record starId: null movieId: WBe15
 invalid stars_in_movies record starId: null movieId: WBe15
 invalid stars_in_movies record starId: null movieId: WBe15
@@ -17664,6 +18022,7 @@ invalid stars_in_movies record starId: null movieId: WCl19
 invalid stars_in_movies record starId: null movieId: WCM2
 invalid stars_in_movies record starId: null movieId: WCM2
 invalid stars_in_movies record starId: null movieId: WCM6
+invalid stars_in_movies record starId: null movieId: WCM22
 invalid stars_in_movies record starId: null movieId: WCM22
 invalid stars_in_movies record starId: null movieId: WCM22
 invalid stars_in_movies record starId: null movieId: WCM32
@@ -17816,7 +18175,8 @@ invalid stars_in_movies record starId: null movieId: WhS5
 invalid stars_in_movies record starId: null movieId: WhS5
 invalid stars_in_movies record starId: null movieId: WhS5
 invalid stars_in_movies record starId: null movieId: WhS5
-invalid stars_in_movies record starId: null movieId: Whu1
+invalid stars_in_movies record starId: nm9425725 movieId: null
+invalid stars_in_movies record starId: null movieId: null
 invalid stars_in_movies record starId: null movieId: WHu7
 invalid stars_in_movies record starId: null movieId: WHu7
 invalid stars_in_movies record starId: null movieId: WHu10
@@ -17894,6 +18254,8 @@ invalid stars_in_movies record starId: null movieId: WjH10
 invalid stars_in_movies record starId: null movieId: WKD50
 invalid stars_in_movies record starId: null movieId: WKH14
 invalid stars_in_movies record starId: null movieId: WKH14
+invalid stars_in_movies record starId: null movieId: WKH14
+invalid stars_in_movies record starId: null movieId: WKH35
 invalid stars_in_movies record starId: null movieId: WKH45
 invalid stars_in_movies record starId: null movieId: WKH52
 invalid stars_in_movies record starId: null movieId: WKl10
@@ -17958,6 +18320,8 @@ invalid stars_in_movies record starId: null movieId: WlD34
 invalid stars_in_movies record starId: null movieId: WlD34
 invalid stars_in_movies record starId: null movieId: WlD34
 invalid stars_in_movies record starId: null movieId: WlD34
+invalid stars_in_movies record starId: null movieId: WlD34
+invalid stars_in_movies record starId: null movieId: WlD35
 invalid stars_in_movies record starId: null movieId: WlD36
 invalid stars_in_movies record starId: null movieId: WlD36
 invalid stars_in_movies record starId: null movieId: WlD36
@@ -18000,7 +18364,19 @@ invalid stars_in_movies record starId: null movieId: WmK15
 invalid stars_in_movies record starId: null movieId: WmK16
 invalid stars_in_movies record starId: null movieId: WmK18
 invalid stars_in_movies record starId: null movieId: WmK27
+invalid stars_in_movies record starId: nm9426552 movieId: null
+invalid stars_in_movies record starId: nm9426556 movieId: null
+invalid stars_in_movies record starId: nm9426557 movieId: null
+invalid stars_in_movies record starId: nm9427834 movieId: null
+invalid stars_in_movies record starId: nm9428174 movieId: null
+invalid stars_in_movies record starId: nm9423373 movieId: null
+invalid stars_in_movies record starId: nm9424415 movieId: null
+invalid stars_in_movies record starId: nm9428421 movieId: null
+invalid stars_in_movies record starId: nm9423141 movieId: null
+invalid stars_in_movies record starId: nm9425117 movieId: null
+invalid stars_in_movies record starId: nm9427179 movieId: null
 invalid stars_in_movies record starId: null movieId: WmK30
+invalid stars_in_movies record starId: nm9429834 movieId: null
 invalid stars_in_movies record starId: null movieId: WoP10
 invalid stars_in_movies record starId: null movieId: WoP10
 invalid stars_in_movies record starId: null movieId: WoP12
@@ -18023,6 +18399,7 @@ invalid stars_in_movies record starId: null movieId: WR31
 invalid stars_in_movies record starId: null movieId: WR40
 invalid stars_in_movies record starId: null movieId: WR40
 invalid stars_in_movies record starId: null movieId: WR40
+invalid stars_in_movies record starId: null movieId: WR42
 invalid stars_in_movies record starId: null movieId: WR72
 invalid stars_in_movies record starId: null movieId: WR72
 invalid stars_in_movies record starId: null movieId: WR72
@@ -18043,6 +18420,7 @@ invalid stars_in_movies record starId: null movieId: WRi20
 invalid stars_in_movies record starId: null movieId: WRi20
 invalid stars_in_movies record starId: null movieId: WRi20
 invalid stars_in_movies record starId: null movieId: WS5
+invalid stars_in_movies record starId: null movieId: WS8
 invalid stars_in_movies record starId: nm9427585 movieId: null
 invalid stars_in_movies record starId: nm9427585 movieId: null
 invalid stars_in_movies record starId: null movieId: WSa5
@@ -18096,6 +18474,7 @@ invalid stars_in_movies record starId: null movieId: WvD70
 invalid stars_in_movies record starId: null movieId: WvD72
 invalid stars_in_movies record starId: null movieId: WvD75
 invalid stars_in_movies record starId: null movieId: WvD75
+invalid stars_in_movies record starId: null movieId: WvD79
 invalid stars_in_movies record starId: null movieId: WvD79
 invalid stars_in_movies record starId: null movieId: WW12
 invalid stars_in_movies record starId: null movieId: WW12
@@ -18338,6 +18717,13 @@ invalid stars_in_movies record starId: null movieId: ZK2
 invalid stars_in_movies record starId: null movieId: ZK3
 invalid stars_in_movies record starId: null movieId: ZK3
 invalid stars_in_movies record starId: null movieId: ZK4
+invalid stars_in_movies record starId: nm9423693 movieId: null
+invalid stars_in_movies record starId: nm9423560 movieId: null
+invalid stars_in_movies record starId: nm9423806 movieId: null
+invalid stars_in_movies record starId: nm9426079 movieId: null
+invalid stars_in_movies record starId: nm9427557 movieId: null
+invalid stars_in_movies record starId: nm9424838 movieId: null
+invalid stars_in_movies record starId: nm9426470 movieId: null
 invalid stars_in_movies record starId: null movieId: ZK7
 invalid stars_in_movies record starId: null movieId: ZlK10
 invalid stars_in_movies record starId: null movieId: ZlK10
@@ -18373,6 +18759,7 @@ invalid stars_in_movies record starId: null movieId: Z0409
 invalid stars_in_movies record starId: null movieId: Z0411
 invalid stars_in_movies record starId: null movieId: Z0411
 invalid stars_in_movies record starId: null movieId: Z0411
+invalid stars_in_movies record starId: null movieId: Z0412
 invalid stars_in_movies record starId: null movieId: Z0414
 invalid stars_in_movies record starId: nm9427377 movieId: null
 invalid stars_in_movies record starId: nm9424374 movieId: null
@@ -18571,6 +18958,7 @@ invalid stars_in_movies record starId: null movieId: Z9610
 invalid stars_in_movies record starId: null movieId: Z9620
 invalid stars_in_movies record starId: null movieId: Z9620
 invalid stars_in_movies record starId: null movieId: Z9620
+invalid stars_in_movies record starId: null movieId: Z9630
 invalid stars_in_movies record starId: null movieId: Z9630
 invalid stars_in_movies record starId: null movieId: Z9630
 invalid stars_in_movies record starId: null movieId: Z9645
