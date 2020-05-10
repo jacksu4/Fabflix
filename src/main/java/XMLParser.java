@@ -1,3 +1,5 @@
+
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.*;
@@ -21,7 +23,9 @@ public class XMLParser {
     private Document dom;
     private Map<String, String> catMap = new HashMap<String, String>();
     private Set<String> movieSet = new HashSet<>();
+    private Set<String> movieSet_exist = new HashSet<>();
     private Map<String, String> starMap = new HashMap<>();
+    private Map<String, String> starMap_exist = new HashMap<>();
 
     public XMLParser(){
         catMap.put("Susp","Thriller");
@@ -162,6 +166,7 @@ public class XMLParser {
                         ResultSet rs = statement.executeQuery();
                         if(rs.next() && title == rs.getString("title") && year == rs.getInt("year") && director == rs.getString("director")){
                             myWriter.write("Skip duplicate movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
+
                         }else{
                             try{
                                 if(!movieSet.contains(id)){
@@ -230,7 +235,7 @@ public class XMLParser {
                     myWriter.write("Skip Invalid movie record id: "+id+" title: "+title+" year: "+year+" director: "+director+"\n");
                 }
             }
-        myWriter.close();
+            myWriter.close();
         }
     }
 
@@ -322,12 +327,22 @@ public class XMLParser {
                         myWriter.write("Skip invalid star record id: "+id+" name: "+name+" birthYear: "+birthYear+"\n");
                     }
                 }else{
-                    myWriter.write("Skip duplicate star record id: "+id+" name: "+name+" birthYear: "+birthYear+"\n");
+                    String star_query_temp = "select id from stars where stars.name = ?";
+                    PreparedStatement star_qs_temp = dbcon.prepareStatement(star_query_temp);
+                    star_qs_temp.setString(1,name);
+                    ResultSet star_rs_temp = star_qs_temp.executeQuery();
+                    String starId = "null";
+                    if(star_rs_temp.next()) {
+                        starId = star_rs_temp.getString("id");
+                    }
+                    star_rs_temp.close();
+                    starMap_exist.put(name, starId);
+                    myWriter.write("Skip duplicate star record id: "+starId+" name: "+name+" birthYear: "+birthYear+"\n");
                 }
                 star_rs.close();
                 star_qs.close();
             }
-        myWriter.close();
+            myWriter.close();
         }
 
     }
@@ -375,7 +390,7 @@ public class XMLParser {
                 }
 
                 if(!movieId.equals("null")){
-                    /*
+
                     String movie_query = "select * from movies where movies.id = ?";
                     PreparedStatement movie_qs = dbcon.prepareStatement(movie_query);
                     movie_qs.setString(1,movieId);
@@ -385,10 +400,12 @@ public class XMLParser {
                     }
                     movie_rs.close();
                     movie_qs.close();
-                     */
-                    if(!movieSet.contains(movieId)){
-                        movieId = "null";
-                    }
+
+//                    if(!movieSet.contains(movieId)){
+//                        movieId = "null";
+//                    }
+
+
                 }
 
                 //get star name from xml and find starId from db
@@ -402,21 +419,24 @@ public class XMLParser {
                 }
 
                 if(!starName.equals("null") && !starName.equals("sa")){
-                    /*
-                    String star_query = "select id from stars where stars.name = ?";
-                    PreparedStatement star_qs = dbcon.prepareStatement(star_query);
-                    star_qs.setString(1,starName);
-                    ResultSet star_rs = star_qs.executeQuery();
+
+//                    String star_query = "select id from stars where stars.name = ?";
+//                    PreparedStatement star_qs = dbcon.prepareStatement(star_query);
+//                    star_qs.setString(1,starName);
+//                    ResultSet star_rs = star_qs.executeQuery();
+//                    String starId = "null";
+//                    if(star_rs.next()){
+//                        starId = star_rs.getString("id");
+//                    }
                     String starId = "null";
-                    if(star_rs.next()){
-                        starId = star_rs.getString("id");
+                    if (starMap_exist.containsKey(starName)){
+                        starId = starMap_exist.get(starName);
                     }
 
-                     */
-                    String starId = "null";
                     if(starMap.containsKey(starName)){
                         starId = starMap.get(starName);
                     }
+
                     if(!starId.equals("null") && !movieId.equals("null")){
                         /*
                         String star_insert = "insert into stars_in_movies (starId, movieId) values (?,?)";
@@ -435,12 +455,12 @@ public class XMLParser {
 
                 }
             }
-        myWriter.close();
-        dataWriter.close();
-        String loadData = "load data local infile 'stars_in_movies_data.txt' into table stars_in_movies";
-        PreparedStatement loadData_is = dbcon.prepareStatement(loadData);
-        loadData_is.executeUpdate();
-        loadData_is.close();
+            myWriter.close();
+            dataWriter.close();
+            String loadData = "load data local infile 'stars_in_movies_data.txt' into table stars_in_movies";
+            PreparedStatement loadData_is = dbcon.prepareStatement(loadData);
+            loadData_is.executeUpdate();
+            loadData_is.close();
         }
     }
 
