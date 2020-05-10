@@ -23,12 +23,12 @@ BEGIN
 		IF Exist > 0 THEN
 			SET @responseMsg = 'Movie already exists.';
 		ELSE
-			SELECT MAX(id) INTO @movie_id_com FROM movies;
+            SELECT MAX(id) INTO @movie_id_com FROM movies where id like "tt0%";
             SET @movie_id_com = cast(substring(@movie_id_com, 3) as unsigned)+1;
-            SET @movie_id_new = concat("tt", @movie_id_com);
+            SET @movie_id_new = concat("tt0", @movie_id_com);
 			INSERT INTO movies (id, title, year, director) 
 			VALUES (@movie_id_new, title, year, director);
-            SET @responseMsg = 'Movie added. ';
+            SET @responseMsg = 'Movie added. Movie id is ';
             SET @responseMsg = concat(@responseMsg , @movie_id_new) ;
             
 			SELECT stars.id, count(*) 
@@ -43,11 +43,12 @@ BEGIN
 				SET @star_id_new = concat("nm", @star_id_com);
 				INSERT INTO stars (id, name) VALUES (@star_id_new, star_name);
 				INSERT INTO stars_in_movies (starId, movieId) VALUES (@star_id_new, @movie_id_new);
-				SET @responseMsg = concat(@responseMsg , 'Star was not found and was created. ') ;
+				SET @responseMsg = concat(@responseMsg , ' Star was not found and was created. Star id is ') ;
 				SET @responseMsg = concat(@responseMsg , @star_id_new) ;
 			ELSE
 				INSERT INTO stars_in_movies(starId, movieId) VALUES (star_id, @movie_id_new);
-                SET @responseMsg = concat(@responseMsg , 'Star was found and was linked to the movie. ') ;
+                SET @responseMsg = concat(@responseMsg , ' Star was found and was linked to the movie. Star id is ') ;
+                SET @responseMsg = concat(@responseMsg , @star_id_new) ;
 			END IF;
         
 			SELECT count(*) 
@@ -59,12 +60,13 @@ BEGIN
 				INSERT INTO genres (name) VALUES (genre_name);
 				SET @genre_id_new = LAST_INSERT_ID();
 				INSERT INTO genres_in_movies (genreId, movieId) VALUES (@genre_id_new, @movie_id_new);
-				SET @responseMsg = concat(@responseMsg , 'Genre was not found and was created. ') ;
+				SET @responseMsg = concat(@responseMsg , ' Genre was not found and was created. Genre id is ') ;
                 SET @responseMsg = concat(@responseMsg , @genre_id_new) ;
 			ELSE
 				SELECT genres.id INTO genre_id FROM genres WHERE genres.name = genre_name;
 				INSERT INTO genres_in_movies (genreId, movieId) VALUES (genre_id, @movie_id_new);
-                SET @responseMsg = concat(@responseMsg , 'Genre was found and was linked to the movie. ') ;
+                SET @responseMsg = concat(@responseMsg , ' Genre was found and was linked to the movie. Genre id is ') ;
+                SET @responseMsg = concat(@responseMsg , @genre_id_new) ;
 			END IF;
 
 		END IF;
