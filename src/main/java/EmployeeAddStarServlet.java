@@ -56,6 +56,7 @@ public class EmployeeAddStarServlet extends HttpServlet {
 
                 System.out.println(statement);
                 statement.executeUpdate();
+                out.write(id);
                 statement.close();
             } else {
                 String insert_query = "insert into stars (id, name) values (?,?)";
@@ -65,6 +66,7 @@ public class EmployeeAddStarServlet extends HttpServlet {
 
                 System.out.println(statement);
                 statement.executeUpdate();
+                out.write(id);
                 statement.close();
             }
 

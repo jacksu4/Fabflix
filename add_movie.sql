@@ -29,6 +29,7 @@ BEGIN
 			INSERT INTO movies (id, title, year, director) 
 			VALUES (@movie_id_new, title, year, director);
             SET @responseMsg = 'Movie added. ';
+            SET @responseMsg = concat(@responseMsg , @movie_id_new) ;
             
 			SELECT stars.id, count(*) 
 			INTO star_id, Exist 
@@ -43,6 +44,7 @@ BEGIN
 				INSERT INTO stars (id, name) VALUES (@star_id_new, star_name);
 				INSERT INTO stars_in_movies (starId, movieId) VALUES (@star_id_new, @movie_id_new);
 				SET @responseMsg = concat(@responseMsg , 'Star was not found and was created. ') ;
+				SET @responseMsg = concat(@responseMsg , @star_id_new) ;
 			ELSE
 				INSERT INTO stars_in_movies(starId, movieId) VALUES (star_id, @movie_id_new);
                 SET @responseMsg = concat(@responseMsg , 'Star was found and was linked to the movie. ') ;
@@ -58,6 +60,7 @@ BEGIN
 				SET @genre_id_new = LAST_INSERT_ID();
 				INSERT INTO genres_in_movies (genreId, movieId) VALUES (@genre_id_new, @movie_id_new);
 				SET @responseMsg = concat(@responseMsg , 'Genre was not found and was created. ') ;
+                SET @responseMsg = concat(@responseMsg , @genre_id_new) ;
 			ELSE
 				SELECT genres.id INTO genre_id FROM genres WHERE genres.name = genre_name;
 				INSERT INTO genres_in_movies (genreId, movieId) VALUES (genre_id, @movie_id_new);

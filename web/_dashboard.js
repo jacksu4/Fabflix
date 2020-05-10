@@ -19,19 +19,12 @@ function handleMetadata(resultData) {
     }
 }
 
-
-function submit_star_info(formSubmitEvent){
-    console.log("submit star info");
-    formSubmitEvent.preventDefault();
-
-    $.ajax(
-        "api/employee_add_star", {
-            method: "POST",
-            data: star_input.serialize(),
-            success: $("#star_message").text("star added")
-        }
-    );
+function output_star(resultData){
+    $("#star_message").text("star added " + resultData);
 }
+
+
+
 
 function submit_movie_info(formSubmitEvent){
     console.log("submit star info");
@@ -42,14 +35,24 @@ function submit_movie_info(formSubmitEvent){
             method: "POST",
             data: movie_input.serialize(),
             success: handleMovieResult
-        }
-    );
+        });
 }
 
 function handleMovieResult(resultDataString) {
     $("#movie_message").text(resultDataString);
 }
 
+function submit_star_info(formSubmitEvent){
+    console.log("submit star info");
+    formSubmitEvent.preventDefault();
+
+    $.ajax(
+        "api/employee_add_star", {
+            method: "POST",
+            data: star_input.serialize(),
+            success: (Data) => output_star(Data)
+});
+}
 
 jQuery.ajax({
     datatype: "json",

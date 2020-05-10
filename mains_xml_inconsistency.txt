@@ -26,8 +26,6 @@ Skip Invalid movie record id: WlJ10 title: null year: 1949 director: W.Jackson
 Skip Invalid movie record id: AS22 title: Morgan Stewart's Coming Home year: -1 director: Alan~Smithee
 Skip Invalid movie record id: AS32 title: Raging Angels year: -1 director: Alan~Smithee
 Skip Invalid movie record id: GeP45 title: null year: 1999 director: Pollock
-SQLException catched for movie record id: FileWriter myWriter = new FileWriter("movie_data_inconsistency.txt"); title: Mamie year: 1966 director: Hiller
-Data truncation: Data too long for column 'id' at row 1
 Skip Invalid movie record id: GxR10 title: null year: 1954 director: G.Reinhardt
 Skip Invalid movie record id: GxR10 title: null year: 1954 director: G.Reinhardt
 Skip Invalid movie record id: RHd2 title: Stop Train 349 year: -1 director: Haedrich 
