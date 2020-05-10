@@ -30,7 +30,7 @@ public class LoginFilter implements Filter {
             return;
         }
 
-        if(httpRequest.getRequestURI().substring(httpRequest.getRequestURI().length()-15).equals("_dashboard.html")){
+        if(httpRequest.getRequestURI().length() > 15 && httpRequest.getRequestURI().substring(httpRequest.getRequestURI().length()-15).equals("_dashboard.html")){
             if(httpRequest.getSession().getAttribute("employee") == null){
                 httpResponse.sendRedirect("login_employees.html");
             }else{
