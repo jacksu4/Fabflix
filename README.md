@@ -39,6 +39,12 @@ substring matching design: support substring, e.g. %love, %eat% on __director, t
  - ShoppingCartServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/ShoppingCartServlet.java
  - SingleMovieServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/SingleMovieServlet.java
  - SingleStarServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/SingleStarServlet.java
+ 
+#### XML Parser and Optimization
+ - inconsistent data is reported in corresponding .txt files in the root directory
+ - Use local hashset and hashtable to record movieId and starId so that the time to check whether the movie or star exist in database is largely reduced
+ - Use load data to largely reduce insert time
+ - Local execution time is reduced from 159.615 seconds to 47.405 seconds
 
 #### Members' Contribution
 
@@ -56,5 +62,4 @@ Jin Zeyu
 - Create SingleMovie page and added related html, js files
 - added CSS files and bootstrap classes to beautify all three pages
 - implement search function, shopping cart function and payment function
-- implement xml parsing function
-
+- implement xml parsing function and optimization
