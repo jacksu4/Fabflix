@@ -39,6 +39,7 @@ substring matching design: support substring, e.g. %love, %eat% on __director, t
  - ShoppingCartServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/ShoppingCartServlet.java
  - SingleMovieServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/SingleMovieServlet.java
  - SingleStarServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/SingleStarServlet.java
+ - XMLParser https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/XMLParser.java
  
 #### XML Parser and Optimization
  - inconsistent data is reported in corresponding .txt files in the root directory
