@@ -70,9 +70,24 @@ function handleResult(resultData){
         movieStarsElement.append('<a class="badge badge-info font-weight-light" href="single-star.html?id='+resultData[1]["stars_id"][j]+'">'+resultData[1]["stars_name"][j]+
             '</a>');
     }
-    let movielist_url = resultData[3]["movielist_url"];
-    let backButton = jQuery("#backButton");
-    backButton.click(function(){
+
+    let movielist_url = "";
+
+    if (resultData.length==3){
+        if (resultData[2]["movielist_url"]!=null) {
+            movielist_url = resultData[2]["movielist_url"]
+        } else {
+            $("#backButton").prop('disabled', true)
+        }
+    } else if (resultData.length==4) {
+        if (resultData[3]["movielist_url"]!=null) {
+            movielist_url = resultData[3]["movielist_url"]
+        } else {
+            $("#backButton").prop('disabled', true)
+        }
+    }
+
+    $("#backButton").click(function(){
         window.location.href = movielist_url;
     });
 
