@@ -33,6 +33,17 @@ public class MovieListServlet extends HttpServlet{
         return statement;
     }
 
+    private String AddPlus(String string){
+        StringBuffer res = new StringBuffer();
+        String[] strArr = string.split(" ");
+        for (String str:strArr){
+            char[] stringArray = ("+" + str).trim().toCharArray();
+            String resStr = new String(stringArray);
+            res.append(resStr).append(" ");
+        }
+        return res.toString().trim();
+    }
+
     protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -68,8 +79,19 @@ public class MovieListServlet extends HttpServlet{
             String first_sort = request.getParameter("firstsort");
             String second_sort = request.getParameter("secondsort");
 
-//            System.out.println(request.getParameter("start"));
+            System.out.println(request.getParameter("advance"));
+            System.out.println(request.getParameter("search"));
 //            System.out.println(request.getParameter("start").equals("null"));
+//            if (!request.getParameter("advancesearch").equals("null") && !request.getParameter("advancesearch").isEmpty()){
+//                String title;
+//                title = request.getParameter("title");
+//                String query = "select id, title, year, director, rating from movies, ratings where match(title) against (? in boolean mode)" +
+//                        "and ratings.movieId = id";
+//
+//                statement = dbcon.prepareStatement(query);
+//                String res_title = AddPlus(title);
+//                statement.setString(1, res_title);
+
             if (!request.getParameter("search").equals("null") && !request.getParameter("search").isEmpty()){
 
 //                System.out.println(request.getParameter("search"));
@@ -112,12 +134,15 @@ public class MovieListServlet extends HttpServlet{
                             "and movies.title like ? and movies.director like ?) as T1 left join ratings on T1.id=ratings.movieId "+
                             "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
+
                     statement = dbcon.prepareStatement(query);
                     statement.setString(1,star_name);
                     statement.setString(2,title);
                     statement.setString(3,director);
 
                     generateStatement(statement, result_per_page, page, 4);
+
+                    System.out.println(statement);
 
                     //System.out.println(statement);
                 }
@@ -127,7 +152,7 @@ public class MovieListServlet extends HttpServlet{
                 if (!start.equals("*")) {
                     String query = "select T1.id, T1.title, T1.year, T1.director, ratings.rating from (select distinct(movies.id), movies.title as title, movies.year, movies.director FROM movies \n" +
                             "where movies.title like ?) as T1 left join ratings on T1.id = ratings.movieId " +
-                    "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
+                            "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                     statement = dbcon.prepareStatement(query);
 
@@ -161,6 +186,19 @@ public class MovieListServlet extends HttpServlet{
                 statement.setString(1,genre);
                 System.out.println(statement);
 
+            }else if (!request.getParameter("advance").equals("null") && !request.getParameter("advance").isEmpty()){
+                String title;
+                title = request.getParameter("title");
+                String query = "select id, title, year, director, rating from movies, ratings where match(title) against (? in boolean mode)" +
+                        "and ratings.movieId = id\n" +
+                "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
+
+                statement = dbcon.prepareStatement(query);
+                String res_title = AddPlus(title);
+                statement.setString(1, res_title);
+                generateStatement(statement, result_per_page, page, 2);
+                System.out.println(statement);
+
             }else{
                 System.out.println("enter default");
                 String query = "select movies.id, movies.title, movies.year, movies.director, ratings.rating FROM movies left join ratings on movies.id = ratings.movieId \n" +
@@ -175,6 +213,7 @@ public class MovieListServlet extends HttpServlet{
             rs = statement.executeQuery();
 
             System.out.println("first statement success");
+
 
             JsonArray jsonArray = new JsonArray();
 

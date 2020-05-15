@@ -51,18 +51,29 @@ function handleMovieListResult(resultData) {
         // Append the row created to the table body, which will refresh the page
         movieListTableBodyElement.append(rowHTML);
 
+        if (resultData.length==0){
+            $("#next").removeAttr('href');
+            $("#prev").removeAttr('href');
+        }
+
         if (resultData.length < resultperpage){
             $("#next").removeAttr('href');
         }
         else{
-            if(search==null){
+            if(search==null && advance_search==null){
                 let hyperlink = "index.html?start=" + start + "&genre=" + genre
                     + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
                     + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)+1).toString();
                 $("#next").attr("href", hyperlink);
             }
-            else{
+            else if(search!=null){
                 let hyperlink = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
+                    + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+                    + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)+1).toString();
+                $("#next").attr("href", hyperlink);
+            }
+            else{
+                let hyperlink = "index.html?" + "advance=" + advance_search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
                     + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
                     + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)+1).toString();
                 $("#next").attr("href", hyperlink);
@@ -72,13 +83,18 @@ function handleMovieListResult(resultData) {
         if(page==0){
             $("#prev").removeAttr('href');
         }else{
-            if(search==null){
+            if(search==null && advance_search==null){
                 let hyperlink = "index.html?start=" + start + "&genre=" + genre
                     + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
                     + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)-1).toString();
                 $("#prev").attr("href", hyperlink);
-            }else{
+            }else if(search!=null){
                 let hyperlink = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
+                    + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+                    + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)-1).toString();
+                $("#prev").attr("href", hyperlink);
+            }else{
+                let hyperlink = "index.html?" + "advance=" + advance_search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
                     + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
                     + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + (parseInt(page)-1).toString();
                 $("#prev").attr("href", hyperlink);
@@ -132,6 +148,7 @@ function displayMessage(){
 var start = getParameterByName('start');
 var genre = getParameterByName('genre');
 var search = getParameterByName('search');
+var advance_search = getParameterByName('advance');
 
 var title = getParameterByName('title');
 var director = getParameterByName('director');
@@ -147,11 +164,20 @@ var resultperpage = getParameterByName('resultperpage');
 var page = getParameterByName('page');
 
 
-if(search==null) {
+if(search==null && advance_search==null) {
     jQuery.ajax({
         dataType: "json", // Setting return data type
         method: "GET", // Setting request method
-        url: "api/movielist?start=" + start + "&genre=" + genre + "&search=" + search
+        url: "api/movielist?start=" + start + "&genre=" + genre + "&search=" + search + "&advance=" + advance_search
+            + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page, // Setting request url, which is mapped by StarsServlet in Stars.java
+        success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+    });
+} else if(search==null && advance_search!=null) {
+    jQuery.ajax({
+        dataType: "json", // Setting return data type
+        method: "GET", // Setting request method
+        url: "api/movielist?start=" + start + "&genre=" + genre + "&search=" + search + "&advance=" + advance_search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
             + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=" + page, // Setting request url, which is mapped by StarsServlet in Stars.java
         success: (resultData) => handleMovieListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
