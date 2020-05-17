@@ -1,5 +1,6 @@
 let search_form = $("#search-form");
 let advance_search_form = $("#advance-search-form");
+let auto_complete = $("#autocomplete");
 
 
 /**
@@ -17,9 +18,6 @@ function handleAdvanceSearchResult(resultDataString) {
     window.location.replace(new_advance_address);
 }
 
-function normalAdvanceSearchResult(query){
-
-}
 
 function handleSearchResult(resultDataString) {
     console.log(resultDataString[0]);
@@ -146,7 +144,9 @@ function handleNormalSearch(query) {
 search_form.submit(submitSearchForm);
 advance_search_form.submit(submitAdvanceSearchForm);
 
-$('#autocomplete').autocomplete({
+
+
+auto_complete.autocomplete({
     // documentation of the lookup function can be found under the "Custom lookup function" section
     lookup: function (query, doneCallback) {
         handleLookup(query, doneCallback)
@@ -160,7 +160,7 @@ $('#autocomplete').autocomplete({
     minChars: 3
 });
 
-$('#autocomplete').keypress(function(event) {
+auto_complete.keypress(function(event) {
     // keyCode 13 is the enter key
     if (event.keyCode == 13) {
         // pass the value of the input box to the handler function
