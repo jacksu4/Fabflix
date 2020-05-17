@@ -256,12 +256,16 @@ $pagemethod.on("change", function(){
 });
 
 $("#submit_sort").bind( "click", function(){
-    if (search==null){
+    if (search==null && advance_search==null){
         console.log("enter nonsearch");
         window.location.href = "index.html?start=" + start + "&genre=" + genre
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
             + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
-    }else{
+    }else if(search==null && advance_search!=null){
+        window.location.href = "index.html?" + "advance=" + advance_search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
+            + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
+            + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
+    } else {
         window.location.href = "index.html?" + "search=" + search + "&title=" + title + "&director=" + director + "&year=" + year + "&star_name=" + star_name
             + "&firstsort=" + firstsort + "&secondsort=" + secondsort + "&firstmethod=" + firstmethod
             + "&secondmethod=" + secondmethod +"&resultperpage=" + resultperpage + "&page=0";
