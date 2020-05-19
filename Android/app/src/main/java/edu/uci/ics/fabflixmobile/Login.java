@@ -66,9 +66,9 @@ public class Login extends ActionBarActivity {
                     if(jo.getString("status").equals("success")){
                         Log.d("login.success", response);
                         //initialize the activity(page)/destination
-                        Intent listPage = new Intent(Login.this, ListViewActivity.class);
+                        Intent searchPage = new Intent(Login.this, SearchActivity.class);
                         //without starting the activity/page, nothing would happen
-                        startActivity(listPage);
+                        startActivity(searchPage);
                     }else{
                         message.setText(jo.getString("message"));
                     }

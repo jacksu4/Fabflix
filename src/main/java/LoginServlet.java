@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
 
         String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
         System.out.println("gRecaptchaResponse=" + gRecaptchaResponse);
+        //gRecaptchaResponse = "android";
 
         try {
             // Get a connection from dataSource
