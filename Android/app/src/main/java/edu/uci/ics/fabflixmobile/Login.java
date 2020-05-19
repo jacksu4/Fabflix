@@ -13,6 +13,8 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,11 +61,21 @@ public class Login extends ActionBarActivity {
             @Override
             public void onResponse(String response) {
                 //TODO should parse the json response to redirect to appropriate functions.
-                Log.d("login.success", response);
-                //initialize the activity(page)/destination
-                Intent listPage = new Intent(Login.this, ListViewActivity.class);
-                //without starting the activity/page, nothing would happen
-                startActivity(listPage);
+                try {
+                    JSONObject jo = new JSONObject(response);
+                    if(jo.getString("status").equals("success")){
+                        Log.d("login.success", response);
+                        //initialize the activity(page)/destination
+                        Intent listPage = new Intent(Login.this, ListViewActivity.class);
+                        //without starting the activity/page, nothing would happen
+                        startActivity(listPage);
+                    }else{
+                        message.setText(jo.getString("message"));
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
             }
         },
                 new Response.ErrorListener() {
@@ -79,6 +91,7 @@ public class Login extends ActionBarActivity {
                 final Map<String, String> params = new HashMap<>();
                 params.put("username", username.getText().toString());
                 params.put("password", password.getText().toString());
+                params.put("g-recaptcha-response","android");
 
                 return params;
             }

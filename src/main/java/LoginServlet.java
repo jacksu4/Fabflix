@@ -51,12 +51,15 @@ public class LoginServlet extends HttpServlet {
             JsonObject responseJsonObject = new JsonObject();
 
             try{
-                RecaptchaVerifyUtils.verify(gRecaptchaResponse);
-
+                if(!gRecaptchaResponse.equals("android")){
+                    System.out.println("verify recaptcha");
+                    RecaptchaVerifyUtils.verify(gRecaptchaResponse);
+                }
                 if (!rs.next()) {
                     responseJsonObject.addProperty("status", "fail");
                     responseJsonObject.addProperty("message", "user " + username + " doesn't exist");
                 } else {
+                    System.out.println("encrpting password");
                     String encryptedPassword = rs.getString("password");
                     boolean success = new StrongPasswordEncryptor().checkPassword(password, encryptedPassword);
                     if (!success) {
