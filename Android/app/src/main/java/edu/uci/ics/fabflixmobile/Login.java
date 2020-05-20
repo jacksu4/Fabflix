@@ -1,6 +1,7 @@
 package edu.uci.ics.fabflixmobile;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -65,6 +66,8 @@ public class Login extends ActionBarActivity {
                     JSONObject jo = new JSONObject(response);
                     if(jo.getString("status").equals("success")){
                         Log.d("login.success", response);
+
+                        SharedPreferences pref = getSharedPreferences("android", MODE_PRIVATE);
                         //initialize the activity(page)/destination
                         Intent searchPage = new Intent(Login.this, SearchActivity.class);
                         //without starting the activity/page, nothing would happen

@@ -28,7 +28,8 @@ public class SearchActivity extends Activity {
         advance_title = findViewById(R.id.advance_title);
         search_button = findViewById(R.id.search);
 
-        url = "http://10.0.2.2:8080/cs122b-spring20-team-74/api/";
+        url = "http://10.0.2.2:8080/cs122b-spring20-team-74/";
+
 
         search_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,11 +42,11 @@ public class SearchActivity extends Activity {
     public void search(){
         final RequestQueue queue = NetworkManager.sharedManager(this).queue;
 
-        final StringRequest searchRequest = new StringRequest(Request.Method.POST, url + "advancesearch", new Response.Listener<String>() {
+        final StringRequest searchRequest = new StringRequest(Request.Method.POST, url + "api/advancesearch", new Response.Listener<String>() {
             @Override
             public void onResponse(String response){
                 Intent listPage = new Intent(SearchActivity.this, ListViewActivity.class);
-                String new_url = url + "index.html?advance=true&title="+advance_title.getText().toString()+"&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0";
+                String new_url = url + "api/movielist?start=null&genre=null&search=null&advance=true&title="+advance_title.getText().toString()+"&director=null&year=null&star_name=null&firstsort=rating&secondsort=title&firstmethod=desc&secondmethod=asc&resultperpage=20&page=0";
                 listPage.putExtra("url",new_url);
                 startActivity(listPage);
             }
