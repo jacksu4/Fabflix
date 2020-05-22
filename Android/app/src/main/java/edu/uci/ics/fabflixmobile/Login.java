@@ -9,10 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
+import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +38,8 @@ public class Login extends ActionBarActivity {
          * In Android, localhost is the address of the device or the emulator.
          * To connect to your machine, you need to use the below IP address
          * **/
-        url = "http://10.0.2.2:8080/cs122b-spring20-team-74/api/";
+        //url = "http://10.0.2.2:8080/cs122b-spring20-team-74/api/";
+        url = "https://ec2-54-235-239-224.compute-1.amazonaws.com:8443/cs122b-proj2/api/";
 
         //assign a listener to call a function to handle the user request when clicking a button
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +65,7 @@ public class Login extends ActionBarActivity {
                     if(jo.getString("status").equals("success")){
                         Log.d("login.success", response);
 
-                        SharedPreferences pref = getSharedPreferences("android", MODE_PRIVATE);
+                        //SharedPreferences pref = getSharedPreferences("android", MODE_PRIVATE);
                         //initialize the activity(page)/destination
                         Intent searchPage = new Intent(Login.this, SearchActivity.class);
                         //without starting the activity/page, nothing would happen
@@ -101,6 +99,7 @@ public class Login extends ActionBarActivity {
         };
 
         // !important: queue.add is where the login request is actually sent
+        //loginRequest.setRetryPolicy(new DefaultRetryPolicy(50000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         queue.add(loginRequest);
 
     }

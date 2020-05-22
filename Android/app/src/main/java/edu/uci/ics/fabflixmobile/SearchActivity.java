@@ -28,7 +28,8 @@ public class SearchActivity extends Activity {
         advance_title = findViewById(R.id.advance_title);
         search_button = findViewById(R.id.search);
 
-        url = "http://10.0.2.2:8080/cs122b-spring20-team-74/";
+        //url = "http://10.0.2.2:8080/cs122b-spring20-team-74/";
+        url = "https://ec2-54-235-239-224.compute-1.amazonaws.com:8443/cs122b-proj2/";
 
 
         search_button.setOnClickListener(new View.OnClickListener() {
