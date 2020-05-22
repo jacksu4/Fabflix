@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.android.volley.Request;
@@ -25,18 +26,11 @@ import java.util.Map;
 
 public class ListViewActivity extends Activity {
     private String url;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.listview);
-        //this should be retrieved from the database and the backend server
-        url = getIntent().getStringExtra("url");
-        Log.d("url",url);
+    private ArrayList<Movie> movies = new ArrayList<>();
+    private Button prevButton;
+    private Button nextButton;
 
-        //get data from backend
-        final ArrayList<Movie> movies = new ArrayList<>();
-        final RequestQueue queue = NetworkManager.sharedManager(this).queue;
-        Context context = this;
+    public void getMovies(Context context, RequestQueue queue, MovieListViewAdapter adapter){
 
         final StringRequest movielistRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -44,22 +38,21 @@ public class ListViewActivity extends Activity {
                 try {
                     Log.d("r",response);
                     JSONArray ja = new JSONArray(response);
-
-                    ArrayList<Movie> movies = new ArrayList<Movie>();
+                    movies.clear();
 
                     for(int i=0;i<ja.length();i++){
                         JSONObject jo = (JSONObject) ja.get(i);
-                        System.out.println("Movie: "+i);
+                        //System.out.println("Movie: "+i);
                         String id = jo.getString("movie_id");
-                        System.out.println("id: "+id);
+                        //System.out.println("id: "+id);
                         String title = jo.getString("movie_title");
-                        System.out.println("title: "+title);
+                        //System.out.println("title: "+title);
                         String year = jo.getString("movie_year");
-                        System.out.println("year: "+year);
+                        //System.out.println("year: "+year);
                         String director = jo.getString("movie_director");
-                        System.out.println("director: "+director);
+                        //System.out.println("director: "+director);
                         String rating = jo.getString("movie_rating");
-                        System.out.println("rating: "+rating);
+                        //System.out.println("rating: "+rating);
                         ArrayList<String> genres = new ArrayList<String>();
                         for(int j=0; j<jo.getJSONArray("movie_genres").length(); j++){
                             genres.add((String)jo.getJSONArray("movie_genres").get(j));
@@ -71,26 +64,8 @@ public class ListViewActivity extends Activity {
 
                         movies.add(new Movie(id, title, year, director, rating, genres, stars));
                     }
-
-
-
-                    MovieListViewAdapter adapter = new MovieListViewAdapter(movies, context);
-
-                    ListView listView = findViewById(R.id.list);
-                    listView.setAdapter(adapter);
-
-                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            Movie movie = movies.get(position);
-                            String message = String.format("Clicked on position: %d, name: %s, %d", position, movie.getTitle(), movie.getYear());
-                            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-
-
-
+                    //System.out.println(movies.toString());
+                    adapter.notifyDataSetChanged();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -112,6 +87,59 @@ public class ListViewActivity extends Activity {
             }
         };
         queue.add(movielistRequest);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.listview);
+        //this should be retrieved from the database and the backend server
+        url = getIntent().getStringExtra("url");
+        //Log.d("url",url);
+
+        //get data from backend
+        Context context = this;
+        final RequestQueue queue = NetworkManager.sharedManager(context).queue;
+        MovieListViewAdapter adapter = new MovieListViewAdapter(movies, context);
+
+        ListView listView = findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Movie movie = movies.get(position);
+                String message = String.format("Clicked on position: %d, name: %s, %d", position, movie.getTitle(), movie.getYear());
+                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+            }
+        });
+        getMovies(context, queue, adapter);
+        prevButton = findViewById(R.id.prev);
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int page = Integer.parseInt(url.substring(url.length()-1));
+                if(page >= 1){
+                    url = url.substring(0,url.length()-1)+(page-1);
+                    getMovies(context, queue, adapter);
+                }
+            }
+        });
+
+        nextButton = findViewById(R.id.next);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int page = Integer.parseInt(url.substring(url.length()-1));
+                if(movies.size()==20){
+                    url = url.substring(0,url.length()-1)+(page+1);
+                    getMovies(context, queue, adapter);
+                }
+            }
+        });
+
+
+
         /*
         ArrayList<String> genres = new ArrayList<String>();
         genres.add("genre1");
