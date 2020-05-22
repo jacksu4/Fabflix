@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="Title"
+            android:layout_width="360sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/title" android:textSize="24sp"
+            android:textColor="#03A9F4"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginTop="16dp" android:layout_marginLeft="6dp" android:layout_marginStart="6dp"/>
+    <TextView
+            android:text="1999"
+            android:layout_width="360sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/year" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginTop="14dp"
+            android:layout_marginLeft="6dp" android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+    <TextView
+            android:text="director"
+            android:layout_width="360sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/director" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginTop="14dp"
+            android:layout_marginLeft="6dp" android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/year"/>
+    <TextView
+            android:text="rating"
+            android:layout_width="360sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginTop="14dp"
+            android:layout_marginLeft="6dp" android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/director"/>
+    <TextView
+            android:text="genres"
+            android:layout_width="360sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/genres"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginTop="14dp"
+            android:layout_marginLeft="6dp" android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/rating"/>
+    <TextView
+            android:text="stars"
+            android:layout_width="360sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/stars"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginTop="14dp"
+            android:layout_marginLeft="6dp" android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/genres"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="vertical"/>
+</android.support.constraint.ConstraintLayout>

@@ -109,8 +109,14 @@ public class ListViewActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Movie movie = movies.get(position);
-                String message = String.format("Clicked on position: %d, name: %s, %d", position, movie.getTitle(), movie.getYear());
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                Intent single_movie_page = new Intent(ListViewActivity.this, SingleMovieActivity.class);
+                String single_movie_url = "http://10.0.2.2:8080/cs122b-spring20-team-74/api/single-movie?id="+movie.getId();
+                //System.out.println(single_movie_url);
+                single_movie_page.putExtra("url",single_movie_url);
+                startActivity(single_movie_page);
+
+                //String message = String.format("Clicked on position: %d, name: %s, %d", position, movie.getTitle(), movie.getYear());
+                //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
             }
         });
         getMovies(context, queue, adapter);
