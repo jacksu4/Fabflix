@@ -8,6 +8,10 @@ project2: https://www.youtube.com/watch?v=3mwuI-ZDAhk
 
 project3: https://youtu.be/J3P5RgbeCjc
 
+project4 (part1): https://www.youtube.com/watch?v=pjw8AcgzJHw&feature=youtu.be
+
+project4 (part2): https://youtu.be/giFw6wOP0AM
+
 
 #### Project Deployment Instruction
 
@@ -58,6 +62,7 @@ Su Jingcheng
 - Create MovieList page, SingleStar page and added related html, js files
 - implement login page, browse function, movielist sorting function
 - implement recaptcha, https, encrypted password, employee login and dashboard function
+- implement autocomplete and fulltext search
 
   
 
@@ -67,3 +72,4 @@ Jin Zeyu
 - added CSS files and bootstrap classes to beautify all three pages
 - implement search function, shopping cart function and payment function
 - implement xml parsing function and optimization
+- implement the android app 
