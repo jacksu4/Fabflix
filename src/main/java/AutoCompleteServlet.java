@@ -2,6 +2,8 @@ package main.java;
 
 import javax.annotation.Resource;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,7 +56,12 @@ public class AutoCompleteServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try{
+
+            Context initContext = new InitialContext();
+            Context envContext = (Context) initContext.lookup("java:/comp/env");
+            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
             Connection dbcon = dataSource.getConnection();
+
             String query = "select id, title from movies where match(title) against (? in boolean mode)";
 
             PreparedStatement statement = dbcon.prepareStatement(query);
