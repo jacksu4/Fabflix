@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 @WebServlet(name = "AutoCompleteServlet", urlPatterns = "/api/autocomplete")
 public class AutoCompleteServlet extends HttpServlet {
 
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     private static JsonObject generateJsonObject(String url, String title) {

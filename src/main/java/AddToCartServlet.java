@@ -14,8 +14,8 @@ import javax.sql.DataSource;
 
 @WebServlet(name = "AddToCartServlet", urlPatterns = "/api/addToCart")
 public class AddToCartServlet extends HttpServlet{
-    @Resource(name = "jdbc/moviedb")
-    private DataSource dataSource;
+
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 

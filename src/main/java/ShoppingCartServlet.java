@@ -23,7 +23,7 @@ import java.util.Map;
 
 @WebServlet(name = "ShoppingCartServlet", urlPatterns = "/api/shopping-cart")
 public class ShoppingCartServlet extends HttpServlet{
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {

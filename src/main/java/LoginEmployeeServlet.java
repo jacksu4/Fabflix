@@ -20,7 +20,7 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 
 @WebServlet(name = "LoginEmployeeServlet", urlPatterns = "/api/login_employee")
 public class LoginEmployeeServlet extends HttpServlet {
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)

@@ -19,7 +19,7 @@ import com.google.gson.JsonObject;
 
 @WebServlet(name = "BrowseServlet", urlPatterns = "/api/browse")
 public class BrowseServlet extends HttpServlet{
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

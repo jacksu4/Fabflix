@@ -17,7 +17,7 @@ import com.google.gson.JsonObject;
 
 @WebServlet(name = "MetadataServlet", urlPatterns = "/api/metadata")
 public class MetadataServlet extends HttpServlet{
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

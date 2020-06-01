@@ -24,7 +24,7 @@ import java.sql.Date;
 
 @WebServlet(name = "OrderConfirmationServlet", urlPatterns = "/api/order-confirmation")
 public class OrderConfirmationServlet extends HttpServlet{
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -42,7 +42,7 @@ public class OrderConfirmationServlet extends HttpServlet{
             // Get a connection from dataSource
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
+            dataSource = (DataSource) envContext.lookup("jdbc/moviedb_write");
             Connection dbcon = dataSource.getConnection();
 
             //obtain customers.id

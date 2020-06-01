@@ -25,7 +25,7 @@ import com.google.gson.JsonObject;
 @WebServlet(name = "MovieListServlet", urlPatterns = "/api/movielist")
 public class MovieListServlet extends HttpServlet{
 
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     private PreparedStatement generateStatement(PreparedStatement statement, int result_per_page, int page, int start_num) throws SQLException {

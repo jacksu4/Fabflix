@@ -23,7 +23,7 @@ import java.util.Map;
 
 @WebServlet(name = "PaymentServlet", urlPatterns = "/api/payment")
 public class PaymentServlet extends HttpServlet{
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {

@@ -20,7 +20,7 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 
 @WebServlet(name = "EmployeeAddStarServlet", urlPatterns = "/api/employee_add_star")
 public class EmployeeAddStarServlet extends HttpServlet {
-    @Resource(name = "jdbc/moviedb")
+
     private DataSource dataSource;
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,7 +35,7 @@ public class EmployeeAddStarServlet extends HttpServlet {
         try {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
+            dataSource = (DataSource) envContext.lookup("jdbc/moviedb_write");
             Connection dbcon = dataSource.getConnection();
 
             // Declare our statement
