@@ -89,15 +89,19 @@ Jin Zeyu
     - BrowseServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/BrowseServlet.java
     - MetadataServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/MetadataServlet.java
     
-    - #### We created a Resource in context.xml and specify parameters like maxTotal and maxIdle to control the pooling parameters. Instead of establishing connection and close connection in servlet physically. We precreate 100 connections and use getConnection() to get the connection every time we want to use it. This significantly reduce the response time.
+    - #### We created two Resource in context.xml and two resource-ref in web.xml and specify parameters like maxTotal and maxIdle to control the pooling parameters. Instead of establishing connection and close connection in servlet physically. We precreate 100 connections, use envContext.lookup() to choose the host database we used and use getConnection() to get the connection every time we want to use it. This significantly reduce the response time and allow master-slave replication in mysql.
     
-    - #### In two different SQL, each SQL acquire a thread and that thread get a connection to the database. We use preparedstatement and set cachePrepStmts to true in context.xml in order to make sure preparedstatement works fine and can be successfully cached
+    - #### The two backend both have two resource: one is localhost and one is master's database. Whenever write to the database is needed, we use envContext.lookup() to choose the master's database and use getConnection() to get the connection. Otherwise we use localhost database to do read operations.
     
 
 - # Master/Slave
-    - #### Include the filename/path of all code/configuration files in GitHub of routing queries to Master/Slave SQL.
-
-    - #### How read/write requests were routed to Master/Slave SQL?
+    - context.xml https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/web/META-INF/context.xml
+    - web.xml https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/web/WEB-INF/web.xml
+    - OrderConfirmationServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/OrderConfirmationServlet.java (used remote master database)
+    - EmployeeAddStarServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/EmployeeAddStarServlet.java (used remote master database)
+    - EmployeeAddMovieServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/EmployeeAddMovieServlet.java (used remote master database)
+    
+    - #### We specify two resource in context.xml and two resource-ref in web.xml. Then, whenever we want to route to master's database to do write operations, We use envContext.lookup() to choose the master's database and use getConnection() to get the connection. Otherwise we use localhost database to do read operations.
     
 
 - # JMeter TS/TJ Time Logs

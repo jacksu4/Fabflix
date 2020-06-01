@@ -42,7 +42,7 @@ public class EmployeeAddMovieServlet extends HttpServlet {
             // Get a connection from dataSource
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
+            dataSource = (DataSource) envContext.lookup("jdbc/moviedb_write");
             Connection dbcon = dataSource.getConnection();
 
             // Declare our statement
