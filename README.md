@@ -63,7 +63,7 @@ Su Jingcheng
 - implement login page, browse function, movielist sorting function
 - implement recaptcha, https, encrypted password, employee login and dashboard function
 - implement autocomplete and fulltext search
-
+- implement connection pooling, master-slave replication and load balancers
   
 
 Jin Zeyu
@@ -73,6 +73,7 @@ Jin Zeyu
 - implement search function, shopping cart function and payment function
 - implement xml parsing function and optimization
 - implement the android app 
+- implement log_processing script and jmeter testing
 
 - # Connection Pooling
     - AutoCompleteServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/AutoCompleteServlet.java
