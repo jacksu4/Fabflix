@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -27,6 +29,9 @@ public class MovieListServlet extends HttpServlet{
 
 
     private DataSource dataSource;
+    private String movie_title;
+    private long ts;
+    private long tj;
 
     private PreparedStatement generateStatement(PreparedStatement statement, int result_per_page, int page, int start_num) throws SQLException {
         int offset = result_per_page * page;
@@ -46,18 +51,39 @@ public class MovieListServlet extends HttpServlet{
         return res.toString().trim();
     }
 
+    private void writeToFile() throws IOException {
+
+
+        String contextPath = getServletContext().getRealPath("/");
+        String filePath=contextPath+"log.txt";
+        System.out.println(filePath);
+
+
+
+
+        FileWriter fw = new FileWriter(filePath, true);
+
+        fw.write("TS: "+ts+"\n");
+        fw.write("TJ: "+tj+"\n");
+
+        fw.close();
+
+    }
+
     protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
+
+        long tsStartTime = System.nanoTime();
         try {
             // Get a connection from dataSource
 //            Context initContext = new InitialContext();
 //            Context envContext = (Context) initContext.lookup("java:/comp/env");
 //            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
 //            Connection dbcon = dataSource.getConnection();
-            String url_mysql = "jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false";
+            String mysql_url = "jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false";
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection dbcon = DriverManager.getConnection(url_mysql, "mytestuser", "mypassword");
+            Connection dbcon = DriverManager.getConnection(mysql_url, "mytestuser", "mypassword");
 
             String url = "index.html?";
             Enumeration<String> paramNames = request.getParameterNames();
@@ -108,6 +134,7 @@ public class MovieListServlet extends HttpServlet{
                     title = "%%";
                 }else{
                     title = "%"+request.getParameter("title")+"%";
+                    movie_title = request.getParameter("title");
                 }
                 if(request.getParameter("director").equals("null")){
                     director = "%%";
@@ -200,7 +227,7 @@ public class MovieListServlet extends HttpServlet{
                 String query = "select id, title, year, director, ratings.rating from movies " +
                         "left join ratings on movies.id = ratings.movieId \n" +
                         "where match(title) against (? in boolean mode)" +
-                "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
+                        "order by " + first_sort + " " + first_method + ", " + second_sort + " " + second_method + " limit ? offset ?";
 
                 statement = dbcon.prepareStatement(query);
                 String res_title = AddPlus(title);
@@ -217,11 +244,16 @@ public class MovieListServlet extends HttpServlet{
 
                 generateStatement(statement, result_per_page, page, 1);
             }
+            long startTime = System.nanoTime();
 
             //System.out.println(statement);
             rs = statement.executeQuery();
 
+            long endTime = System.nanoTime();
+            tj = endTime - startTime;
+
             System.out.println("first statement success");
+
 
 
             JsonArray jsonArray = new JsonArray();
@@ -249,11 +281,16 @@ public class MovieListServlet extends HttpServlet{
 
                 genre_statement.setString(1, movie_id);
 
+                startTime = System.nanoTime();
                 ResultSet genre_rs = genre_statement.executeQuery();
+                endTime = System.nanoTime();
+                tj += (endTime - startTime);
 
                 while(genre_rs.next()){
                     movie_genres.add(genre_rs.getString("genres_name"));
                 }
+                genre_rs.close();
+                genre_statement.close();
 
                 String star_query = "select stars.name as stars_name, stars.id as stars_id from stars, stars_in_movies " +
                         "where stars_in_movies.movieId = ? and stars.id = stars_in_movies.starId " +
@@ -263,12 +300,18 @@ public class MovieListServlet extends HttpServlet{
 
                 star_statement.setString(1, movie_id);
 
+                startTime = System.nanoTime();
                 ResultSet star_rs = star_statement.executeQuery();
+                endTime = System.nanoTime();
+                tj += (endTime - startTime);
 
                 while(star_rs.next()){
                     movie_stars.add(star_rs.getString("stars_name"));
                     movie_stars_id.add(star_rs.getString("stars_id"));
                 }
+
+                star_rs.close();
+                star_statement.close();
 
                 JsonArray movie_genres_JsonArray = new Gson().toJsonTree(movie_genres).getAsJsonArray();
                 JsonArray movie_stars_JsonArray = new Gson().toJsonTree(movie_stars).getAsJsonArray();
@@ -285,11 +328,7 @@ public class MovieListServlet extends HttpServlet{
                 jsonObject.add("movie_stars", movie_stars_JsonArray);
                 jsonObject.add("movie_stars_id", movie_stars_id_JsonArray);
 
-
                 jsonArray.add(jsonObject);
-
-                genre_rs.close();
-                star_rs.close();
             }
             // write JSON string to output
             out.write(jsonArray.toString());
@@ -306,6 +345,12 @@ public class MovieListServlet extends HttpServlet{
             // set reponse status to 500 (Internal Server Error)
             response.setStatus(500);
         }
+        long tsEndTime = System.nanoTime();
+        ts = tsEndTime - tsStartTime;
+        System.out.println(movie_title);
+        System.out.println("ts: "+ts);
+        System.out.println("tj: "+tj);
+        writeToFile();
         out.close();
     }
 }

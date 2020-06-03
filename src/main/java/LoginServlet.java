@@ -88,6 +88,9 @@ public class LoginServlet extends HttpServlet {
             }
 
             response.getWriter().write(responseJsonObject.toString());
+            rs.close();
+            statement.close();
+            dbcon.close();
 
         } catch (Exception e) {
             JsonObject jsonObject = new JsonObject();
