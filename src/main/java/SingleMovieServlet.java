@@ -29,10 +29,13 @@ public class SingleMovieServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
         try {
             // Get a connection from dataSource
-            Context initContext = new InitialContext();
-            Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
-            Connection dbcon = dataSource.getConnection();
+//            Context initContext = new InitialContext();
+//            Context envContext = (Context) initContext.lookup("java:/comp/env");
+//            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
+//            Connection dbcon = dataSource.getConnection();
+            String url_mysql = "jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false";
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection dbcon = DriverManager.getConnection(url_mysql, "mytestuser", "mypassword");
 
             //title, year, director, rating
 

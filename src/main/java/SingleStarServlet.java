@@ -15,6 +15,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -44,10 +45,13 @@ public class SingleStarServlet extends HttpServlet {
 
         try {
             // Get a connection from dataSource
-            Context initContext = new InitialContext();
-            Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
-            Connection dbcon = dataSource.getConnection();
+//            Context initContext = new InitialContext();
+//            Context envContext = (Context) initContext.lookup("java:/comp/env");
+//            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
+//            Connection dbcon = dataSource.getConnection();
+            String url_mysql = "jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false";
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection dbcon = DriverManager.getConnection(url_mysql, "mytestuser", "mypassword");
 
             // Construct a query with parameter represented by "?"
             String query = "SELECT * from stars as s, stars_in_movies as sim, movies as m " +

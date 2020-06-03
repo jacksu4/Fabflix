@@ -33,10 +33,13 @@ public class EmployeeAddStarServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try {
-            Context initContext = new InitialContext();
-            Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb_write");
-            Connection dbcon = dataSource.getConnection();
+//            Context initContext = new InitialContext();
+//            Context envContext = (Context) initContext.lookup("java:/comp/env");
+//            dataSource = (DataSource) envContext.lookup("jdbc/moviedb_write");
+//            Connection dbcon = dataSource.getConnection();
+            String url = "jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false";
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection dbcon = DriverManager.getConnection(url, "mytestuser", "mypassword");
 
             // Declare our statement
             Statement get_statement = dbcon.createStatement();

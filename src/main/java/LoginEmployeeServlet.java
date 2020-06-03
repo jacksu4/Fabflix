@@ -37,10 +37,13 @@ public class LoginEmployeeServlet extends HttpServlet {
 
         try {
             // Get a connection from dataSource
-            Context initContext = new InitialContext();
-            Context envContext = (Context) initContext.lookup("java:/comp/env");
-            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
-            Connection dbcon = dataSource.getConnection();
+//            Context initContext = new InitialContext();
+//            Context envContext = (Context) initContext.lookup("java:/comp/env");
+//            dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
+//            Connection dbcon = dataSource.getConnection();
+            String url = "jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false";
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection dbcon = DriverManager.getConnection(url, "mytestuser", "mypassword");
 
             // Declare our statement
 
