@@ -38,7 +38,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>cs122b-proj2</finalName>
+        <finalName>cs122b-proj2-nocp</finalName>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
