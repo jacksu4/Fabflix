@@ -30,8 +30,6 @@ public class MovieListServlet extends HttpServlet{
 
     private DataSource dataSource;
     private String movie_title;
-    private long ts;
-    private long tj;
 
     private PreparedStatement generateStatement(PreparedStatement statement, int result_per_page, int page, int start_num) throws SQLException {
         int offset = result_per_page * page;
@@ -51,36 +49,26 @@ public class MovieListServlet extends HttpServlet{
         return res.toString().trim();
     }
 
-    private void writeToFile() throws IOException {
+    private void writeToFile(long ts, long tj) throws IOException {
 
-
-        String contextPath = getServletContext().getRealPath("/");
-        String filePath=contextPath+"log.txt";
-        System.out.println(filePath);
-
-
-
-
-        FileWriter fw = new FileWriter(filePath, true);
-
-        fw.write("TS: "+ts+"\n");
-        fw.write("TJ: "+tj+"\n");
-
-        fw.close();
 
     }
 
     protected void doGet( HttpServletRequest request, HttpServletResponse response) throws IOException {
+        long ts = 0;
+        long tj = 0;
+        long tsStartTime = System.nanoTime();
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
 
-        long tsStartTime = System.nanoTime();
+
         try {
             // Get a connection from dataSource
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
             dataSource = (DataSource) envContext.lookup("jdbc/moviedb");
             Connection dbcon = dataSource.getConnection();
+            //here
 
             String url = "index.html?";
             Enumeration<String> paramNames = request.getParameterNames();
@@ -342,13 +330,23 @@ public class MovieListServlet extends HttpServlet{
             // set reponse status to 500 (Internal Server Error)
             response.setStatus(500);
         }
+        out.close();
         long tsEndTime = System.nanoTime();
         ts = tsEndTime - tsStartTime;
         System.out.println(movie_title);
         System.out.println("ts: "+ts);
         System.out.println("tj: "+tj);
-        writeToFile();
-        out.close();
+
+        String contextPath = getServletContext().getRealPath("/");
+        String filePath=contextPath+"log.txt";
+        System.out.println(filePath);
+
+        FileWriter fw = new FileWriter(filePath, true);
+
+        fw.write("TS: "+ts+"\n");
+        fw.write("TJ: "+tj+"\n");
+
+        fw.close();
     }
 }
 
