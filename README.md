@@ -12,6 +12,8 @@ project4 (part1): https://www.youtube.com/watch?v=pjw8AcgzJHw&feature=youtu.be
 
 project4 (part2): https://youtu.be/giFw6wOP0AM
 
+project5: https://youtu.be/t3L0B5FKJBQ
+
 
 #### Project Deployment Instruction
 
@@ -102,24 +104,29 @@ Jin Zeyu
     - EmployeeAddStarServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/EmployeeAddStarServlet.java (used remote master database)
     - EmployeeAddMovieServlet https://github.com/UCI-Chenli-teaching/cs122b-spring20-team-74/blob/master/src/main/java/EmployeeAddMovieServlet.java (used remote master database)
     
+    - #### Add star functionality may not work properly because I use loadfile in mysql and starId in XML file for master and slave instance is different. Other than this, everything works fine.
     - #### We specify two resource in context.xml and two resource-ref in web.xml. Then, whenever we want to route to master's database to do write operations, We use envContext.lookup() to choose the master's database and use getConnection() to get the connection. Otherwise we use localhost database to do read operations.
     
 
 - # JMeter TS/TJ Time Logs
-    - #### Instructions of how to use the `log_processing.*` script to process the JMeter logs.
+    - #### As the JMeter test is running, the servlet time and JDBC time are measured and recorded in the "log.txt" file in the root directory of your server.
+    - #### Gather those "log.txt" files from all the servers tested and put them in a new directory without any other ".txt" files.
+    - #### Find the "log_processing.py" file from the root directory of our github and put it into the same directory where your put your "log.txt" files.
+    - #### In your command line, navigate to this directory and run "python3 log_processing.py".
+    - #### The results are saved into "log_processing_result.txt" in the current directory.
 
 
 - # JMeter TS/TJ Time Measurement Report
 
 | **Single-instance Version Test Plan**          | **Graph Results Screenshot**                 | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
 |------------------------------------------------|------------------------------                |----------------------------|-------------------------------------|---------------------------|--------------|
-| Case 1: HTTP/1 thread                          | imgs/Graph-single-instance-cp-1thread.png    | ??                         | ??                                  | ??                        | ??           |
-| Case 2: HTTP/10 threads                        | imgs/Graph-single-instance-cp-10thread.png   | ??                         | ??                                  | ??                        | ??           |
-| Case 3: HTTPS/10 threads                       | imgs/Graph-https-single-instance-cp-10thread.png  | ??                    | ??                                  | ??                        | ??           |
-| Case 4: HTTP/10 threads/No connection pooling  | imgs/Graph-single-instance-nocp-10thread.png  | ??                        | ??                                  | ??                        | ??           |
+| Case 1: HTTP/1 thread                          | imgs/Graph-single-instance-cp-1thread.png    | 84                         | 10.371                                  | 9.913                        | under low pressure, the servlet is running fast           |
+| Case 2: HTTP/10 threads                        | imgs/Graph-single-instance-cp-10thread.png   | 143                         | 67.480                                  | 67.144                        | increasing to 10 threads, the servlet is slowed down           |
+| Case 3: HTTPS/10 threads                       | imgs/Graph-https-single-instance-cp-10thread.png  | 147                    | 67.683                                  | 67.293                        | https slows down the query a little but not much effect on servlet           |
+| Case 4: HTTP/10 threads/No connection pooling  | imgs/Graph-single-instance-nocp-10thread.png  | 160                        | 84.336                                  | 69.399                        | the performance without connection pooling is worse than that with connection pooling as more time are spent on establishing jdbc connection           |
 
 | **Scaled Version Test Plan**                   | **Graph Results Screenshot**        | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
 |------------------------------------------------|------------------------------       |----------------------------|-------------------------------------|---------------------------|--------------|
-| Case 1: HTTP/1 thread                          | imgs/Graph-scaled-cp-1thread.png    | ??                         | ??                                  | ??                        | ??           |
-| Case 2: HTTP/10 threads                        | imgs/Graph-scaled-cp-10thread.png   | ??                         | ??                                  | ??                        | ??           |
-| Case 3: HTTP/10 threads/No connection pooling  | imgs/Graph-scaled-nocp-10thread.png | ??                         | ??                                  | ??                        | ??           |
+| Case 1: HTTP/1 thread                          | imgs/Graph-scaled-cp-1thread.png    | 85                         | 10.225                                  | 9.860                        | slightly better than single-instance (1 thread cannot show the advantage of the scaled version)           |
+| Case 2: HTTP/10 threads                        | imgs/Graph-scaled-cp-10thread.png   | 133                         | 41.906                                  | 41.216                        | with 10 threads, we can see a lot improvement compared with single-instance           |
+| Case 3: HTTP/10 threads/No connection pooling  | imgs/Graph-scaled-nocp-10thread.png | 159                         | 81.753                                  | 66.408                        | Again, withou connection pool, the performance is lowered           |
