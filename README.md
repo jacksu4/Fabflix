@@ -1,4 +1,4 @@
-## CS 122B Project 
+## Fabflix
 
 #### Web Demo URL
 
